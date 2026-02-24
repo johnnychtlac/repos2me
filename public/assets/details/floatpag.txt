@@ -1,0 +1,4 @@
+floatpag 宏包的主要作用是允许用户自定义包含整页浮动体（如大图、大表）的页面的页眉页脚样式。在标准的 LaTeX 中，浮动体所在的页面通常使用默认的页面样式，这可能不符合某些排版需求（例如，希望浮动体页面没有页眉，或使用特殊的页码格式）。该宏包通过提供灵活的命令，让用户可以精确控制这些页面的外观。
+\floatpagestyle{⟨foo⟩}：将页面样式 ⟨foo⟩ 应用于所有被整页浮动体占据的页面。
+\rotfloatpagestyle{⟨foo⟩}：将页面样式 ⟨foo⟩ 应用于由 rotating 宏包生成的侧向图表（sideways figures and tables）所在的页面。
+\thisfloatpagestyle{⟨foo⟩}：在 figure 或 table 环境中使用时，将页面样式 ⟨foo⟩ 应用于该浮动体所在的特定页面。

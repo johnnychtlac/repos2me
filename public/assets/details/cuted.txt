@@ -1,0 +1,5 @@
+cuted 宏包主要用于在 LaTeX 的双栏排版模式中处理通栏（全宽）内容。允许在双栏页面（\twocolumn 模式）的任何位置插入全宽度的材料（如宽表格、大图或长公式）。插入的内容会占据整行宽度，原有的双栏文本会自动重排到该内容的下方。如果当前页空间不足，部分内容可以自动移至下一页。在该环境中使用浮动体（floats）和脚注（footnotes）可能会出现问题。若脚注出错，建议使用 \footnotemark 和 \footnotetext 命令手动修复。提供了 \switchonecolumn 命令：从当前位置开始切换到单栏排版。提供了 \switchtwocolumn 命令：从当前位置开始切换回双栏排版。这使得用户可以在同一文档中灵活混合单栏和双栏布局。
+\begin{strip} ... \end{strip}：核心环境，用于包裹需要全宽显示的内容。
+\preCutedStrip / \postCutedStrip：用于在 strip 环境前后添加特定的 tokens 或调整间距。
+\stripsep：控制 strip 环境与周围文本之间的垂直间距（默认为 15pt plus2pt minus 2pt）。
+\oldcolsbreak：用于在特定情况下调整分栏断点（通常当前版本不需要手动使用）。

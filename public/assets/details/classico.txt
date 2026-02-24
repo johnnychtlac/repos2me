@@ -1,0 +1,1 @@
+如果在 LaTeX 环境或其他排版系统中存在针对 URW Classico 的宏包，其核心作用是将这份基于 Univers 和 Helvetica 风格的无衬线字体引入文档，以实现现代、简洁的视觉效果。定义了字体的族系（Family）、系列（Series，如 Regular, Bold）和形状（Shape，如 Italic, Small Caps）。确保系统能正确调用 T1 编码或 OT1 编码下的字符。提供命令来调用文档中展示的特殊样式，例如 \textsc{} (小型大写字母) 或粗斜体。

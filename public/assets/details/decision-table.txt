@@ -1,0 +1,8 @@
+提供命令 \dmntable 等，用于快速创建标准化的 决策表 (Decision Tables)。支持多种扩展格式：包括术语表（glossary）和目标表（goal table）。支持概率表（probability tables），可表达带概率值的决策逻辑。
+\dmntable：标准 DMN 决策表（含输入列）。
+\dmnoutputtable：无输入列的 DMN 输出表。
+\dmnglossarytable：cDMN 定义的术语表。
+\goaltable：cDMN 定义的目标表。
+\pdmntable：带概率值的 pDMN 决策表。
+\pdmnoutputtable：无输入列的概率表。
+自动统一字体、字号、颜色等，避免手动调整。基于 NiceTabular（来自 nicematrix 宏包）实现，支持复杂布局与着色。可直接嵌入 figure 或 table 环境，支持添加标题、标签和交叉引用。相比将表格以图片形式插入，使用此宏包生成的表格更清晰、可编辑、可搜索。基于 expl3 编程层开发，使用 xparse 定义命令。依赖 nicematrix 宏包实现美观的表格边框与背景色。支持多行单元格（需配合 makecell 宏包）。

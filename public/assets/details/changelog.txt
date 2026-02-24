@@ -1,0 +1,4 @@
+该宏包的主要目的是遵循 keepachangelog.com 的最佳实践，帮助用户生成按时间顺序排列、包含每个项目版本显著变更的文件。让用户和贡献者能清晰地看到项目每个版本之间发生了哪些具体变化。将变更分为 Added（新增）、Changed（更改）、Deprecated（弃用）、Removed（移除）、Fixed（修复）和 Security（安全）等类别，而不是简单地转储 Git 提交日志。
+begin{changelog}...\end{changelog}：包裹整个变更日志。支持选项如设置作者、章节命令（如 \section*）、标题（默认为 "Changelog"）以及是否生成标签。
+\begin{version}...\end{version}：定义单个版本的变更。支持设置版本号 （v）、日期 （date）、作者 （author） 以及是否标记为 yanked（撤销发布）。
+\added， \changed， \fixed 等：在 version 环境中使用，用于引入不同类别的变更列表（如“新增了什么功能”、“修复了什么 Bug”）。

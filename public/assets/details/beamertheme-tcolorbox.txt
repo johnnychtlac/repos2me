@@ -1,0 +1,1 @@
+这是一个用于 LaTeX Beamer 的内层主题（Inner Theme）。它的核心作用是利用功能强大的 tcolorbox 宏包来替代 Beamer 默认的“块（Blocks）”绘制机制。Beamer 默认的块（如 block、alertblock）是通过拼接两个 beamercolorbox 实现的，这导致了许多局限性：在某些 PDF 阅读器中，拼接处的缝隙会变得可见。用户难以对形状（如圆角+阴影）进行微调。缺乏复杂的边框、阴影或渐变效果。使用 tcolorbox 重新绘制 Beamer 块。它能自动继承当前 Beamer 主题的外观（颜色、圆角、阴影），同时赋予 tcolorbox 强大的定制能力，让块看起来更平滑、专业且易于修改。

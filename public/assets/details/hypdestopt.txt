@@ -1,0 +1,5 @@
+hypdestopt 旨在通过优化 hyperref 宏包生成的PDF 目标（destinations）来减小最终 PDF 文件的体积。它主要针对 pdfTeX 和 luaTeX 引擎在 PDF 模式下工作。删除那些在文档中没有被任何链接引用的冗余目标点。将原本冗长的目标名称替换为更短的字符串（使用 name 选项）。直接使用数字编号代替名称来标识目标，这通常能产生最小的文件体积（这是默认行为，使用 num 选项）。
+num（默认）：使用编号目标。文件体积最小，因为完全不使用名称字符串。
+name：使用缩短的名称目标。通过 alphalph 包生成短的十六进制字符串作为名称。
+verbose：启用详细调试输出，记录在日志文件中。
+不兼容 LaTeX 的新式 PDF 管理功能（即使用了 \DocumentMetadata 加载的 PDF management）。如果检测到该功能，宏包将自动失效且不执行任何操作。仅支持 pdfTeX 和 luaTeX（PDF 模式）。需要 hyperref (v6.75a+) 和 iftex 等宏包支持。如果你需要保留原始的、可读的目标名称（例如供外部程序通过名称跳转），则不应使用此宏包。不支持手动使用 \pdfdest 等底层命令创建的非 hyperref 管理的命名目标。在首次编译时可能会出现 pdfTeX warning(dest): name{...} has been referenced... 之类的警告，通常在第二次编译后消失。

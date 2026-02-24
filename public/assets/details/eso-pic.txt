@@ -1,0 +1,15 @@
+该宏包的核心功能是让用户能够轻松地在 LaTeX 文档的每一页（或指定页）的绝对位置上添加图形命令。它常用于在页面背景或前景中插入水印、徽标、边框、网格线或其他装饰性元素。
+\AddToShipoutPictureBG{...}：将图形命令添加到每一页的背景（位于正常文档内容之下）。
+\AddToShipoutPictureBG*{...}：仅将图形命令添加到当前页的背景。
+\AddToShipoutPictureFG{...}：将图形命令添加到每一页的前景（位于正常文档内容之上）。
+\AddToShipoutPictureFG*{...}：仅将图形命令添加到当前页的前景。
+注：\AddToShipoutPicture 和 \AddToShipoutPicture* 是背景命令的别名，为了兼容性保留。
+\ClearShipoutPictureBG：清除背景钩子中的内容。
+\ClearShipoutPictureFG：清除前景钩子中的内容。
+宏包提供了一系列命令，帮助用户更容易地基于页面的特定参考点（如左上角、左下角、中心）进行定位，而无需手动计算坐标：
+基于页面（Page）：\AtPageUpperLeft， \AtPageLowerLeft， \AtPageCenter
+基于文本区域（Text）：\AtTextUpperLeft， \AtTextLowerLeft， \AtTextCenter
+基于纸张库存（Stock，主要用于 memoir 类）：\AtStockUpperLeft， \AtStockLowerLeft， \AtStockCenter
+pscoord（默认）：坐标原点 （0,0） 位于页面的左下角。
+texcoord：坐标原点 （0，0） 位于页面的左上角。
+通过加载选项（如 grid=true），可以在页面上绘制网格，方便用户确定元素的绝对位置。支持自定义网格单位（mm， in， pt， bp）、颜色、线型（实线或虚线）。可选择将网格置于背景 （gridBG） 或前景。colorgrid 选项可快速启用红色主网格和绿色子网格。

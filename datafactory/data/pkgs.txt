@@ -1,0 +1,1708 @@
+# 配置,教程和手册,
+#
+# 体积优化,文档编码,加密,
+#
+# 打包与分发,脚本,自动化工具,测试,查询,编程命令和宏,记录文档类,数组,遍历,钩子,标记,条件判断,版本兼容,系统命令,显示内部引用键,
+#
+# 幻灯片,幻灯片主题,排版模板,精装书护封,平装书封面,精装书硬封壳,文学编程,
+#
+# 页边栏,页面数量,页面尺寸和布局,页面方向,页码,页面布局可视化,
+#
+# 章节和目录,章节编号,标题,
+#
+# 表格,矩阵,列表,多栏,浮动体,文本框,盒子,盒子尺寸,代码展示,
+#
+# 锚点,超链接,子文档,垂直分隔线,单元格,平行文本,
+#
+# 评分方案,课程表,
+#
+# 图像,图像信息,
+#
+# 颜色,
+#
+# 原生作者和单位信息,词汇表,缩略语,术语,格式转换,书签,CSL格式,脚注和尾注,段落注,标签和引用,文献和引用,页眉和页脚,索引,
+#
+# 多语言,字族和字体,图标符号字符,加粗,字体支撑,带圈文字,缩放,连字符,
+#
+# 叙利亚语,西多会数字,日语,基数词和序数词,
+#
+# 元素定位,自动断行,脱敏处理,填空效果,元素调整,文本缩进,逐字,定理,标点挤压,代码展示,双向排版,垂直间距,移动证明,环绕,
+# 
+# 计算机科学,图论,运筹学,数学,物理,化学,工程类,密码学,语言学,sage,
+#
+# 绘图,贝塞尔曲线,几何图形,公式,杨表,杨图,算盘图,带状杨表,二维码,辫子图,网络协议图,数据结构图,哈斯图,分子结构式,化学方程式,时间轴图,电气电路图,解剖图,动作规划,因果链,
+# 
+# 括号,箭头,标注框,引号,虚线,实线,网格,DOI横幅,田字格,米字格,拼音,上标和下标,张量矩阵,
+# 计算器,国际象棋,中国象棋,背景或水印,便利贴,模拟终端,
+# 公式缩放,
+# 
+# 计算,位运算,斐波那契数,数值归一化,
+# 时间和日期,
+# 
+# 多媒体,
+# 
+# 填字游戏,数独,卡库罗,
+#
+
+abraces:
+  labels: [括号,]
+  docpaths: [abraces-doc.pdf,]
+abspos:
+  labels: [元素定位,]
+  docpaths: [abspos.pdf,]
+academicons:
+  labels: [图标符号字符,]
+  docpaths: [doc/academicons.pdf,]
+acmart:
+  labels: [排版模板,]
+  docpaths: [acmart.pdf,]
+actuarialsymbol:
+  labels: [图标符号字符,]
+  docpaths: [actuarialsymbol.pdf,]
+adforn:
+  labels: [图标符号字符,]
+  docpaths: [doc/adforn.pdf,]
+adfsymbols:
+  labels: [箭头,]
+  docpaths: [doc/adfsymbols.pdf,]
+adigraph:
+  labels: [计算机科学,图论,运筹学,]
+  docpaths: [adigraph_documentation.pdf,]
+adjustbox:
+  labels: [元素调整,]
+  docpaths: [adjustbox.pdf,]
+affilauthor:
+  labels: [原生作者和单位信息,]
+  docpaths: [affilauthor-doc.pdf,]
+afterpage:
+  labels: [钩子,]
+  docpaths: [afterpage.pdf,]
+aiplans:
+  labels: [动作规划,因果链,]
+  docpaths: [aiplans-Introduction.pdf,]
+algxpar:
+  labels: [文本缩进,]
+  docpaths: [algxpar-doc.pdf,]
+alltt:
+  labels: [逐字,]
+  docpaths: [alltt.pdf,]
+amsmath:
+  labels: [数学,物理,工程类,]
+  docpaths: [amsmath.pdf,]
+amsthm:
+  labels: [数学,物理,工程类,定理,]
+  docpaths: [doc/amsthdoc.pdf,]
+anima:
+  labels: [幻灯片,多媒体,]
+  docpaths: [anima-doc.pdf,]
+animate:
+  labels: [多媒体,]
+  docpaths: [animate.pdf,]
+annotate-equations:
+  labels: [数学,公式,]
+  docpaths: [annotate-equations.pdf,]
+aomart:
+  labels: [排版模板,]
+  docpaths: [aomart.pdf,]
+aramaic-serto:
+  labels: [叙利亚语,]
+  docpaths: [sertodoc.pdf,]
+arara:
+  labels: [自动化工具,]
+  docpaths: [doc/arara-manual.pdf,]
+array:
+  labels: [表格,矩阵,]
+  docpaths: [array.pdf,]
+arsenal-math:
+  labels: [数学,字族和字体,]
+  docpaths: [doc/sample-math.pdf,]
+arsenal:
+  labels: [字族和字体,图标符号字符,]
+  docpaths: [arsenal.pdf,]
+asmeconf:
+  labels: [排版模板,]
+  docpaths: [asmeconf-template.pdf,]
+asmejour:
+  labels: [排版模板,]
+  docpaths: [asmejour-template.pdf,]
+aspen:
+  labels: [密码学,图标符号字符,]
+  docpaths: [aspen-doc.pdf,]
+association-matrix:
+  labels: [矩阵,]
+  docpaths: [association-matrix.pdf,]
+asymptote-manual-zh-cn:
+  labels: [绘图,]
+  docpaths: [asymptote-manual-zh-cn.pdf,]
+atableau:
+  labels: [杨表,杨图,算盘图,带状杨表,]
+  docpaths: [atableau.pdf,]
+atkinson:
+  labels: [字族和字体,]
+  docpaths: [doc/atkinson-samples.pdf,]
+atveryend:
+  labels: [钩子,]
+  docpaths: [atveryend.pdf,]
+autopuncitems:
+  labels: [列表,]
+  docpaths: [autopuncitems.pdf,]
+auxhook:
+  labels: [钩子,]
+  docpaths: [auxhook.pdf,]
+awami:
+  labels: [字族和字体,]
+  docpaths: [awami-sample.pdf,]
+babel:
+  labels: [多语言,]
+  docpaths: [babel.pdf,]
+beamer-reveal:
+  labels: [幻灯片,多媒体,]
+  docpaths: [beamer-reveal.pdf,]
+beamer-theme-albi:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [beamer-theme-albi-doc.pdf,]
+beamer-varbox:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [beamer-varbox.pdf,]
+beamer:
+  labels: [幻灯片,]
+  docpaths: [doc/beameruserguide.pdf,]
+beamertheme-arguelles:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [demo/demo-arguelles.pdf,]
+beamertheme-CleanEasy:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [CleanEasy.pdf,]
+beamertheme-csh:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [example-csh.pdf,]
+beamertheme-gotham:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [gotham-doc.pdf,]
+beamertheme-light:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [beamertheme-light-example.pdf,]
+beamertheme-mirage:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [mirage-beamer-zh.pdf,]
+beamertheme-rainbow:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [beamertheme-rainbow-doc.pdf,]
+beamertheme-spectrum:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [beamertheme-spectrum-doc.pdf,]
+beamertheme-tcolorbox:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [beamertheme-tcolorbox-doc.pdf,]
+beamerthemeCelestia:
+  labels: [幻灯片,幻灯片主题,]
+  docpaths: [doc/beamerthemeCelestia.pdf,]
+beamertools:
+  labels: [幻灯片,编程命令和宏,]
+  docpaths: [beamertools.pdf,]
+beautybook:
+  labels: [排版模板,]
+  docpaths: [beautybook-cn.pdf,]
+beautynote:
+  labels: [排版模板,]
+  docpaths: [beautynote.pdf,]
+bezierplot:
+  labels: [贝塞尔曲线,计算,绘图,]
+  docpaths: [bezierplot-doc.pdf,]
+bib2gls:
+  labels: [词汇表,缩略语,索引,格式转换,]
+  docpaths: [bib2gls.pdf,]
+bib2qr:
+  labels: [文献和引用,二维码,]
+  docpaths: [bib2qr.pdf,]
+biblatex:
+  labels: [文献和引用,]
+  docpaths: [doc/biblatex.pdf,]
+bidi:
+  labels: [双向排版,]
+  docpaths: [bidi-doc.pdf,]
+bitset:
+  labels: [位运算,计算,]
+  docpaths: [bitset.pdf,]
+bm:
+  labels: [数学,加粗,]
+  docpaths: [bm.pdf,]
+bmpsize:
+  labels: [图片信息,]
+  docpaths: [bmpsize.pdf,]
+bnumexpr:
+  labels: [计算,]
+  docpaths: [bnumexpr.pdf,]
+bodeplot:
+  labels: [绘图,伯德图,奈奎斯特图,尼科尔斯图,零极点图,]
+  docpaths: [bodeplot-doc.pdf,]
+bookcover:
+  labels: [精装书护封,平装书封面,精装书硬封壳,]
+  docpaths: [bookcover.pdf,]
+bookmark:
+  labels: [书签,]
+  docpaths: [bookmark.pdf,]
+bookshelf:
+  labels: [文献和引用,图像,]
+  docpaths: [doc/bookshelf.pdf,]
+bootstrapicons:
+  labels: [图标符号字符,]
+  docpaths: [doc/bootstrapicons-docs.pdf,]
+bracealign:
+  labels: [括号,公式,元素调整,]
+  docpaths: [bracealign.pdf,]
+braids:
+  labels: [辫子图,]
+  docpaths: [braids.pdf,]
+breqn:
+  labels: [公式,自动断行,]
+  docpaths: [breqn.pdf,]
+broydensolve:
+  labels: [计算,绘图,]
+  docpaths: [broydensolve-doc.pdf,]
+bundledoc:
+  labels: [打包与分发,脚本,]
+  docpaths: [bundledoc.pdf,]
+bxcoloremoji:
+  labels: [图标符号字符,]
+  docpaths: [bxcoloremoji-en.pdf,]
+byo-twemojis:
+  labels: [图标符号字符,]
+  docpaths: [byo-twemojis.pdf,]
+byrne:
+  labels: [几何图形,绘图,]
+  docpaths: [byrne-latex.pdf,]
+bytefield:
+  labels: [网络协议图,数据结构图,]
+  docpaths: [bytefield.pdf,]
+calc:
+  labels: [计算,]
+  docpaths: [calc.pdf,]
+calcfrac:
+  labels: [计算,]
+  docpaths: [calcfrac-fr.pdf,]
+calculator:
+  labels: [计算,]
+  docpaths: [calculator.pdf,]
+calculatoritems:
+  labels: [计算器,绘图,]
+  docpaths: [doc/calculatoritems-doc.pdf,]
+callouts-box:
+  labels: [标注框,]
+  docpaths: [callouts-box.pdf,]
+calxxxx-yyyy:
+  labels: [时间和日期,]
+  docpaths: [calxxxx-yyyy-doc.pdf,]
+caption:
+  labels: [浮动体,标题,]
+  docpaths: [caption.pdf,]
+cascade:
+  labels: [数学,公式,]
+  docpaths: [cascade.pdf,]
+cascadiamono-otf:
+  labels: [字族和字体,]
+  docpaths: [doc/cascadiamono-otf-doc.pdf,]
+catppuccinpalette:
+  labels: [颜色,幻灯片,幻灯片主题,]
+  docpaths: [catppuccinpalette.pdf,]
+causets:
+  labels: [物理,哈斯图,]
+  docpaths: [causets.pdf,]
+ccool:
+  labels: [编程命令和宏,]
+  docpaths: [ccool.pdf,]
+cdcmd:
+  labels: [编程命令和宏,]
+  docpaths: [doc/cdcmd-cn.pdf,]
+censor:
+  labels: [脱敏处理,]
+  docpaths: [censor.pdf,]
+centernot:
+  labels: [数学,公式,]
+  docpaths: [centernot.pdf,]
+cfgguide:
+  labels: [配置,]
+  docpaths: [cfgguide.pdf,]
+cfr-lm:
+  labels: [字体支撑,]
+  docpaths: [doc/cfr-lm.pdf,]
+changebar:
+  labels: [元素定位,页边栏,]
+  docpaths: [changebar.pdf,]
+changelog:
+  labels: [变更日志,]
+  docpaths: [changelog.pdf,]
+char2path:
+  labels: [几何图形,图标符号字符,格式转换,绘图,]
+  docpaths: [char2path.pdf,]
+chemarr:
+  labels: [化学,箭头,公式,]
+  docpaths: [chemarr.pdf,]
+chemfig:
+  labels: [化学,分子结构式,化学方程式,]
+  docpaths: [chemfig-en.pdf,]
+chemformula:
+  labels: [化学,化学方程式,]
+  docpaths: [chemformula-manual.pdf,]
+chemmacros:
+  labels: [排版模板,化学,化学方程式,]
+  docpaths: [chemmacros-manual.pdf,]
+chemnum:
+  labels: [化学,标签和引用,]
+  docpaths: [chemnum_en.pdf,]
+chess-problem-diagrams:
+  labels: [国际象棋,]
+  docpaths: [diagram.pdf,]
+chessboard:
+  labels: [国际象棋,]
+  docpaths: [chessboard.pdf,]
+chinesechess:
+  labels: [中国象棋,]
+  docpaths: [chinesechess.pdf,]
+chinese-jfm:
+  labels: [标点挤压,]
+  docpaths: [chinese-jfm.pdf,]
+chronos:
+  labels: [时间轴图,]
+  docpaths: [chronos-doc.pdf,]
+circledtext:
+  labels: [带圈文字,]
+  docpaths: [circledtext.pdf,]
+circuit-macros:
+  labels: [电气电路图,]
+  docpaths: [doc/Circuit_macros.pdf,]
+circuitikz:
+  labels: [电气电路图,]
+  docpaths: [doc/circuitikzmanual.pdf,]
+cistercian:
+  labels: [西多会数字,]
+  docpaths: [cistercian-doc.pdf,]
+citation-style-language:
+  labels: [CSL格式,文献和引用,]
+  docpaths: [citation-style-language-doc.pdf,]
+citeright:
+  labels: [原生作者和单位信息,文献和引用,]
+  docpaths: [citeright.pdf,]
+classes:
+  labels: [排版模板,]
+  docpaths: [classes.pdf,]
+classico:
+  labels: [字族和字体,]
+  docpaths: [doc/classico-samples.pdf,]
+classicthesis:
+  labels: [排版模板,]
+  docpaths: [ClassicThesis.pdf,]
+classlist:
+  labels: [记录文档类,编程命令和宏,]
+  docpaths: [classlist.pdf,]
+clearsans:
+  labels: [字族和字体,]
+  docpaths: [doc/clear-samples.pdf,]
+cleveref:
+  labels: [标签和引用,]
+  docpaths: [cleveref.pdf,]
+clicks:
+  labels: [幻灯片,]
+  docpaths: [clicks.pdf,]
+clistmap:
+  labels: [数组,遍历,]
+  docpaths: [clistmap.pdf,]
+cloze:
+  labels: [填空效果,]
+  docpaths: [cloze-doc.pdf,]
+clsguide:
+  labels: [教程和手册,]
+  docpaths: [clsguide.pdf,]
+cluttex:
+  labels: [自动化工具,]
+  docpaths: [doc/cluttex.pdf,]
+cmtiup:
+  labels: [字族和字体,数学,]
+  docpaths: [cmtiup.pdf,]
+cmupint:
+  labels: [字族和字体,数学,]
+  docpaths: [doc/cmupint.pdf,]
+codeanatomy:
+  labels: [代码展示,解剖图,]
+  docpaths: [codeanatomy.usage.pdf,]
+codebox:
+  labels: [代码展示,]
+  docpaths: [codebox.pdf,]
+codedescribe:
+  labels: [代码展示,编程命令和宏,]
+  docpaths: [doc/codedescribe.pdf,]
+codehigh:
+  labels: [代码展示,]
+  docpaths: [codehigh.pdf,]
+collcell:
+  labels: [表格,编程命令和宏,]
+  docpaths: [collcell.pdf,]
+colonequals:
+  labels: [数学,图标符号字符,]
+  docpaths: [colonequals.pdf,]
+color:
+  labels: [颜色,]
+  docpaths: [color.pdf,]
+colorblind:
+coloredbelts:
+coloredtheorem:
+colorist:
+colortbl:
+  labels: [表格,颜色,]
+  docpaths: [colortbl.pdf,]
+commalists-tools:
+complexpolylongdiv:
+concmath-otf:
+context-notes-zh-cn:
+  labels: [教程和手册,]
+  docpaths: [context-notes-zh-cn.pdf,]
+cooking-units:
+cool:
+cora-macs:
+counterz:
+covington:
+create-theorem:
+creationboites:
+  labels: [文本框,盒子,]
+  docpaths: [doc/CreationBoites-doc.pdf,]
+crefthe:
+  labels: [引用和标签,]
+  docpaths: [crefthe-doc.pdf,]
+crimson:
+crossrefware:
+  labels: [自动化工具,脚本,]
+  docpaths: [crossrefware.pdf,]
+crossword:
+  labels: [填字游戏,数独,卡库罗,]
+  docpaths: [cwpuzzle.pdf,]
+cs-techrep:
+csquotes:
+  labels: [引号,]
+  docpaths: [csquotes.pdf,]
+csthm:
+csvsimple:
+ctable:
+  labels: [浮动体,]
+  docpaths: [ctable.pdf,]
+ctex:
+currfile:
+curve2e:
+CusTeX:
+customenvs:
+  labels: [排版模板,]
+  docpaths: [doc/customenvs-doc-en.pdf,]
+cuted:
+  labels: [多栏,]
+  docpaths: [cuted.pdf,]
+cvss:
+cweb:
+dashrulex:
+  labels: [虚线,]
+  docpaths: [dashrulex.pdf,]
+datatool-english:
+datatool:
+datestamp:
+datetime2:
+dbshow:
+dccpaper:
+dcolumn:
+  labels: [表格,]
+  docpaths: [dcolumn.pdf,]
+ddphonism:
+decision-table:
+  labels: [表格,矩阵,]
+  docpaths: [decision-table.pdf,]
+defoldfonts:
+dejavu-otf:
+delarray:
+  labels: [表格,]
+  docpaths: [delarray.pdf,]
+derivative:
+DictSym:
+didactic:
+  labels: [排版模板,]
+  docpaths: [didactic.pdf,]
+didec:
+diffcoeff:
+doc:
+  labels: [文学编程,]
+  docpaths: [doc.pdf,]
+docstrip:
+  labels: [文学编程,]
+  docpaths: [docstrip.pdf,]
+docsurvey:
+  labels: [教程和手册,]
+  docpaths: [docsurvey.pdf,]
+doibanner:
+  labels: [DOI横幅,]
+  docpaths: [doibanner.pdf,]
+domaincoloring:
+draftwatermark:
+Drawing-with-METAPOST:
+drawmgr:
+dsptricks:
+dtxdescribe:
+dtxgen:
+ducksay:
+DVIasm:
+dvipscol:
+  labels: [教程和手册,]
+  docpaths: [dvipscol.pdf,]
+dvisvgm:
+dynkin-diagrams:
+easing :
+easybook:
+EasyDTX:
+ebproof:
+elpres:
+elsarticle:
+embedfile:
+embrac:
+emoji:
+emotion:
+endheads:
+  labels: [脚注和尾注,]
+  docpaths: [endheads.pdf,]
+engord:
+  labels: [基数词和序数词,]
+  docpaths: [engord.pdf,]
+enotez:
+  labels: [脚注和尾注,]
+  docpaths: [enotez_en.pdf,]
+enparen:
+  labels: [括号,数学,]
+  docpaths: [enparen.pdf,]
+enumext:
+  labels: [列表,]
+  docpaths: [enumext.pdf,]
+enumitem:
+  labels: [列表,]
+  docpaths: [enumitem.pdf,]
+enumsub:
+  labels: [列表,]
+  docpaths: [enumsub.pdf,]
+envelope-letter:
+enverb:
+eolang:
+eoldef:
+eolgrab:
+  labels: [编程命令和宏,]
+  docpaths: [eolgrab.pdf,]
+epcqrcode:
+eplain:
+epst.pdf,]:
+eqnlines:
+erewhon-math:
+erw-l3:
+eso-pic:
+  labels: [钩子,图像,]
+  docpaths: [eso-pic.pdf,]
+essaykit:
+etex:
+  labels: [教程和手册,]
+  docpaths: [etex_man.pdf,]
+etl:
+etoolbox:
+euclidean-lattice:
+euclideangeometry:
+euler-math:
+EuropeCV:
+everypage:
+exam-zh:
+exam:
+exercisesheets:
+exesheet:
+expex-glossonly:
+  labels: [语言学,]
+  docpaths: [expex-glossonly.pdf,]
+expkv-bundle:
+expl3:
+  labels: [教程和手册,]
+  docpaths: [expl3.pdf,]
+expltools:
+exscale:
+  labels: [缩放,]
+  docpaths: [exscale.pdf,]
+exsol:
+extractbb:
+ezedits:
+fadingimage:
+  labels: [图像,]
+  docpaths: [doc/fadingimage.pdf,]
+fancyhdr:
+  labels: [页眉和页脚,]
+  docpaths: [fancyhdr.pdf,]
+fancymag:
+fancyqr:
+fancyvrb:
+  labels: [逐字,]
+  docpaths: [doc/fancyvrb-doc.pdf,]
+farbe:
+fbox:
+  labels: [文本框,盒子,]
+  docpaths: [doc/fbox.pdf,]
+fcolumn:
+fgruler:
+fibnum:
+  labels: [斐波那契数,计算,]
+  docpaths: [fibnum.pdf,]
+figchild:
+figput:
+figureversions:
+fileerr:
+  labels: [测试,]
+  docpaths: [fileerr.pdf,]
+filehook:
+fillpages:
+  labels: [页面数量,]
+  docpaths: [fillpages-documentation.pdf,]
+fillwith:
+fistrum:
+fix-cm:
+  labels: [字体支撑,]
+  docpaths: [fix-cm.pdf,]
+fixltxhyph:
+floatpag:
+  labels: [浮动体,页眉和页脚,]
+  docpaths: [floatpag.pdf,]
+flowfram:
+flushend:
+  labels: [多栏,浮动体,页眉和页脚,]
+  docpaths: [flushend.pdf,]
+fmtcount:
+fnpct:
+  labels: [脚注和尾注,标点挤压,]
+  docpaths: [fnpct-manual.pdf,]
+fodot:
+  labels: [逐字,]
+  docpaths: [fodot-doc.pdf,]
+fontawesome5:
+fontawesome6:
+fontawesome7:
+fontawesomescaled:
+fontscale:
+fontscripts:
+fontsetup:
+fontsmpl:
+  labels: [字族和字体,测试,]
+  docpaths: [fontsmpl.pdf,]
+fontspec:
+footmisc:
+  labels: [脚注和尾注,]
+  docpaths: [footmisc-doc.pdf,]
+footnoterange:
+  labels: [脚注和尾注,]
+  docpaths: [footnoterange.pdf,]
+forest-ext:
+forloop:
+FraGoLi:
+framedsyntax:
+  labels: [文本框,盒子,]
+  docpaths: [FramedSyntax.pdf,]
+freemath:
+fretplot:
+froufrou:
+ftnright:
+  labels: [多栏,脚注和尾注,]
+  docpaths: [ftnright.pdf,]
+functional:
+futharksymb:
+gb4e-next:
+  labels: [脚注和尾注,]
+  docpaths: [gb4e-next.pdf,]
+gb4e:
+  labels: [语言学,]
+  docpaths: [gb4e-doc.pdf,]
+gckanbun:
+genealogy-profiles:
+genealogytree:
+gentium-otf:
+gentium-sil:
+geometry:
+  labels: [页面尺寸和布局,]
+  docpaths: [geometry.pdf,]
+gfdl:
+ghsystem:
+git-latexdiff:
+gitinfo-lua:
+gitver:
+glossaries-extra:
+  labels:  [缩略语,术语,]
+  docpaths: [glossaries-extra-manual.pdf,]
+glossaries:
+  labels:  [缩略语,术语,]
+  docpaths: [glossaries-user.pdf,]
+gradient-text:
+grading-scheme:
+  labels: [表格,评分方案,]
+  docpaths: [grading-scheme.pdf,]
+graph35:
+graphics:
+  labels: [图像,]
+  docpaths: [graphics.pdf,]
+graphicx:
+  labels: [图像,]
+  docpaths: [graphicx.pdf,]
+graphpap:
+  labels: [绘图,网格,]
+  docpaths: [graphpap.pdf,]
+Gratzer-Color-Scheme:
+gregoriotex:
+gridset:
+handoutWithNotes:
+hanzibox:
+  labels: [田字格,米字格,拼音,]
+  docpaths: [hanzibox.pdf,]
+hereapplies:
+  labels: [术语,引用和标签,]
+  docpaths: [hereapplies-doc.pdf,]
+heria:
+hhline:
+  labels: [实线,]
+  docpaths: [hhline.pdf,]
+hideanswer:
+hideproofs:
+highlightx:
+HitType:
+hobby:
+hologo:
+homework:
+huaz:
+hustvisual:
+hvarabic:
+hvextern:
+hvfloat:
+  labels: [浮动体,]
+  docpaths: [doc/hvfloat.pdf,]
+hvindex:
+  labels: [索引,]
+  docpaths: [doc/hvindex-doc.pdf,]
+hvlogos:
+hvqrurl:
+hwemoji:
+hypbmsec:
+  labels: [章节和目录,标题,]
+  docpaths: [hypbmsec.pdf,]
+hypcap:
+  labels: [浮动体,锚点,]
+  docpaths: [hypcap.pdf,]
+hypdestopt:
+  labels: [体积优化,]
+  docpaths: [hypdestopt.pdf,]
+hyperref:
+  labels: [超链接,]
+  docpaths: [doc/hyperref.pdf,]
+hypgotoe:
+  labels: [超链接,子文档,]
+  docpaths: [hypgotoe.pdf,]
+hyph-utf8:
+hyphsubst:
+  labels: [连字符,]
+  docpaths: [hyphsubst.pdf,]
+iaria:
+iaria-lite:
+IdeaVault:
+ifdraft:
+  labels: [条件判断,]
+  docpaths: [ifdraft.pdf,]
+ifis-macros:
+iflang:
+  labels: [条件判断,]
+  docpaths: [iflang.pdf,]
+iftex:
+ifthen:
+  labels: [条件判断,]
+  docpaths: [ifthen.pdf,]
+imakeidx:
+  labels: [索引,]
+  docpaths: [imakeidx.pdf,]
+incgraph:
+  labels: [图像,]
+  docpaths: [incgraph.pdf,]
+inconsolata-nerd-font:
+indentfirst:
+  labels: [文本缩进,]
+  docpaths: [indentfirst.pdf,]
+indextra:
+  labels: [索引,]
+  docpaths: [indextra-doc.pdf,]
+inlinegraphicx:
+  labels: [图像,]
+  docpaths: [doc/inlinegraphicx-doc.pdf,]
+innerscript:
+inputenc:
+  labels: [文档编码,]
+  docpaths: [inputenc.pdf,]
+install-latex-guide-zh-cn:
+  labels: [教程和手册,]
+  docpaths: [install-latex-guide-zh-cn.pdf,]
+interlinear:
+intexgral:
+ipsum:
+isosafety:
+isosigns:
+isphysicalmath:
+istgame:
+iwonamath:
+japanese-otf:
+jetbrainsmono-otf:
+JeuxCartes:
+jigsaw:
+jlreq:
+joinbox:
+  labels: [盒子,]
+  docpaths: [joinbox.pdf,]
+jsonparse:
+jsonresume:
+JuliaMono:
+Junicode:
+junicodevf:
+jupynotex:
+jwjournal:
+keisennote:
+keyfloat:
+  labels: [浮动体,]
+  docpaths: [keyfloat.pdf,]
+keytheorems:
+keyval:
+  labels: [编程命令和宏,键值,]
+  docpaths: [keyval.pdf,]
+KKsymbols:
+knowledge:
+  labels: [术语,]
+  docpaths: [knowledge.pdf,]
+koma-script:
+  labels: [排版模板,]
+  docpaths: [doc/scrguide-en.pdf,]
+kpfonts-otf:
+kpfonts:
+ktbox:
+  labels: [文本框,盒子,]
+  docpaths: [doc/ktbox.pdf,]
+l3build:
+  labels: [打包与分发,]
+  docpaths: [l3build.pdf,]
+l3charts:
+l3sys-query:
+  labels: [测试,查询,]
+  docpaths: [l3sys-query-tool.pdf,]
+langsci-avm:
+  labels: [语言学,]
+  docpaths: [langsci-avm.pdf,]
+lastpage:
+  labels: [页码,]
+  docpaths: [lastpage.pdf,]
+latex-amsmath:
+latex-firstaid:
+latex-formatter:
+latex-indexer:
+  labels: [索引,]
+  docpaths: [latex-indexer.pdf,]
+latex-typo:
+latex2e-help-texinfo:
+  labels: [教程和手册,]
+  docpaths: [latex2e.pdf,]
+latexdiff:
+latexindent:
+  labels: [文本缩进,脚本,]
+  docpaths: [documentation/latexindent.pdf,]
+latexmk:
+latexrelease:
+  labels: [版本兼容,]
+  docpaths: [latexrelease.pdf,]
+lato-math:
+layout:
+  labels: [页面布局可视化,]
+  docpaths: [layout.pdf,]
+leaflet:
+lecturenotes:
+lectures:
+leftindex:
+leporello:
+LeteSansMath:
+letter:
+  labels: [排版模板,]
+  docpaths: [letter.pdf,]
+letterswitharrows:
+lettrine:
+libertinus-fonts:
+libertinus-otf:
+libertinus-type1:
+lie-hasse:
+liederbuch:
+liftarm:
+linearregression:
+linebreaker:
+lineno:
+LinguisTiX:
+linkedthm:
+lipsum:
+lisp-on-tex:
+listings:
+  labels: [代码展示,]
+  docpaths: [listings.pdf,]
+listofitems:
+listparskip:
+  labels: [垂直间距,]
+  docpaths: [listparskip_user_guide.pdf,]
+LiteBook:
+LiteSolution:
+litetable:
+  labels: [课程表,]
+  docpaths: [litetable-zh-cn.pdf,]
+liturgy-cw:
+llmk:
+logictools:
+longdivision:
+longtable:
+  labels: [表格,]
+  docpaths: [longtable.pdf,]
+longtwocolumn:
+  labels: [多栏,]
+  docpaths: [longtwocolumn.pdf,]
+lparse:
+lscape:
+  labels: [页面方向,]
+  docpaths: [lscape.pdf,]
+lscapeenhanced:
+  labels: [页面方向,]
+  docpaths: [lscapeenhanced.pdf,]
+lshort-zh-cn:
+  labels: [教程和手册,]
+  docpaths: [lshort-zh-cn.pdf,]
+lstaddons:
+  labels: [代码展示,]
+  docpaths: [lstautogobble.pdf,lstlinebgrd.pdf,]
+lt3luabridge:
+lt3rawobjects:
+ltcmdhooks:
+  labels: [钩子,]
+  docpaths: [ltcmdhooks-doc.pdf,]
+ltfilehook:
+  labels: [钩子,]
+  docpaths: [ltfilehook-doc.pdf,]
+lthooks:
+  labels: [钩子,]
+  docpaths: [lthooks-doc.pdf,]
+ltmarks:
+  labels: [标记,]
+  docpaths: [ltmarks-doc.pdf,]
+ltpara:
+  labels: [钩子,]
+  docpaths: [ltpara-doc.pdf,]
+ltproperties:
+  labels: [钩子,]
+  docpaths: [ltproperties-doc.pdf,] 
+ltshipout:
+  labels: [钩子,]
+  docpaths: [ltshipout-doc.pdf,]
+ltsockets:
+  labels: [钩子,]
+  docpaths: [ltsockets-doc.pdf,]
+lttemplates:
+  labels: [编程命令和宏,]
+  docpaths: [lttemplates-doc.pdf,]
+ltx-talk:
+ltxdoc:
+  labels: [文学编程,]
+  docpaths: [ltxdoc.pdf,]
+ltximg:
+lua-placeholders:
+lua-regression:
+lua-tikz3dtools:
+Lua-UCA:
+Lua-UL:
+lua-unicode-math:
+lua-visual-debug:
+lua-widow-control:
+luaaddplot:
+luacas:
+luacensor:
+luacode:
+luacolor:
+luacomplex:
+luafindfont:
+luagcd:
+luahttp:
+luakeys:
+luakeyval:
+lualatex-math:
+lualinalg:
+luamathalign:
+luamaths:
+luamesh:
+LuaMML:
+luamplib:
+luanumint:
+luaoptions:
+luaotfload:
+luaplot:
+luarandom:
+luaset:
+luasseq:
+luatbls:
+luatex-cn:
+luatex-type-definitions:
+luatex:
+luatexja:
+luatexko:
+luatikz:
+luatruthtable:
+luavlna:
+luaxml:
+lucida-otf:
+lucide-icons:
+luciole:
+luwa-ul:
+LuwianType:
+lwarp:
+LXGW-fonts:
+LydType:
+magicwatermark:
+  labels: [背景或水印,]
+  docpaths: [doc/magicwatermark-cn.pdf,]
+mahjong:
+mailing:
+make4ht:
+makeidx:
+  labels: [索引,]
+  docpaths: [makeindx.pdf,]
+makeindex:
+  labels: [索引,]
+  docpaths: [doc/makeindex.pdf,]
+marginalia:
+marginnote:
+maritime:
+markdown:
+match_parens:
+math-operator:
+mathastext:
+mathcolor:
+  labels: [公式,颜色,]
+  docpaths: [mathcolor.pdf,]
+mathcommand:
+mathtools:
+maze:
+mcf2graph:
+measurebox:
+medmath:
+memoir:
+Memoize:
+menukeys:
+messagepassing:
+metalogox:
+metapost:
+mf2pt1:
+mfb-oldstyle:
+mhchem:
+miama:
+microtype:
+mindflow:
+minim-math:
+minim:
+minimalist:
+minted-code:
+  labels: [代码展示,]
+  docpaths: [doc/minted-code-doc.pdf,]
+minted:
+  labels: [代码展示,]
+  docpaths: [minted.pdf,]
+mismath:
+mitthesis:
+mk:
+moderncv:
+modernruler:
+modguide :
+  labels: [教程和手册,]
+  docpaths: [modguide.pdf,]
+moloch:
+monaspace-otf:
+moremath:
+morewrites:
+mp-geom2d:
+MPchess:
+mpostinl:
+mptrees:
+multi-sudoku:
+multicol:
+  labels: [多栏,]
+  docpaths: [multicol.pdf,]
+multicolrule:
+  labels: [多栏,垂直分隔线,]
+  docpaths: [multicolrule.pdf,]
+multifootnote:
+  labels: [多栏,脚注和尾注,]
+  docpaths: [multifootnote-doc.pdf,]
+multirow:
+  labels: [表格,单元格,]
+  docpaths: [multirow.pdf,]
+MusiXTeX:
+nameauth:
+  labels: [原生作者和单位信息,索引,]
+  docpaths: [nameauth.pdf,]
+natbib:
+  labels: [文献和引用,]
+  docpaths: [natbib.pdf,]
+needspace:
+neoschool:
+NewComputerModern:
+newpax:
+newtx:
+nfssext-cfr:
+nfssfont:
+  labels: [测试,]
+  docpaths: [nfssfont.pdf,]
+nicefilelist:
+nicematrix:
+  labels: [矩阵,]
+  docpaths: [nicematrix.pdf,]
+ninecolors:
+nl-interval:
+nodepthtext:
+nodetree:
+NoteBeamer:
+notoCJKsc:
+NovaBeamer-Theme:
+numbersets:
+numerica-plus:
+numerica-tables:
+numerica:
+numspell:
+odsfile:
+onepgnote:
+open-everyday-symbols:
+openmoji:
+OpTEX:
+optikz:
+OutilsGeomTikZ:
+overarrows:
+overlays:
+overpic:
+packdoc:
+pagelayout:
+  labels: [排版模板,]
+  docpaths: [doc/pagelayout-manual.pdf,]
+pageslts:
+  labels: [页码,]
+  docpaths: [pageslts.pdf,]
+panda:
+pangram:
+papermas:
+paracol:
+  labels: [多栏,]
+  docpaths: [paracol.pdf,]
+parnotes:
+  labels: [段落注,]
+  docpaths: [parnotes.pdf,]
+pascaltriangle:
+passopt:
+pats-resume:
+pdfcolparallel:
+  labels: [平行文本,]
+  docpaths: [pdfcolparcolumns.pdf,]
+pdfjam:
+pdflatexpicscale:
+pdflscape:
+  labels: [页面方向,]
+  docpaths: [pdflscape.pdf,]
+pdfoverlay:
+pdfpages:
+pdfToolbox:
+pdfx:
+pegmatch:
+pennstander-otf:
+perltex:
+pgf-go:
+pgf-interference:
+pgf-PeriodicTable:
+pgf-spectra:
+pgf-umlcd:
+pgf:
+TikZ:
+pgfkeysearch:
+pgfmath-xfp:
+pgfornament-han:
+pgfplots:
+pgfplotsthemebeamer:
+phonenumbers:
+photobook:
+physics-patch:
+physics2:
+pictochrono:
+pifont:
+piton:
+  labels: [代码展示,]
+  docpaths: [piton.pdf,]
+pixelart:
+PixelArtTikz:
+pkginfograb:
+plain-widow:
+plantuml:
+plex-otf:
+plex:
+pmdraw:
+polexpr:
+polyglossia:
+polyomino:
+postit:
+  labels: [便利贴,]
+  docpaths: [doc/postit-doc-en.pdf,]
+postnotes:
+  labels: [脚注和尾注,]
+  docpaths: [postnotes-doc.pdf,]
+powerdot:
+ctan-ppmcheckpdf:
+ppt-slides:
+prettytok:
+principia:
+prisma-flow-diagram:
+proc:
+  labels: [排版模板,]
+  docpaths: [proc.pdf,]
+ProjLib:
+pronunciation:
+proof-at-the-end:
+  labels: [移动证明,]
+  docpaths: [proof-at-the-end.pdf,]
+prooftrees:
+protecteddef:
+  labels: [编程命令和宏,]
+  docpaths: [protecteddef.pdf,]
+pseudo:
+  labels: [代码展示,]
+  docpaths: [doc/pseudo.pdf,]
+pst-3dplot:
+pst-arrow:
+pst-bar:
+pst-barcode:
+pst-circ:
+pst-coil:
+pst-diffraction:
+pst-eucl:
+pst-fit:
+pst-fourbarlinkage:
+pst-func:
+pst-gears:
+pst-geometrictools:
+pst-hsb:
+pst-kepler:
+pst-labo:
+pst-magneticfield:
+pst-massspring:
+pst-math:
+pst-node:
+pst-nutation:
+pst-optic:
+pst-plot:
+pst-poker:
+pst-solarsystem:
+pst-solides3d:
+pst-sphericaltrochoid:
+pst-tools:
+pst-tvz:
+pst-vehicle:
+pstricks-add:
+pstricks-base:
+ptex-manual:
+  labels: [日语,]
+  docpaths: [ptex-manual.pdf,]
+pwebmac:
+pxpic:
+PyLuaTEX:
+pynotebook:
+pythonimmediate:
+pythontex:
+Q-and-A:
+qrbill:
+qrcodetikz:
+quantum-chemistry-bonn:
+quantumcubemodel:
+quizztex:
+qworld:
+ragged2e:
+rainbowbrackets:
+raleway:
+randexam:
+randintlist:
+realhats:
+rebuttal:
+rec-thy:
+recorder-fingering:
+refcheck:
+  labels: [标签和引用,测试,]
+  docpaths: [refdemo.pdf,]
+refstyle:
+  labels: [引用和标签,]
+  docpaths: [refstyle.pdf,]
+reledmac:
+reledpar:
+reptheorem:
+rescansync:
+resizegather:
+  labels: [公式缩放,]
+  docpaths: [resizegather.pdf,]
+ResolSysteme:
+responsive:
+rest-api:
+robust-externalize:
+rotating:
+  labels: [元素调整,]
+  docpaths: [rotating.pdf,]
+rotchiffre:
+  labels: [加密,]
+  docpaths: [rotchiffre.pdf,]
+rpgicons:
+rule-d:
+runtexfile:
+sagetex:
+  labels: [sage,数学,计算,]
+  docpaths: [sagetex.pdf,]
+sankey:
+sanskrit:
+sansmathfonts:
+saveenv:
+scaletextbullet:
+schemata:
+schooldocs:
+scontents:
+Scrabble:
+scrhack:
+scrindex:
+  labels: [版本兼容,]
+  docpaths: [scrindex.pdf,]
+scripture:
+seatingchart:
+secnum:
+  labels: [章节和目录,章节编号,]
+  docpaths: [secnum.pdf,]
+secretx:
+SemanTEX:
+semesterplannerLua:
+setouterhbox:
+  labels: [自动断行,公式,盒子,]
+  docpaths: [setouterhbox.pdf,]
+setspace:
+setspaceenhanced:
+settobox:
+  labels: [盒子尺寸,]
+  docpaths: [settobox.pdf,]
+shellesc:
+  labels: [系统命令,]
+  docpaths: [shellesc.pdf,]
+show.pdf,]-tags:
+showkerning:
+showkeys:
+  labels: [显示内部引用键,测试,]
+  docpaths: [showkeys.pdf,]
+sidenotes:
+sidenotesplus:
+sim-os-menus:
+  labels: [模拟终端,]
+  docpaths: [doc/sim-os-menus-doc.pdf,]
+simplebnf:
+simpleicons:
+simplekv:
+simplenodes:
+simplexam:
+siunitx:
+SJTUTeX:
+skdoc:
+skeldoc:
+skillicons:
+slixte:
+smart-eqn:
+songproj:
+soul:
+spacingtricks:
+spark-otf:
+spath3:
+spbmark:
+SpeLATEX:
+splentinex:
+spreadtab:
+  labels: [表格,计算,]
+  docpaths: [spreadtab-en.pdf,]
+SQLTeX:
+stabular:
+  labels: [表格,]
+  docpaths: [stabular.pdf,]
+stackrel:
+  labels: [上标和下标,公式,]
+  docpaths: [stackrel.pdf,]
+standalone:
+  labels: [子文档,]
+  docpaths: [standalone.pdf,]
+standardsectioning:
+starray:
+sTEX:
+stfloats:
+  labels: [浮动体,多栏,]
+  docpaths: [stfloats.pdf,]
+stocksize:
+  labels: [物理纸张,页面尺寸和布局,]
+  docpaths: [stocksize-doc.pdf,]
+stretchy:
+styledcmd:
+suanpan-l3:
+subcaption:
+  labels: [浮动体,标题,]
+  docpaths: [caption.pdf,]
+subeqn:
+subeqnarray:
+sunpath:
+supertabular:
+  labels: [表格,]
+  docpaths: [supertabular.pdf,]
+swfigure:
+  labels: [图像,]
+  docpaths: [swfigure.pdf,]
+switch:
+synthslant:
+syntonly:
+  labels: [测试,]
+  docpaths: [syntonly.pdf,]
+systeme:
+tableof:
+  labels: [章节和目录,]
+  docpaths: [tableof.pdf,]
+tablerIcons:
+tabular2:
+  labels: [表格,]
+  docpaths: [tabular2.pdf,]
+tabularht:
+  labels: [表格,]
+  docpaths: [tabularht.pdf,]
+tabularkv:
+  labels: [表格,键值,]
+  docpaths: [tabularkv.pdf,]
+tabularray:
+  labels: [表格,]
+  docpaths: [tabularray.pdf,]
+tabularx:
+  labels: [表格,]
+  docpaths: [tabularx.pdf,]
+talk:
+TangramTikZ:
+tasks:
+  labels: [多栏,]
+  docpaths: [tasks-manual.pdf,]
+tblr-extras:
+  labels: [表格,]
+  docpaths: [tblr-extras-doc-EN.pdf,]
+tcolorbox:
+  labels: [文本框,盒子,]
+  docpaths: [tcolorbox.pdf,]
+temporal-logic:
+tensormatrix:
+  labels: [张量矩阵,]
+  docpaths: [tensormatrix.pdf,]
+terminalcode:
+  labels: [模拟终端,]
+  docpaths: [terminalcode-doc.pdf,]
+termsim:
+  labels: [模拟终端,]
+  docpaths: [termsim.pdf,]
+tex-nutshell:
+  labels: [教程和手册,]
+  docpaths: [tex-nutshell.pdf,]
+tex4ebook:
+TeX4ht:
+texbytopic:
+  labels: [教程和手册,]
+  docpaths: [TeXbyTopic.pdf,]
+texdef:
+texdoc:
+TeXFindPkg:
+texfot:
+texinfo-latest:
+texinfo:
+texlogfilter:
+texlogsieve:
+texshade:
+textcase:
+textpos:
+texvc:
+The-Comprehensive-LATEX-Symbol-List:
+thematicpuzzle:
+thepdfnumber:
+  labels: [数值归一化,]
+  docpaths: [thepdfnumber.pdf,]
+thermodynamics:
+thmlist:
+thumbs:
+tikz-bpmn:
+tikz-cookingsymbols:
+tikz-decofonts:
+tikz-ext:
+tikz-kalender:
+tikz-mirror-lens:
+tikz-network:
+TikZ-planets:
+tikz-relay:
+tikz-shields:
+tikz-trackschematic:
+tikz-triminos:
+tikz3d-fr:
+tikzbrickfigurines:
+tikzbricks:
+tikzcalendarnotes:
+tikzdotncross:
+TikZducks:
+tikzfill:
+tikzfxgraph:
+TikZlings:
+TikZmarmots:
+TikZpingus:
+tikzquads:
+tikzquests:
+timechart:
+timeop:
+titleps:
+  labels: [页眉和页脚,]
+  docpaths: [titleps.pdf,]
+titlesec:
+  labels: [章节和目录,]
+  docpaths: [titlesec.pdf,]
+tkz-elements:
+tkz-euclide:
+tkz-grapheur:
+tkz-interval:
+tocdata:
+  labels: [章节和目录,]
+  docpaths: [tocdata.pdf,]
+todonotes:
+tokcycle:
+tokmap:
+tqft:
+trace:
+  labels: [测试,]
+  docpaths: [trace.pdf,]
+tracklang:
+traffic-light-protocol:
+transparent:
+trig:
+  labels: [计算,]
+  docpaths: [trig.pdf,]
+TrivialPursuit:
+truthtable:
+tsvtemplate:
+tugboat:
+tuple:
+turnthepage:
+tutodoc:
+twoopt:
+  labels: [可选参数,编程命令和宏,]
+  docpaths: [twoopt.pdf,]
+typog:
+tzplot:
+ucph-revy:
+ullrcorners:
+undolabl:
+  labels: [标签和引用,]
+  docpaths: [undolabl.pdf,]
+unibidi-lua:
+unicode-data:
+unicode-math:
+unicodefonttable:
+unitconv:
+unravel:
+updatemarks:
+upmendex:
+UPmethodology:
+uptex-fonts:
+usrguide:
+  labels: [教程和手册,]
+  docpaths: [usrguide.pdf,]
+utfsym:
+varioref:
+  labels: [标签和引用,]
+  docpaths: [varioref.pdf,]
+VarsFromJobname:
+vectorlogos:
+verbatimbox:
+  labels: [逐字,]
+  docpaths: [verbatimbox.pdf,]
+verifycommand:
+vexillology:
+visualtoks:
+vpp:
+vscodeicons:
+weiqi:
+whatsnote:
+wheelchart:
+withargs:
+witharrows:
+wordcloud:
+wordle:
+worldflags :
+wrapfig2:
+  labels: [环绕,]
+  docpaths: [wrapfig2.pdf,]
+wrapstuff:
+  labels: [环绕,]
+  docpaths: [wrapstuff.pdf,]
+WriteOnGrid:
+xassoccnt:
+xcharter-math:
+xcjk2uni:
+xcoffins:
+  labels: [盒子,]
+  docpaths: [xcoffins.pdf,]
+xcolor:
+xcomment:
+xecjk:
+XePersian:
+xetexko:
+xgalley:
+xindex:
+xint-regression:
+xint:
+xintsession:
+xistercian:
+xkeyval:
+xlop:
+xltabular:
+  labels: [表格,]
+  docpaths: [doc/xltabular-doc.pdf,]
+xmeaning:
+xpeekahead:
+xpinyin:
+xr:
+  labels: [标签和引用,子文档,]
+  docpaths: [xr.pdf,]
+xreview:
+xsavebox:
+  labels: [体积优化,]
+  docpaths: [xsavebox.pdf,]
+xsim:
+xspace:
+  labels: [编程命令和宏,]
+  docpaths: [xspace.pdf,]
+xstacks:
+xstring:
+xtufte:
+YAMLvars:
+yet-another-guide-latex2e:
+  labels: [教程和手册,]
+  docpaths: [Yet-Another-Guide-LaTeX2e_v132.pdf,]
+yfonts-otf:
+yquant:
+Ysabeau:
+zeckendorf:
+zennote:
+  labels: [排版模板,]
+  docpaths: [zennote.pdf,]
+zhlipsum:
+zref-check:
+  labels: [标签和引用,测试,]
+  docpaths: [zref-check-doc.pdf,]
+zref-clever:
+  labels: [标签和引用,]
+  docpaths: [zref-clever-doc.pdf,]
+zref-vario:
+  labels: [标签和引用,]
+  docpaths: [zref-vario-doc.pdf,]
+zref:
+  labels: [标签和引用,]
+  docpaths: [zref.pdf,]
+zx-calculus:

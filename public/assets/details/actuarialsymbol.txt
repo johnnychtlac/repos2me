@@ -1,0 +1,1 @@
+该宏包由 David Beauchemin 和 Vincent Goulet 开发，旨在帮助精算师和数学家轻松、一致地排版寿险精算和金融数学中复杂的符号。该宏包主要解决了标准 LaTeX 难以完美处理的三类排版问题：四角上下标（Actuarial Symbols）： 精算符号通常包含左下、左上、右下、右上四个位置的辅助符号。双字母主体符号（Two-letter Symbols）： 如（DA），需要特殊的间距调整（Kerning）以符合排版规范。优先序数字（Precedence Numbers）： 在多生命状态（Multiple Lives）的符号中，需要在状态的上方或下方标注数字（如 1,2,3 ）来表示失效顺序。

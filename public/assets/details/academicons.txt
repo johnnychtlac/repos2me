@@ -1,0 +1,1 @@
+academicons 的主要功能是为 LaTeX 提供与 Academicons 字体 的特定绑定。它允许用户通过简单的 LaTeX 命令，直接调用 146 个高质量的在线学术社交图标。支持 XeLaTeX 或 LuaLaTeX。支持 pdfLaTeX。该宏包的设计灵感来源于著名的 fontawesome 宏包，旨在为学术界提供类似的图标支持。

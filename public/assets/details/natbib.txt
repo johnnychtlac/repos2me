@@ -1,0 +1,6 @@
+natbib 的核心作用是统一并简化了 LaTeX 中“作者-年份”（Author–Year）和“数字”（Numerical）两种引用模式的操作。natbib 既可以处理传统的数字引用（如 [1], [2]），也可以处理作者-年份引用（如 (Jones et al., 1990)）。用户可以在不修改正文 \cite 命令的情况下，仅通过更改宏包选项或参考文献样式，就能在“数字模式”和“作者-年份模式”之间自由切换。它重新实现了 LaTeX 的 \cite 命令，定义了一套新的命令（如 \citet 和 \citep），使得引用格式更加规范和灵活。兼容标准的 .bst 样式文件（如 plain.bst）。兼容其他引用宏包的样式（如 harvard，apalike，chicago 等）。兼容 hyperref（超链接）、chapterbib（分章参考文献）、babel 等常用宏包。
+文档中重点介绍了 natbib 定义的几个核心引用命令，它们比标准 LaTeX 的 \cite 更加直观：
+\citet{key}：文本引用（Textual citation）。输出示例：Jones et al. (1990)。适用于将作者作为句子的一部分。
+\citep{key}：括号引用（Parenthetical citation）。输出示例：(Jones et al., 1990)。适用于将引用放在句尾括号内。
+\citep*{key} 或 \citet*{key}：星号版本。强制显示完整的作者列表（例如显示所有作者而非 "et al."）。
+\citealt{key}：无括号引用。输出示例：Jones et al. 1990。不添加任何括号，仅输出文本。

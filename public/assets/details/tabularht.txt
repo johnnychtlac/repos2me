@@ -1,0 +1,1 @@
+该宏包的主要功能是为 LaTeX 的表格环境（tabular 和 array）增加高度指定功能。标准的 tabular 环境通常根据内容自动调整高度，而 tabularht 允许用户强制设定表格的总高度，或者在自然高度的基础上增加额外的高度。支持 array, delarray, tabularx 等宏包。

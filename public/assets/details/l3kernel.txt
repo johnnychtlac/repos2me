@@ -1,0 +1,7 @@
+l3kernel 宏包中的文件为 TeX 编程人员提供了一个具有明确定义语法规范的应用程序接口（API），该接口完全独立于文档层面的语法。因此，所提供的命令不打算用于文档层面，也不用于文档类（class）文件的版式设计描述。该 API 为 LaTeX 内核的新功能扩展以及其他高级扩展提供了基础。这一编程层被设计为 LaTeX2e 格式构建的一部分进行加载，或者作为宏包加载到 plain TeX 或其他格式中。LaTeX 团队认为 l3kernel 提供的语法和功能是稳定的。尽管某些函数仍可能会发生变更，但相对于 l3kernel 的整体范围而言，这些变更将非常微小。特别是，不会删除任何函数，尽管部分函数可能会被标记为“已弃用”（deprecated）。
+l3kernel 宏包需要 e-TeX 扩展以及许多额外的“实用程序”原语（primitives），其中绝大多数最初是添加到 pdfTeX 中的。特别是，必须具备以下 pdfTeX 原语的等效功能：\ifincsname、\ifpdfprimitive、\pdfcreationdate、\pdfelapsedtime、\pdffiledump、\pdffilemoddate、\pdffilesize、\pdflastxpos、\pdflastypos、\pdfmdfivesum、\pdfnormaldeviate、\pdfpageheight、\pdfpagewidth、\pdfprimitive、\pdfrandomseed、\pdfresettimer、\pdfsavepos、\pdfsetrandomseed、\pdfshellescape、\pdfstrcmp、\pdfuniformdeviate。除了上述要求外，完全支持 Unicode 的引擎必须提供 LuaTeX 手册中记录的以下原语功能：\Uchar、\Ucharcat、\Umathcode。
+interface3：该文件是 LaTeX3（expl3）编程接口的索引或参考手册。供 LaTeX 宏包开发者查阅，以便使用标准化的 expl3 语法来编写高效、稳定的代码。展示了 LaTeX3 严格的命名约定，帮助开发者理解函数的用途和参数类型。引导用户去查找具体命令的详细定义和用法说明。
+l3doc：是一个实验性的 LaTeX 文档类（class），专门用于编写和排版 LaTeX3 （expl3） 宏包的源代码文档。它旨在最终取代传统的 ltxdoc 类，以更好地适应 LaTeX3 编程环境的需求。
+l3prefixes：该文档（l3prefixes.pdf）列出了已向 LaTeX 团队注册、供在 expl3 代码中使用的前缀（prefixes）列表。
+l3styleguide：该文档是 LaTeX3 内核的代码风格指南（Style Guide），主要面向 LaTeX3 内核代码及文档的开发者。其核心目的是确保不同作者编写的代码和文档在风格上保持一致，从而便于长期的维护和协作。
+l3term-glossary：该文档描述了在 LaTeX3 (expl3) 编程语境下，相关的 TeX 术语及其含义。它旨在帮助开发者理解 TeX 底层机制如何在 LaTeX3 的代码风格中运作。

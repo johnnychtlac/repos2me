@@ -1,0 +1,17 @@
+upertabular 宏包提供了一个名为 supertabular 的新环境，它是标准 LaTeX tabular 环境的扩展。标准的 tabular 环境必须在一页内完成，如果内容过长会导致溢出（Overfull vbox）。supertabular 能够自动检测页面空间，当表格内容超出当前页剩余空间时，自动断开表格，插入可选的表尾（tabletail），换页后插入可选的表头（tablehead），并继续绘制表格。它在内部仍然使用 tabular 环境，但在每次遇到行结束符 \\ 时评估已用空间。
+\tablefirsthead{...}：定义表格第一页顶部的表头内容（可选）。
+\tablehead{...}：定义后续每一页顶部的表头内容。
+\tabletail{...}：定义除最后一页外，每页底部插入的内容（例如“续下页”提示）。
+\tablelasttail{...}：定义最后一页底部插入的内容（可选）。
+\tablecaption、\topcaption、\bottomcaption：为跨页表格添加标题，支持放在顶部或底部，功能类似标准的 \caption。
+\shrinkheight{length}：手动调整允许的最大高度，用于解决某些特殊情况下的分页问题。
+supertabular / supertabular*：类似于 tabular / tabular*，后者可拉伸至指定宽度。
+mpsupertabular / mpsupertabular*：支持脚注。这些环境将每一页的内容放入一个 minipage 中，从而允许在表格单元格内使用脚注（脚注文本会打印在每页底部）。
+宏包加载时支持以下选项来控制日志输出和算法：
+errorshow（默认）：不写入额外信息。
+pageshow：记录分页决策信息。
+debugshow：记录每一行的添加细节。
+高度计算算法：
+estimate（默认）：使用旧的基于估算的算法（兼容性更好）。
+calculate：使用新的基于计算的算法（能更精确地填充页面，减少 underfull vbox，但在极小字体或复杂公式下可能表现不同）。
+如果普通单元格内容高度超过估算值，仍可能产生 overfull vbox。包含 p 类型列（段落列）时，如果最后一行内容过多，可能导致分页错误。不建议将 supertabular 放在浮动体环境（如 table）中，因为浮动体会试图将整个表格放在一页上，这与跨页功能冲突。如果同一页上有浮动对象（float），可能会导致不可预期的结果。

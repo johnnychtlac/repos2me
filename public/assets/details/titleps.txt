@@ -1,0 +1,8 @@
+主要用于自定义和设置页面的页眉（headlines）和页脚（footlines）。提供了一种更高级的接口来定义页眉和页脚，用户无需直接处理复杂的 LaTeX 原生标记机制（如 \leftmarks 和 \rightmarks）。可以直接使用注册为“标记”的命令或变量（如 \sectiontitle, \thechapter），宏包会自动返回发出标记时的预期值（即当前章节标题或编号）。可以单独使用，但与 titlesec 宏包配合使用时功能最强大。支持标准文档类及许多其他类。提供了比标准 LaTeX 更强大的标记功能，特别是处理浮动体（floats）时的页眉页脚。
+\newpagestyle{<name>}{<commands>}：定义新的页面样式。
+\sethead[...] {...} / \setfoot[...] {...}：设置页眉和页脚的具体内容（区分奇偶页）。
+\settitlemarks{chapter, section, ...}：指定哪些级别的标题作为标记源。
+\toptitlemarks, \firsttitlemarks, \bottitlemarks 等：切换后续命令获取哪种类型的标记值。
+\newtitlemark{<command>}：将自定义命令注册为标记，以便在页眉页脚中使用（如语言名称、自定义计数器）。
+\headrule, \footrule, \setheadrule{<length>}：添加或设置分隔线。
+通常使用 \usepackage[pagestyles]{titlesec} 一起加载，或者单独使用 \usepackage{titleps}。对于双栏布局，可能需要配合 fix2col 包。如果需要使用标准的 \markboth 行为，可以通过 \setmarkboth 进行调整，但通常建议直接使用 titleps 提供的机制。

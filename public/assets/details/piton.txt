@@ -1,0 +1,7 @@
+piton 宏包利用 LuaLaTeX 中的 Lua 库 LPEG（Parsing Expression Grammars）来解析计算机代码，并实现语法高亮。必须使用 LuaLaTeX 引擎进行编译（不支持 pdfLaTeX，XeLaTeX 等）。无需外部程序（No external program），不需要 --shell-escape 参数，编译速度快。
+使用 \piton{...} 命令，适合在段落中插入短代码。
+使用 {Piton} 环境，用于排版多行代码块。
+使用 \PitonInputFile 命令，直接插入并格式化外部源代码文件。
+原生支持语言 Python（默认）、OCaml、C（及 C++）、SQL。minimal（极简模式）和 verbatim（纯文本模式）。用户可以通过 \NewPitonLanguage 命令（兼容 listings 宏包的语法）定义自己的语言解析器。
+通过 \SetPitonStyle 命令，用户可以自定义关键字、注释、字符串等元素的颜色和字体（例如将注释设为灰色，关键字设为粗体）。支持自动行号，且支持跨多个代码块连续编号、跳过空行编号等复杂设置。支持设置代码块背景色（background-color），并支持圆角边框（rounded-corners，需配合 tikz）。支持通过 gobble、auto-gobble 等键去除代码前的缩进空格。
+它允许在代码中直接嵌入 LaTeX 命令：以 #>（Python）或 //>（C/SQL）开头的注释，其后的内容会被当作 LaTeX 代码编译。支持在注释中使用 $...$ 插入数学公式。支持定义特定的定界符（如 !...!），在代码中直接插入任意 LaTeX 代码（例如高亮特定行）。可以从外部文件导入代码，并支持只导入文件中特定标签（Markers）之间的部分，或特定行号范围。可以将代码块的内容写入外部文件。可以将代码文件作为附件（Joined files）嵌入生成的 PDF 中。支持添加回形针图标（paperclip）或注释（annotation），点击即可查看源码。完美支持 beamer 文档类。支持 Overlay（覆盖/分步显示），允许在代码环境中使用 \pause、\only、\alert 等命令，非常适合教学演示。提供了 tcolorbox 键，方便与 tcolorbox 宏包结合，创建可分页、可带标题的漂亮代码框。

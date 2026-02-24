@@ -1,0 +1,3 @@
+lscapeenhanced 是一个用于修复标准 lscape（以及依赖它的 pdflscape）宏包潜在问题的增强版宏包。标准的 lscape 宏包在横向页面（landscape mode）中，会将 \textheight 设置为 \textwidth 的值，但不将 \textwidth 设置为原来的 \textheight 值。这种处理方式是不一致的。这种不一致会导致与其他宏包（如 showframe、KOMA-Script 的 scrlayer 和 scrlayer-scrpage）发生冲突，导致页眉、页脚或边框显示错误。lscapeenhanced 通过修补 lscape 的内部命令，避免了这种错误的尺寸交换，从而解决了兼容性问题。它特别修复了在使用 KOMA-Script 类（如 scrartcl, scrreprt, scrbook）或相关包时，横向页面布局错乱的问题。
+由于 pdflscape 基于 lscape，该宏包同样适用于修复 pdflscape 带来的类似问题。
+在导言区用 \usepackage{lscapeenhanced} 直接替换 \usepackage{lscape}。这会自动加载 lscape 并应用修复补丁。如果需要 pdflscape 的功能，可以使用 \usepackage[pdflscape]{lscapeenhanced}，这会同时加载 pdflscape 并应用修复。

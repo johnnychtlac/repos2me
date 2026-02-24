@@ -1,0 +1,6 @@
+在 LaTeX 编译过程中，\end{document} 并不是绝对的终点。文档结束后，系统还需要处理辅助文件（.aux）、输出最后一页、清理内存等。atveryend 的作用就是让你能够控制你的代码是在这些具体步骤之前还是之后运行，从而避免代码冲突或执行时机错误。
+\AfterLastShipout：enddocument/afterlastpage，在最后一页输出到 DVI/PDF 后执行。
+\AtVeryEndDocument：enddocument/afteraux，在 .aux 辅助文件关闭之后执行（常用于写入最终数据）。
+\AtEndAfterFileList：enddocument/info，在文件列表信息处理后执行。
+\AtVeryVeryEnd：enddocument/end，在文档结束处理的最末端执行。
+\BeforeClearDocument：enddocument，在文档清理（Clear）之前执行。（建议优先使用标准的 \AtEndDocument）

@@ -1,0 +1,6 @@
+该宏包主要用于在页面的边缘快速插入全宽图片，并支持渐隐（fading）效果。它通常包含在 LiteBook 和 LiteSolution 文档类中。该宏包依赖 tikz 宏包及其 fadings 库来实现图片的渐隐效果。它提供了四个主要命令，分别用于从不同方向插入渐隐图片：
+\UPFadingImage： 从顶部开始渐隐。
+\LOWFadingImage： 从底部开始渐隐。
+\LTFadingImage： 从左侧开始渐隐。
+\RITFadingImage： 从右侧开始渐隐。
+需要 tikz 宏包和 fadings 库。

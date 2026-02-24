@@ -1,0 +1,27 @@
+multirow 宏包：允许在表格（tabular、array 及其衍生环境如 longtable、supertabular 等）中创建跨越多行的单元格。
+ \multirow[⟨vpos⟩]{⟨nrows⟩}[⟨bigstruts⟩]{⟨width⟩}[⟨vmove⟩]{⟨text⟩}
+⟨nrows⟩：指定跨越的行数。可以是正数（向下跨）、负数（向上跨）或分数（用于微调）。
+⟨vpos⟩：垂直对齐方式，可选 c (居中，默认), t (顶部), b (底部)。
+⟨width⟩：文本宽度。特殊值包括 * (自然宽度) 和 = (使用所在列的定义宽度)。
+⟨vmove⟩：微调参数，用于手动上下移动文本位置。
+⟨bigstruts⟩：配合 bigstrut 包使用，指定跨度内包含的 strut 数量，以修正高度计算。
+支持多种表格环境，包括 tabularx, tabulary, longtable, supertabular, booktabs 等。
+longtable：修复 longtable 环境中 \cline 与 \multirow 配合时的分页 bug。
+supertabular：增强对 supertabular 的支持，防止跨页时切断多行单元格，并提供 \STneed 命令来预留空间。
+debug：输出调试信息到日志文件。
+与颜色包配合： 提供了处理与 colortbl 或 xcolor 包冲突的方法（例如使用负的 ⟨nrows⟩ 或将 \multirow 放在最后一行）。
+bigstrut 宏包：
+创建比标准 LaTeX 行高更大的“支柱”（strut），用于增加表格行的高度，使内容看起来不那么拥挤，特别是在有横线（\hline）的情况下。
+ \bigstrut[⟨x⟩]
+不带参数：同时增加上方高度和下方深度。
+[t]：仅增加上方高度（常用于 \hline 之后的行）。
+[b]：仅增加下方深度（常用于 \hline 之前的行）。
+ \bigstrutjot 控制增加的大小（默认为 2pt，若单独加载 multirow 则为 3pt）。
+通常用于相邻于 \hline 的单元格中，以改善表格外观。multirow 包会利用此参数来更准确地计算跨行单元格的总高度。
+bigdelim 宏包：在表格中创建跨越多个行的大定界符（如大括号、圆括号等），通常用于表示行之间的分组关系。需配合 multirow 包使用。
+\ldelim{⟨delim⟩}{⟨n⟩}[⟨vmove⟩]{⟨width⟩}[⟨text⟩]：创建左侧定界符。
+\rdelim{⟨delim⟩}{⟨n⟩}[⟨vmove⟩]{⟨width⟩}[⟨text⟩]：创建右侧定界符。
+⟨delim⟩：定界符符号（如 (, [, \{ 等）。
+⟨n⟩：跨越的行数。
+⟨text⟩：定界符旁边的可选文本（左定界符在左侧，右定界符在右侧）。
+ 常用于方程组展示或对表格行进行分组标记。

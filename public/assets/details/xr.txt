@@ -1,0 +1,1 @@
+这是一个用于在 LaTeX 文档中引用外部文档标签（labels）、页码和参考文献的宏包。允许在一个 LaTeX 主文档中引用另一个或多个辅助文档（.tex 文件）中的内容，如章节、公式、图表等的标签（\label）。支持使用标准的 \ref、\pageref 命令，如果加载了 nameref 宏包，还支持 \nameref。自版本 6.00 起，xr 合并了原有的 xr-hyper 功能，原生支持 hyperref 的扩展标签语法，可生成指向外部文档的活跃链接（active links）。

@@ -1,0 +1,1 @@
+pdflscape 宏包旨在增强 LaTeX 中 lscape 宏包的功能，专门用于在生成的 PDF 文档中正确显示横向（landscape）页面。它通过设置 PDF 页面的 /Rotate 属性，告诉 PDF 阅读器（如 Adobe Acrobat, Preview 等）将该页面旋转 90 度显示。标准的 lscape 宏包仅在打印时旋转内容，但在屏幕阅读 PDF 时，页面本身不会自动旋转，用户需要手动旋转视图。pdflscape 解决了这个问题，使得横向页面在屏幕上也能自动以横向方式展示。

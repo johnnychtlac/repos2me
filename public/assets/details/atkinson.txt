@@ -1,0 +1,1 @@
+该宏包为 Atkinson Hyperlegible 字体家族提供了 LaTeX、pdfLaTeX、XeLaTeX 和 LuaLaTeX 的支持。该字体家族以盲人研究所（Braille Institute）创始人 J. Robert Atkinson 的名字命名。它与传统排版设计的不同之处在于，它专注于字形区分度以增加字符识别，最终提高可读性。

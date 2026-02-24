@@ -1,0 +1,10 @@
+这是一个用于在 LaTeX 中轻松生成关联矩阵（Association Matrix）的工具。用户无需手动编写复杂的表格代码，只需定义行、列及关联关系，宏包会自动生成对应的矩阵表格。可以突出显示某一行，便于在论文或报告中强调特定章节与出版物之间的关联。用户可以自定义表格的标题、行列格式、关联标记符号等。通过 \amxReset 命令清除之前的配置，允许在同一文档中生成多个不同的关联矩阵。
+\amxrow{<key>}{<text>}：定义矩阵的行。
+\amxcol{<key>}{<text>}：定义矩阵的列。
+\amxassociate{<col-key>}{<row-key>}：建立行列之间的关联，对应单元格会显示标记（默认为 •）。
+\amxgenerate：生成完整的关联矩阵表格，可选参数 \amxgenerate[<row>] 用于高亮指定行。
+\amxReset：重置所有配置，以便创建新的独立矩阵。
+\amxsetTopCorner{<text>}：设置左上角标题。
+\amxsetColumnHeading{<command>}：自定义列标题格式。
+\amxsetRowFormat{<command>} / \amxsetRowFormatHighlighted{<command>}：设置普通行和高亮行的格式。
+\amxsetIndicator{<symbol>} / \amxsetIndicatorHighlighted{<hl-symbol>}{<other-symbol>}：自定义关联标记符号。

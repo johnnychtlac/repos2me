@@ -1,0 +1,1 @@
+这是一个专门为 Beamer 文档类设计的扩展包，主要作用是允许用户自定义演示文稿中“块”（Block）元素圆角的大小。Beamer 默认的 rounded 主题提供了一种固定的圆角效果。beamer-varbox 的核心价值在于它提供了一个名为 variable rounded 的预定义选项。当你加载这个宏包时，它会自动将 block（普通块）、block alerted（警示块）和 block example（示例块）的开始和结束模板替换为 variable rounded 版本。正如文档摘要所述，该包假设“如果你引入了这个包，你就想要修改后的块”，因此它直接覆盖了默认样式。

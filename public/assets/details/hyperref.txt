@@ -1,0 +1,1 @@
+hyperref 是一个用于在 LaTeX 文档中创建超链接（Hyperlinks）和交互式元素的宏包。它的核心功能包括：将文档中的引用（如 \ref, \pageref, \eqref）、目录项、索引项、参考文献引用等自动转换为可点击的超链接。为生成的 PDF 文件添加书签（Bookmarks），方便读者在阅读器中导航章节结构。允许设置或自动提取文档的标题（pdftitle）、作者（pdfauthor）等信息到 PDF 的属性字典中。不仅支持 PDF（通过 pdfTeX, dvipdfm, XeTeX, LuaTeX 等驱动），还支持其他格式如 HTML（通过 Hevea 等）。

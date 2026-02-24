@@ -1,0 +1,3 @@
+stackrel 宏包的主要功能是扩展 LaTeX 原生的 \stackrel 命令，并新增一个用于二元符号的命令 \stackbin。原生的 LaTeX \stackrel 命令只能在关系符号（如 =）上方添加内容（上标）。stackrel 宏包通过增加一个可选参数，允许用户同时在符号的下方添加内容（下标）。定义了新的 \stackbin 命令，专门用于在二元符号（如 +）的上下方同时添加内容。其语法设计遵循了 amsmath 和 mathtools 包中可伸缩箭头的风格。
+\stackrel[<下标>]{<上标>}{<关系符号>}：用于关系符号（Relation symbols）。[<下标>] 是可选参数，如果省略则不显示下标。示例——\stackrel[x]{!}{=} 会在等号上方显示 !，下方显示 x。
+\stackbin[<下标>]{<上标>}{<二元符号>}：用于二元运算符（Binary symbols）。示例——\stackbin[\text{and}]{}{+} 会在加号下方显示 "and"，上方无内容。

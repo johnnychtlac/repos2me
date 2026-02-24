@@ -1,0 +1,13 @@
+使用 Lua 模式匹配来修改环境内容。提供 AutoPuncItemize、AutoPuncItemizeO 和 AutoPuncItemizeE（测试版）环境，或者通过 enumitem 包的选项 autopunc，自动在列表项末尾添加标点。倒数第二项后加分号和“and”（例如：; and）。最后一项后加句号（例如：.）。中间项后加分号（例如：;）。
+\APomit：放在 \item 中，表示该项不自动加标点，且不计入列表项数（用于完全忽略该项的标点逻辑）。
+\APpass：放在 \item 中，表示该项不自动加标点，但仍计入列表项数（常用于引入子列表的项）。
+\setAPeach{默认}{倒数第二}{最后}：分别设置默认、倒数第二项和最后一项的标点符号。
+\setAPall{符号}：将所有位置的标点设为相同。
+\setAPdef{符号}、\setAPseclast{符号}、\setAPlast{符号}：单独设置某一种情况的标点。
+\enableAPautopassnest / \disableAPautopassnest：开启或关闭“自动跳过引入嵌套列表的项”的功能（默认开启）。
+autopunc：不展开环境内容（标准用法）。
+autopuncO：展开环境内容一次（适用于 \item 包含在命令中的情况）。
+autopuncE：完全展开环境内容（开发中，不建议使用）。
+只需在 itemize 等环境中加入 [autopunc] 选项，即可实现类似 “one; two; three; and four.” 的效果。宏包默认会自动处理引入子列表的父项（不加标点）。如果需要在每个嵌套层级都使用自动标点，需在每个子列表环境中也加上 [autopunc]。如果与 beamer 类冲突，加载宏包时可传入 noenumitem 选项，但仍可使用 AutoPuncItems 环境包裹列表来实现功能。
+
+ 

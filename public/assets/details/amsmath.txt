@@ -1,0 +1,23 @@
+amsmath 是 AMS-TEX 的 LaTeX 2e 版本继任者。它旨在解决原生 LaTeX 数学环境的局限性，提供了更强大、更灵活的数学排版功能，是当前数学、物理及工程类 LaTeX 文档的标准配置。
+align， align*， alignat， flalign： 提供多行公式的对齐功能（如二元关系符对齐），支持多列结构。
+gather： 用于多行公式，每行独立居中，不进行列对齐。
+multline： 用于单个过长的公式，第一行左对齐（或缩进），最后一行右对齐，中间行居中。
+split： 用于在单个编号的公式内部进行多行对齐。
+subequations： 用于对一组公式进行子编号（如 1a， 1b， 1c）。
+matrix： 普通矩阵（无括号）。
+pmatrix： 圆括号矩阵。
+bmatrix： 方括号矩阵。
+Bmatrix： 花括号矩阵。
+vmatrix： 单竖线矩阵（行列式）。
+Vmatrix： 双竖线矩阵。
+分数与二项式： \frac， \dfrac， \tfrac， \binom。
+微积分与算子： \iint， \iiint， \idotsint （多重积分符号），\lim， \sum 的优化处理。
+箭头： \xrightarrow， \xleftarrow （可伸展的箭头，支持上下标）。
+点号 （Ellipsis）： \dots， \dotsc， \dotsb， \dotsi （智能判断上下文选择点号位置）。
+盒子： \boxed （将方框套在公式周围）。
+文本模式： \text （在公式中插入正常间距的文本）。
+\tag： 允许用户手动设置公式的编号或标签。
+\eqref： 提供带括号的公式引用，比标准的 \ref 更美观。
+编号控制： 支持 \numberwithin 命令，可将公式编号格式化为“节.序号”的形式。
+水平间距： \! （负薄空）， \： （中空）， \; （厚空） 等，用于微调数学符号间距。
+破碎控制： \allowdisplaybreaks （允许长公式跨页）。

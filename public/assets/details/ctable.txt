@@ -1,0 +1,16 @@
+旨在简化带有标题（caption）和脚注（footnotes）的表格（table）及图片（figure）浮动体的排版。它提供了一个 \ctable 命令，而不是传统的环境（environment）。用户无需输入嵌套的 begin...end 序列。仅需 4 个参数：[键=值选项] {列定义} {脚注内容} {表格行内容}。第一个可选参数接受大量的 key=value 对，使得宏包非常灵活且可扩展。可以通过 \setupctable 设置全局默认选项。内部集成了 Simon Fear 的 booktabs 宏包，自动提供更好的水平线周围的垂直间距，使表格更美观。强制标题和脚注的宽度与表格宽度一致（除非使用 mincapwidth 等选项调整），避免窄表格导致标题过宽的问题。支持自动生成表格脚注，并提供专门的命令来控制脚注标记的样式（如上标或基线对齐）。如果指定了 width 选项，它会使用 tabularx 环境（需要列定义中包含 X specifier）。如果未指定宽度，则使用标准的 tabular 环境。当表格内容较小时，自动将 X 列替换为 l 列以避免过多的空白，仅在内容超过最大宽度时才启用 tabularx。
+\ctable[options]{coldefs}{foottable}{rows}： 主命令，用于创建表格或图片浮动体。
+\tnote[label]{text}： 用于在 \ctable 的第三个参数中定义表格脚注。
+\tmark[label]： 用于在表格内容或标题中插入脚注标记（默认为上标）。
+\setupctable{key=value...}： 用于设置 \ctable 的全局默认选项。
+\NN： 普通换行。
+\FL： 第一行换行并加粗顶线 （\toprule)。
+\ML： 中间行换行并加细中线 （\midrule)。
+\LL： 最后一行换行并加粗底线 （\bottomrule)。
+位置与对齐： center （默认)， left， right， pos （浮动位置，如 tbp)。
+标题控制： caption （标题文本)， cap （短标题，用于目录)， topcap （默认，标题在上)， botcap （标题在下)， captionskip （调整标题与表格间距)。
+宽度控制： width （固定宽度，启用 tabularx)， maxwidth （最大宽度，智能切换)， mincapwidth （最小标题/脚注宽度)。
+脚注样式： super （默认，上标标记)， nosuper （基线标记)， notespar （脚注排成段落)， nonotespar （默认，脚注排成表格)。
+边框与背景： framerule （框线粗细)， framefg （框线颜色)， framebg （背景颜色)， framesep （框线与内容间距)。
+其他： figure （生成图片浮动体而非表格)， sideways （旋转90度)， continued （用于跨页表格，延续编号)。
+ctable 会自动加载或使用以下宏包的功能：array， booktabs， tabularx， rotating， xcolor， etoolbox 等。

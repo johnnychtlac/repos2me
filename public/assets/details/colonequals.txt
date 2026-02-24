@@ -1,0 +1,2 @@
+数学公式中，直接使用文本字符的冒号（:）往往不会围绕数学轴线（math axis）垂直居中，导致与等号（=）等其他符号组合时（如 :=）看起来不对称或不美观。colonequals 宏包定义了一个名为 \ratio 的命令，它生成一个垂直居中的冒号符号。宏包利用居中的冒号，定义了一系列标准的数学关系符号，解决了某些数学字体缺失这些完整符号的问题。
+主要符号包括：\colonequals ( := )、\equalscolon ( =: )、\coloncolon ( :: )、\colonminus ( :− )、\colonapprox ( :≈ )、\colonsim ( :∼ )。以及这些符号的反向或双冒号变体（如 \minuscolon, \coloncolonequals 等）。提供了 \colonsep 和 \doublecolonsep 命令，允许用户调整冒号与其他符号之间、或两个冒号之间的间距，以优化视觉效果。当使用的数学字体（如默认字体）没有包含完美居中的组合符号时，此宏包非常有用。如果已经使用了包含这些符号的字体包（如 txfonts 或 mathabx），则通常不需要此宏包。

@@ -1,0 +1,65 @@
+@manual{ctan-etex,
+	subtitle = {The ε-TEX manual},
+	date = {etex_man.tex},
+	mirror = {https://mirror.ctan.org/systems/doc/etex},
+}
+
+@manual{ctan-ltcmdhooks,
+	subtitle = {The ltcmdhooks documentation},
+	date = {ltcmdhooks.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-ltfilehook,
+	subtitle = {The ltfilehook documentation},
+	date = {ltfilehook.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-lthooks,
+	subtitle = {The lthooks documentation},
+	date = {lthooks.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-ltmarks,
+	subtitle = {The ltmarks documentation},
+	date = {ltmarks.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-ltpara,
+	subtitle = {The ltpara documentation},
+	date = {ltpara.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-ltproperties,
+	subtitle = {The ltproperties documentation},
+	date = {ltproperties.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-ltshipout,
+	subtitle = {The ltshipout documentation},
+	date = {ltshipout.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-ltsockets,
+	subtitle = {The ltsockets documentation},
+	date = {ltsockets.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-lttemplates,
+	subtitle = {The lttemplates documentation},
+	date = {lttemplates.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/base},
+}
+
+@manual{ctan-mathcolor,
+	subtitle = {Providing color in math},
+	date = {mathcolor.dtx},
+	mirror = {https://mirror.ctan.org/macros/latex/required/graphics},
+}

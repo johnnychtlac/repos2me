@@ -1,0 +1,1 @@
+该文档描述的是 LaTeX 的 proc 文档类（document class），而非传统意义上的宏包（package）。专门用于排版学术会议论文集（conference proceedings）文章，生成可直接印刷的“相机就绪”（camera-ready）稿件。基于标准的 article 文档类，但修改了部分布局规则，并强制采用双栏排版。为兼容旧版 LaTeX 2.09 提供了 .sty 文件，但明确提示用户应将其作为文档类（\documentclass{proc}）而非宏包使用。

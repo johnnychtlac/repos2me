@@ -1,0 +1,4 @@
+该宏包旨在半自动化地创建基于 tcolorbox 的精美文本框（Boîtes）。它不是一个取代 tcolorbox 的高级工具，而是一个简化的“助手”，帮助用户快速为课程讲义、笔记等文档生成风格统一、带有图标、计数器和自定义颜色的文本框环境。通过 \CreationBoite 命令，用户可以轻松定义新的 LaTeX 环境。环境名称、计数器名称、基础颜色、图标（支持 FontAwesome, Twemoji 等）以及标签（单数/复数形式）。支持添加副标题（SousTitre）、修改标签文字（ModifLabel）、在计数器后添加补充说明（ComplementTitre）。可在右下角添加水印图片（Logo）、Emoji（Emoji）或 FontAwesome 图标（Icone）。可调整这些装饰的大小、旋转角度、透明度和位置。可选择隐藏计数器（Compteur=false）或强制使用复数标签（Pluriel）。自动创建并存储边框色（cbcoulbord<Nom>）和背景色（cbcoulfond<Nom>），方便在框内引用。使用 \ParamBoites 命令可全局修改所有框的默认样式，如字体（标题/副标题）、边距、边框粗细等。
+标准风格：功能全面，带有完整的边框、背景色、图标和复杂的标题栏设计。
+替代风格 (Style Alternatif)：通过 \CreationBoiteAlt 定义，风格更简约（“épuré”），通常只有左侧边框和浅色背景，适合更低调的排版需求。支持计数器按章节重置或全局计数。
+允许用户通过重定义内部命令（如 \TitreBoite, \SousTitreBoite 等）来深度修改框的结构和布局。支持直接传递 tcolorbox 的原生选项进行微调。底层依赖 tcolorbox（含 fitting, skins, breakable 库）。支持 fontawesome (5/6/7版本可选), twemojis, simplekv, ulem 等包以实现图标和样式功能。

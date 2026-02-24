@@ -1,0 +1,7 @@
+hypcap 宏包旨在解决 hyperref 宏包在处理浮动体（如图片 figure、表格 table）时的一个常见问题：超链接锚点位置错误。默认情况下，点击目录或交叉引用中的链接跳转到浮动体时，光标会停留在标题（caption）下方，而不是浮动体的顶部。hypcap 将锚点设置任务分为两部分：在浮动体开始处（或通过 \capstart 命令）设置超链接锚点。修改 \caption 命令，使其不再重复设置锚点，仅负责显示标题和更新计数器。点击链接时，页面会正确跳转到浮动体的顶端。必须在加载 hyperref 宏包之后加载 hypcap。支持传入浮动体环境名称作为选项（如 figure, table, figure*, table*）。
+all：自动重定义所有四种标准浮动体环境，无需手动插入额外命令。若使用了这些选项，宏包会自动在环境开头插入 \capstart，前提是环境中必须包含 \caption。
+\capstart：手动设置锚点的命令。增加计数器、创建 hyperref 锚点，并重新定义随后的 \caption 以移除其自带的锚点设置。通常放在浮动体环境的开头，或者在同一个浮动体内有多个 \caption 时，在每个 \caption 之前使用。
+\hypcapspace：用于调整锚点位置的垂直间距。默认值为 0.5\baselineskip。如果链接指向的位置太靠上（紧贴顶部），可以通过此命令增加一点空间，使跳转视觉效果更好。示例：\renewcommand{\hypcapspace}{0pt} 可移除额外空间。
+\hypcapredef{<env>}：用于自定义其他非标准的浮动体环境，使其自动执行 \capstart。
+\capstartfalse / \capstarttrue：用于临时禁用或启用 \capstart 的效果。例如，在没有标题的浮动体中，可以使用 \capstartfalse 来避免报错或多余的操作。
+与其他重定义了 \caption 或 \@caption 的宏包可能存在冲突。

@@ -1,0 +1,1 @@
+xltabular 宏包定义了一个名为 xltabular 的新环境，该环境结合了 tabularx 和 longtable 的优点：像 tabularx 一样，支持使用 X 列说明符来自动调整列宽以填充指定宽度。像 longtable 一样，允许表格在页面之间断开（支持跨页），并可以定义表头（header）和表尾（footer）。与另一个类似宏包 ltablex 不同，xltabular 不会 改变原始 tabularx 环境的行为。这意味着你可以同时在一个文档中使用原始的 tabularx（用于单页表格）和新的 xltabular（用于跨页表格）。

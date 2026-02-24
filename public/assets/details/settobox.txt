@@ -1,0 +1,4 @@
+settobox 是一个由 Heiko Oberdiek 开发的 LaTeX 宏包（当前版本为 v1.5，发布于 2016 年 5 月 16 日）。它的主要作用是提供一系列命令，用于获取和设置 LaTeX 中盒子（box）的尺寸，功能类似于 LaTeX 原生的 \settowidth 命令，但更加灵活和全面。
+这些命令用于将盒子的特定尺寸赋值给一个长度变量（length register）：\settoboxwidth{<长度>}{<盒子>}——获取盒子的宽度。\settoboxheight{<长度>}{<盒子>}——获取盒子的高度。\settoboxdepth{<长度>}{<盒子>}——获取盒子的深度。\settoboxtotalheight{<长度>}{<盒子>}——获取盒子的总高度（高度 + 深度）。
+这些命令允许直接修改盒子的尺寸。它们支持使用 calc 宏包进行数学表达式计算，并可以在表达式中使用以下特殊长度变量：\width——盒子当前宽度。\height——盒子当前高度。\depth——盒子当前深度。\totalheight——盒子当前总高度。主要命令包括：\setboxwidth{<盒子>}{<长度表达式>}——设置盒子宽度。\setboxheight{<盒子>}{<长度表达式>}——设置盒子高度。\setboxdepth{<盒子>}{<长度表达式>}——设置盒子深度。
+这些命令用于相对于基准点移动盒子内容。移动操作会改变盒子的宽度和高度以适应新的位置：\setboxmoveleft{<盒子>}{<长度表达式>}——向左移动。\setboxmoveright{<盒子>}{<长度表达式>}——向右移动。\setboxlower{<盒子>}{<长度表达式>}——向下移动。\setboxraise{<盒子>}{<长度表达式>}——向上移动（文档目录中提到了 \setboxright 但在具体命令列表中对应的是 \setboxraise 用于垂直向上，示例代码中也使用了 \setboxraise）。

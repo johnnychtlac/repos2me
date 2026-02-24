@@ -1,0 +1,1 @@
+ltxdoc 是 LaTeX Project 团队维护的一个文档类，专门用于排版 LaTeX 源代码文件的文档。主要用于处理扩展名为 .dtx (Documented TeX) 的文件，这些文件包含了 LaTeX 内核及标准宏包的源代码和文档。能够将源代码和用户文档整合在一起排版。支持生成代码索引（Index of macro usage）和变更历史（Change history）。可以一次性处理所有源文件（如 sources2e.tex），生成完整的交叉引用索引。基于 article 类和 doc 包构建，但针对源码排版进行了优化（如调整页边距以容纳更宽的代码行）。

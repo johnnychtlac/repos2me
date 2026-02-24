@@ -1,0 +1,1 @@
+Arsenal 是一款由 Andrij Shevchenko 设计的开源字体（曾获 2011 年乌克兰字体设计比赛冠军）。该宏包主要提供以下支持：允许用户在 LaTeX 文档中调用 Arsenal 字体（包括 Regular，Italic，Bold，Bold Italic 等字重）。通过配套的 ArsenalMath 包，提供了匹配的数学符号字体。文档特别提到，\mathcal 命令使用了字体中的 Swash（花体） 字符，这是该宏包的一个特色。定义了多种特殊符号和货币符号的 LaTeX 命令。

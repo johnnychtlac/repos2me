@@ -1,0 +1,21 @@
+footmisc 是一个用于在 LaTeX 中自定义脚注（footnotes）样式的宏包。它提供了多种选项，让用户可以灵活地控制脚注的编号方式、排版格式、位置以及与浮动体（如图片、表格）的关系等。
+perpage：每页重新从1开始编号脚注。
+symbol / symbol*：使用符号（如 *, †, ‡）代替数字编号。symbol* 是更安全的版本，当符号用尽时会自动切换为数字，避免报错。
+\setfnsymbol 和 \DefineFNsymbols：允许用户定义或选择预设的符号集（如 bringhurst, chicago, wiley 等风格）。
+para：将同一页的多个脚注合并为一个段落显示，而不是每个脚注单独成段。这在需要大量简短脚注的学术版本（如校勘本）中非常有用。
+ragged：设置脚注文本为右对齐（ragged right），避免难看的间距。可以通过重定义 \footnotelayout 来自定义更多格式。
+hang：设置悬挂缩进样式，脚注标记与页边距对齐，正文部分缩进。
+marginal / flushmargin：调整脚注标记相对于页边距的位置（例如伸入页边或与页边对齐）。
+norule：移除脚注上方的分隔线。
+splitrule：当脚注跨页时，在分割部分上方添加全宽分隔线。
+stable：允许在章节标题等“移动参数”中安全地使用脚注，防止脚注出现在目录或页眉中造成错误。
+multiple：允许在同一位置连续使用多个脚注（如 \footnote{A}\footnote{B}），宏包会自动将其格式化为 "1,2" 的形式，而不是 "12"。
+\footref：提供引用已标记脚注的命令，方便在文中多次引用同一个脚注。
+LaTeX 默认的顺序通常是“正文 -> 脚注 -> 底部浮动体”。footmisc 提供了选项来改变这一布局：
+bottom：强制脚注位于页面最底部（浮动体之上）。
+bottomfloats：强制浮动体位于页面最底部，脚注紧跟正文。
+abovefloats / belowfloats：精细控制脚注相对于浮动体的位置。
+加载这些选项还可以修复 LaTeX 在某些情况下（如使用 \newpage 时）脚注位置不一致的奇怪行为。
+hyperref：兼容，但部分选项（如 multiple）可能无法完全协同工作。
+setspace / memoir：支持行间距调整，但建议先加载 setspace 再加载 footmisc。
+manyfoot：初步支持多序列脚注，但仍在完善中。

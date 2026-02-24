@@ -1,0 +1,8 @@
+它是一个基于 tcolorbox 和 LaTeX3 开发的工具，专门用于在 LaTeX 文档中排版美观的源代码盒子。codebox 的主要目的是解决 LaTeX 中代码排版（特别是需要语法高亮时）的复杂性。它封装了底层细节，提供了一套简洁的接口，允许用户通过两种主流引擎（minted 或 listings）来展示代码。该宏包的核心作用可以分为环境排版、文件导入和样式定制三个维度：
+codebox / codebox*：基于环境内容排版代码。星号版本（*）可添加底线注释。
+codeview / codeview*：与 codebox 类似，但带有自动编号功能。星号版本支持底线注释。
+\codefile / \codefile*：基于外部文件内容排版代码。星号版本支持底线注释。
+\cvfile / \cvfile*：基于外部文件排版且带有自动编号的代码盒子。
+minted 引擎（默认）：提供更优秀的语法高亮效果（依赖 Pygments）。
+listings 引擎：纯 LaTeX 方案，不需要外部 Python 支持，兼容性更好。
+通过 \codeset 命令或环境选项，用户可以精细控制代码盒子的外观：支持设置如 c，java，python 等语言，默认为 C 语言。可调整代码字号 (codesize)、行距 (codestretch)、行号间距 (linenumsep)。支持为代码盒子添加底线注释（Caption），并可单独设置注释的格式。可自定义编号前的文字（如 "Code", "Listing"）。

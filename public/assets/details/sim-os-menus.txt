@@ -1,0 +1,7 @@
+主要用于在 LaTeX 文档中模拟操作系统（OS）的界面元素。它允许用户创建看起来像真实操作系统中的上下文菜单、终端窗口、文件查看器、文件夹树以及社交媒体帖子等视觉效果。该宏包旨在为技术文档、教程或演示文稿提供逼真的操作系统界面截图替代方案，无需实际截图即可通过代码生成高质量的矢量图形。
+\ContextMenu： 创建类似 Windows、macOS 或 Linux 的右键点击菜单。支持多级子菜单。可自定义背景色、高亮色、圆角、字体、图标（支持 FontAwesome 5/6/7）。可设置分隔线和箭头指示器。
+TermWin （Windows）， TermUnix （Linux/Unix）， TermMac （macOS）： 模拟不同操作系统的命令行终端窗口。自动匹配对应操作系统的窗口样式（如标题栏按钮、提示符风格）。支持自定义标题、宽度和对齐方式。
+PDFViewer： 模拟 PDF 阅读器界面。IMGViewer： 模拟图片查看器界面。PYViewer： 模拟代码编辑器/脚本编辑器界面（常配合 listings 或 piton 包使用）。将内容包裹在带有工具栏图标（如缩放、旋转、打印等）的窗口框架中，使其看起来像是在特定应用程序中打开。
+ForestDirTree： 以树状结构展示文件夹和文件，模仿操作系统的文件资源管理器或 Finder。基于 forest 宏包构建。可自定义文件夹和文件的图标颜色、样式及连接线风格。
+MastodonPost， BlueSkyPost： 模拟 Mastodon 或 BlueSky 社交平台的帖子布局。包含头像、用户名、账号地址、发布时间。底部包含点赞、转发、评论等互动计数器图标。
+该宏包会自动加载多个底层包，包括 tikz， pgf， tcolorbox， fontawesome5， tabularray， listofitems 等，用于绘图和布局。

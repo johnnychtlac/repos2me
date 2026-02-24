@@ -1,0 +1,1 @@
+这是一个专门为 LaTeX 排版系统设计的宏包，旨在方便用户在文档中使用微软开源的 Cascadia Code 字体（及其无连字版本 Cascadia Mono）。简单来说，这个宏包的作用是将 Cascadia 字体的各种字重（Weight）和样式（如斜体、粗体）映射为 LaTeX 可识别的命令，让你可以在 XeLaTeX 或 LuaLaTeX 编译环境中轻松使用这款程序员喜爱的等宽字体。必须使用 XeLaTeX 或 LuaLaTeX（因为依赖 fontspec 宏包）。主要用于排版包含代码的文档（如技术报告、编程教程），特别是需要展示 Python 等代码片段时（文档中提供了 Fibonacci 算法的代码样例）。

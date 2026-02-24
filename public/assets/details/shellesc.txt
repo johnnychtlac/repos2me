@@ -1,0 +1,5 @@
+该宏包提供了一个统一的接口 \ShellEscape，用于在 LaTeX 文档中安全地执行系统命令（如删除文件、调用外部程序等）。它的主要目的是：隐藏不同 TeX 引擎（如 pdfLaTeX, XeLaTeX, LuaLaTeX）在执行系统命令时的语法差异。在传统引擎（web2c-based，如 pdfLaTeX）中，它映射为 \immediate\write18。
+在 LuaLaTeX（0.87版本以后）中，由于不再支持 \write18 语法，它通过 Lua 的 os.execute 函数实现相同功能。帮助将旧文档移植到新版 LuaLaTeX，因为它重定义了 \write 命令，使得旧的 \write18{command} 写法在 LuaLaTeX 中也能正常工作。提供 \ShellEscapeStatus 命令来检查 shell escape 的启用状态（0=禁用, 1=完全启用, 2=受限启用）。
+\ShellEscape{<command>}：立即执行提供的系统命令。例如：\ShellEscape{rm file.txt}。编译时通常需要添加 --shell-escape 选项，否则默认禁止执行系统命令。
+\DelayedShellEscape{<command>}：延迟执行系统命令，直到当前页面输出（shipout）时再执行。适用于需要知道页码等后续信息的场景。
+\ShellEscapeStatus：一个整数变量，用于判断当前 shell escape 的状态，0——禁用（disabled）。1——启用（enabled/unrestricted）。2——受限启用（restricted）。

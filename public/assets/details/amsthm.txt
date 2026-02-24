@@ -1,0 +1,8 @@
+amsthm 宏包是美国数学学会（AMS）提供的 LaTeX 支持环境的一部分，主要用于增强 LaTeX 中定理类环境的定义和使用。
+增强的 \newtheorem 命令：支持 \theoremstyle specification（类似于 Mittelbach 的 theorem 包）。提供 \newtheorem* 形式，用于定义无编号的环境（例如命名为“Klein’s Lemma”的特殊引理）。
+证明环境（proof）：自动在证明末尾添加 QED 符号（ □□ ）。支持自定义证明标题（如“Proof of the Main Theorem”）。提供 \qedhere 命令，用于在公式或列表环境中正确放置 QED 符号。
+宏包预定义了三种定理样式，通过 \theoremstyle 命令切换：plain（默认）——斜体正文，上下有额外间距。适用于定理、引理、推论等。definition——正体正文，上下有额外间距。适用于定义、例子、习题等。remark——正体正文，无额外间距。适用于备注、注释、案例等。
+用户还可以使用 \newtheoremstyle 命令创建自定义样式，例如：break——定理标题后换行（常用于定理以列表开始的情况）。bfnote——将可选的注释部分加粗显示。
+默认情况下，不同类型的定理（如定理、引理）各自独立编号。通过可选参数让不同环境共享同一计数器（例如让引理跟随定理编号：Lemma 1, Lemma 2, Theorem 3...）。支持按章节或节进行 subordinate 编号（例如 Proposition 2.1, 2.2）。使用 \swapnumbers 命令可将编号移至标题前（如“1.4 Theorem”）。
+若与非 AMS 文档类及 amsmath 包一起使用，必须在 amsmath 之后加载 amsthm。遵循 AMS 风格，定理或证明结束后的下一行文本始终视为新段落并缩进。包括 \qedhere 在多行公式中的某些限制，以及与某些包（如 paralist, wrapfig）的冲突。
+配合使用的包：mdframed——为定理添加边框。thmtools——提供更灵活的键值语法和定理列表功能。不推荐的包——某些包（如 paralist）会覆盖 amsthm 的字体设置，导致格式不符合 AMS 标准。

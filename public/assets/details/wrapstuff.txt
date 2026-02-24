@@ -1,0 +1,17 @@
+旨在提供一种更强大且灵活的图文绕排（文字环绕图片或其他内容）解决方案。它由李清开发，试图整合并扩展如 picinpar、floatflt、wrapfig、cutwin 和 wrapfig2 等现有宏包的功能。允许用户在文档中插入图片或自定义内容，并使正文文字围绕其排列。兼容 caption、float 和 floatrow 等常用宏包，支持添加标题（caption）。试图兼容显示数学公式（display math）和各种 LaTeX 列表环境（list environments），解决传统绕排宏包在这些场景下容易出错的问题。兼容 \parbox 和 minipage 环境。宏包主要提供一个用户环境 wrapstuff。用户可以通过可选参数或 \wrapstuffset 命令来调整绕排效果。
+l， r， c， i， o：分别设置内容位于左侧、右侧、中间、内侧（双页模式）、外侧。默认为右侧 （r）。
+ratio：设置绕排内容左侧正文占据行宽的比例（0到1之间），用于精细控制分栏宽度。
+width， height：设置绕排内容的宽高。若设 width 为自然宽度（默认），内容只能单行；若需换行需指定宽度。
+lines：手动指定绕排内容占据的正文行数（默认自动计算）。
+top：设置在正文段落的第几行之后开始绕排。
+leftsep， rightsep， hsep：设置左右水平间距。
+abovesep， belowsep， vsep：设置上下垂直间距。
+hoffset， voffset：微调内容的水平和垂直位置。hoffset 可设为 \width 使内容完全伸出版心。
+column：控制是否将绕排内容两侧的正文分栏显示。
+true：严格分栏。
+par：以段落为单位分栏。
+false：不分栏，文字保持从左到右流式排列（悬挂缩进效果）。
+type：设置浮动体类型（如 figure 或 table），以便在环境中使用 \caption 命令。
+\wrapstuffset{<选项列表>}：全局或局部设置默认选项。
+\wrapstuffclear：如果当前段落行数不够，绕排效果可能会延续到下一段。使用该命令可以强制清除绕排状态，消除对后续段落的影响。
+wrapstuff 利用了 LaTeX 较新的段落钩子（paragraph hooks）技术，这使得它在处理复杂的排版场景（如数学公式、列表嵌套）时比旧式宏包更加稳定和灵活。它能够动态计算行数，并在必要时自动延伸到下一个段落，同时也提供了机制来处理由此产生的布局问题。

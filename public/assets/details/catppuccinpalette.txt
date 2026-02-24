@@ -1,0 +1,1 @@
+这是一个基于广受欢迎的 Catppuccin 配色方案开发的工具，旨在为 LaTeX 文档提供柔和、护眼的拿铁（Latte）、弗拉贝（Frappe）、马其朵（Macchiato）和摩卡（Mocha）四种主题。catppuccinPalette 的主要功能是将 Catppuccin 的调色板定义为 LaTeX 中 xcolor 宏包可识别的颜色。它不仅引入了基础的色彩变量，还根据 Catppuccin 的设计规范定义了文本、链接、背景等专用颜色，让你能轻松制作出具有统一、美观视觉风格的文档。

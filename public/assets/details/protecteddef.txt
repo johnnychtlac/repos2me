@@ -1,0 +1,2 @@
+protecteddef 宏包旨在为 Plain TeX 和 LaTeX 提供一种统一的方法来定义稳健宏（robust macros）。它通过提供一个名为 \ProtectedDef 的命令，自动检测并使用当前环境中最合适的保护机制：优先尝试使用 e-TeX 的 \protected 原语。如果不可用，则尝试使用 LaTeX 的 \DeclareRobustCommand。如果两者都不可用，则宏不会被设为稳健（保持普通定义）。此外，无论使用哪种机制，该宏包都会包含对命令是否已定义的检查（兼容 LaTeX 的 \@ifdefinable 或自行实现的检查），如果命令已存在则报错，防止意外覆盖。
+设计用于同时支持 Plain TeX、LaTeX 甚至 iniTeX 环境。智能判断底层引擎支持哪种保护方式（e-TeX 的 \protected 或 LaTeX 的保护机制）。在定义新命令前检查该命令是否已被定义，避免冲突。\ProtectedDef 的语法模仿了 LaTeX 的 \newcommand，但不支持可选参数。

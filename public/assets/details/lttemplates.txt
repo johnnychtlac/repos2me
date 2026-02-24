@@ -1,0 +1,1 @@
+这是一个由 LaTeX Project 团队（Frank Mittelbach, Chris Rowley, David Carlisle）开发的系统，旨在清晰分离文档的语义结构、视觉设计和具体实现，从而让非程序员的用户也能轻松定制文档外观，同时方便程序员在现有类的基础上进行扩展。它将文档创作过程分为三个层次：语义层（Authoring）、设计层（Layout Design）、实现层（Implementation），lttemplates 的核心就是让这三层解耦。文档作者可以更容易地通过选择或微调“实例”来改变文档外观，无需深入 TeX 编程。类/包开发者可以更清晰地组织代码，复用设计模式，并提供更友好的定制接口。

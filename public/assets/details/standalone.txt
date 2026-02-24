@@ -1,0 +1,19 @@
+standalone 宏包的主要目的是方便用户将图片环境（如 TikZ、PSTricks）或其他内容放在独立的源文件中进行编译，既可以将这些文件作为独立文档编译，也可以轻松地将它们作为子文件包含在主文档中。提供一个特殊的 standalone 文档类，自动裁剪输出文件（PDF/DVI/PS），使其大小仅适应内容本身（去除多余的页边距、页码等）。允许用户在主文档中通过 \input 直接加载这些子文件，而忽略子文件中不必要的导言区代码（preamble），避免冲突。
+自动裁剪 (Cropping)：默认开启 crop 选项，将页面大小调整为内容大小加可选的边框（border）。
+多页支持：支持在一个文件中生成多个裁剪好的页面（例如通过 multi 选项或特定的环境如 tikzpicture）。
+tikz, pstricks选项：自动加载相应宏包并配置环境以支持多页和裁剪。
+beamer选项：支持包含 Beamer 叠加效果（overlays）的帧，将其转换为独立的幻灯片页面。
+varwidth选项：处理因段落换行导致的多余空白问题。
+convert选项：直接将编译结果转换为图像格式（如 PNG, JPG, SVG, EMF 等），需安装外部工具（如 Ghostscript, ImageMagick, Inkscape）并使用 -shell-escape 编译选项。
+配置文件：支持 standalone.cfg 配置文件，可统一设置默认选项。
+忽略子文件导言区：在主文档中加载该宏包后，当使用 \input 引入子文件时，会自动跳过子文件中从 \documentclass 到 \begin{document} 之间的代码，只保留正文内容。
+subpreambles 选项：可将所有子文件的导言区代码收集到一个辅助文件 (.sta) 中，供主文档在下次编译时加载。
+sort 选项：自动整理和合并子文件中的宏包加载命令，避免选项冲突。
+print 选项：将所有子文件的导言区打印到一个文本文件 (.stp) 中，方便用户手动复制到主文档。
+智能包含宏 \includestandalone替代 \input，提供更灵活的模式：tex——直接包含源代码（默认）。image——包含已生成的图像文件（如 PDF, EPS）。build / buildmissing / buildnew——自动调用编译器从源码构建图像，然后包含图像。这可以显著加快主文档的编译速度，特别是当包含复杂图形时。
+创建子文件：使用 \documentclass{standalone}，编写内容（如图形），编译时可得到裁剪好的独立 PDF。
+创建主文件：使用常规文档类（如 article），加载 \usepackage{standalone} 及子文件所需的所有宏包。
+引入内容：在主文档的正文中使用 \input{子文件名} 或 \includestandalone{子文件名} 引入图形。
+\ifstandalone / \IfStandalone：判断当前是独立编译还是被主文档引入，用于执行特定代码。
+\standaloneconfig{...}：用于在文件或配置文件中设置选项。
+\standaloneenv{...}：声明哪些环境应该被视为独立页面（用于多页模式）。

@@ -1,0 +1,7 @@
+这是一套由 Boris Veytsman 开发的 Perl 脚本工具集。它的主要目的是帮助学术出版流程自动化，特别是针对 Crossref（负责学术论文 DOI 注册的机构）的元数据提交，以及 BibTeX 参考文献数据库的维护。这套工具就像是一个“学术出版流水线助手”，能帮你把论文的元数据整理成 Crossref 能识别的格式，或者自动帮你把参考文献中的 DOI、MR、ZBL 号补齐。
+ltx2crossrefxml.pl：将 .rpi 元数据文件转换为 Crossref 接受的 XML 格式。
+bibdoiadd.pl：查询 Crossref 数据库，为 BibTeX 条目自动添加缺失的 DOI 号。
+bibmradd.pl：查询 MathSciNet 数据库，为 BibTeX 条目自动添加缺失的 MR 号。
+bibzbladd.pl：查询 ZbMath 数据库，为 BibTeX 条目自动添加缺失的 Zbl 号。
+biburl2doi.pl：将 URL 字段中指向 doi.org 的链接转换为标准的 DOI 字段。
+bbl2bib.pl：尝试从 .bbl 文件（LaTeX 编译生成的参考文献列表）重建 BibTeX .bib 文件。

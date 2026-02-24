@@ -1,0 +1,4 @@
+这是一个专为 LaTeX 设计的工具，旨在帮助用户在文档中创建逼真的终端（Terminal）风格代码框。它非常适合编写技术文档、教程或任何需要高保真展示命令行交互的场景。使用 UTF-8 绘图字符渲染边框，并内置等宽字体支持。支持在 深色（Dark，默认） 和 浅色（Light） 两种主题间自由切换，且可在文档编译时动态调整。支持 16 种标准 ANSI 颜色，能够完美还原终端输出的真实色彩。可以无缝配合外部工具（如 cmdlog2tex）嵌入真实的终端会话记录。
+\begin{termcode}：用于直接在 LaTeX 源码中编写代码片段，支持语法高亮。
+\terminput：用于直接包含外部文件（如日志、脚本），非常适合长代码或终端日志。
+你不仅可以在加载宏包时全局设定主题（如 \usepackage[theme=light]{terminalcode}），还可以在文档中间通过 \terminalcodetheme{light} 或 \tctheme{dark} 动态切换，以适应文档不同部分的排版需求。支持自定义等宽字体（如 DejaVu Sans Mono 或 Courier New），确保代码显示的专业性。能够准确渲染 16 种标准终端颜色。在代码块中，你可以使用 « 和 » 符号包裹 LaTeX 命令（如 \ansicolor 或 \ac），手动指定特定文本的颜色（例如 \ac{31} 显示红色），并能通过 \ansireset 重置回默认颜色。它推荐配合工具 cmdlog2tex 使用：使用系统工具（如 Linux/macOS 的 script 命令）录制真实的终端操作。利用 cmdlog2tex 将录制的日志（.log）转换为 LaTeX 格式（.tex），保留所有颜色信息。使用 \terminput 命令将转换后的文件直接导入 LaTeX 文档。必须 使用 XeLaTeX 或 LuaLaTeX。不支持 pdfLaTeX，因为它无法处理 Unicode 和现代字体需求。源文件必须保存为 UTF-8 编码，否则框线绘制字符或颜色可能无法正确显示。

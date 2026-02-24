@@ -1,0 +1,7 @@
+enotez 是一个用于 LaTeX2ε 的宏包，主要功能是提供灵活且强大的尾注（Endnotes）支持。它是为了解决旧版 endnotes 宏包的缺陷（如不支持嵌套尾注、与 hyperref 兼容性差）而重新实现的。允许在尾注内部再插入尾注，这是其相对于其他类似宏包（如 sepfootnotes）的主要优势之一。提供了基于 xtemplate 的机制，用户可以轻松自定义尾注列表的样式（如段落式、列表式等）。支持将尾注按章节（section 或 chapter）自动分组打印，适合书籍排版，可以在书末按章节列出尾注。
+\endnote{<text>}：在文中插入尾注标记并定义尾注内容。支持可选参数自定义标记。
+\printendnotes：打印尾注列表。
+支持可选参数指定样式（如 plain, description, itemize 或自定义样式）。支持星号版本 \printendnotes* 一次性打印所有尾注（但在嵌套尾注或分节模式下有限制）。
+\endnotemark 和 \endnotetext：允许分离标记和文本的定义，用于更复杂的引用场景。
+标签与引用：尾注可以像普通标签一样使用 \label 和 \ref 进行交叉引用。
+可以通过 \setenotez 设置各种选项，如列表标题 (list-name)、计数器格式 (counter-format)、标记格式 (mark-format) 等。提供“段前”和“段后”命令（如 \AtEveryEndnotesList, \AfterEveryEndnotesList）在尾注列表前后插入自定义内容。通过设置 split=section 或 split=chapter，可以将尾注按章节自动分割。每个分割部分可以有独立的标题（例如“第1章的尾注”）。支持与 hyperref 宏包配合，实现从文中尾注标记跳转到尾注列表，以及从列表反向跳转回文中（需开启 backref=true 选项）。支持将尾注列表标题添加到目录中 (totoc 选项)。利用 translations 宏包自动检测并适配语言（通过 babel 或 polyglossia），自动翻译“Notes”、“section”、“chapter”等术语。

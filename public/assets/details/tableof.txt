@@ -1,0 +1,12 @@
+该宏包允许用户通过标签（tags）机制，灵活地生成多个不同内容的目录。它打破了标准 \tableofcontents 通常只能使用一次的限制，让用户可以根据章节的标签来筛选哪些条目出现在特定的目录中。用于给章节（如 \section, \chapter 等）打上标签，以便后续筛选。用于根据标签条件生成目录。
+\toftagstart{tag1, tag2, ...} 和 \toftagstop{tag1, tag2, ...}：成对使用。在这两个命令之间的所有章节都会自动被加上指定的标签列表。标签不需要预先声明。
+\toftagthis{tag1, tag2, ...}：仅对紧接着的下一个章节命令生效，将其标记为指定标签。
+\tofuntagthis{tag1, tag2, ...}：仅对紧接着的下一个章节命令生效，从当前标签列表中移除指定标签。
+\tableof{required tags}：生成包含所有必需标签（AND 逻辑）的目录。例如 \tableof{weaponry, hunting} 会显示同时拥有 "weaponry" 和 "hunting" 标签的条目。
+星号变体 (\tableof*{...})：使用 OR 逻辑（拥有任一标签即可）。
+\tablenotof{excluded tags}：生成不包含指定标签的目录。例如 \tablenotof{ecology} 会显示所有没有 "ecology" 标签的条目。
+星号变体 (\tablenotof*{...})：排除拥有任一指定标签的条目。
+\tableoftaggedcontents{required tags}{excluded tags}：最通用的命令，同时指定必需标签和排除标签。例如 \tableoftaggedcontents{A, B}{C} 显示拥有 A 和 B 但没有 C 的条目。
+\nexttocwithtags{required}{excluded} \tableofcontents：用于影响标准的 \tableofcontents 命令，使其在下一次使用时只打印符合标签条件的条目。
+\tofOpenTocFileForWrite：如果文档中完全不使用标准的 \tableofcontents 命令，需要在导言区或文档开始时使用此命令（通常配合 \AtBeginDocument），以确保 .toc 文件被正确创建和写入。
+该宏包依赖 .toc 文件中的 \contentsline 宏，因此与 Beamer 类不兼容（除非在 article 模式下使用 beamerarticle 包）。与标准 LaTeX 目录通常只能用一次不同，tableof 提供的命令（如 \tableof, \tableoftaggedcontents）可以在文档中多次调用，生成不同的目录列表。标签列表中的空格和逗号周围的空格会被自动忽略。

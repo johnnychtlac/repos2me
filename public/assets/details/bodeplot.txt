@@ -1,0 +1,1 @@
+这是一个用于 LaTeX 的工具，专门用于绘制控制系统分析中常用的各类图表。宏包提供了四大类绘图功能，涵盖了频域分析的主要需求：伯德图（Bode Plots），奈奎斯特图（Nyquist Plots），尼科尔斯图（Nichols Charts），零极点图（Pole-zero Maps）。

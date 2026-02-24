@@ -1,0 +1,9 @@
+该宏包用于在 LaTeX 文档编译过程中，显示“内部”引用键（key）。它修改了 \label、\ref、\pageref、\cite 和 \bibitem 等命令，使得这些命令所使用的标签名称（即你在代码中写的 key，如 sec:intro）直接打印在生成的 PDF 页面上。目的：主要用于文档的草稿（draft）阶段，方便作者核对引用标签是否正确，避免在最终稿中出现错误的交叉引用（如 "???"）。排版影响：宏包会尽量将这些标签打印在页边距或零宽度的盒子中，以不改变文档原有的排版格式。兼容 fleqn 选项。支持 AMS-LaTeX 系列宏包（如 amsmath）。支持 varioref、natbib 和 harvard 等参考文献及引用宏包。能智能识别公式环境（如 equation, eqnarray, align 等），将标签显示在公式编号旁边，而不是公式内部。可以通过 \showkeyslabelformat 命令自定义标签的显示格式。默认格式为：小字号、打字机字体、带边框（\fbox{\normalfont\small\ttfamily#1}）。
+\label 和 \bibitem：通常将键名打印在页边距的一个框内，或者在当前文本位置上方/旁边，尽量不遮挡正文。
+\ref、\pageref 和 \cite：将引用的键名以小字体打印在行线上方（类似上标），例如：sec:intro。
+notref：停止重定义 \ref 和 \pageref（即不显示引用处的 key，只显示 \label 定义的 key）。
+notcite：停止重定义 \cite 及相关命令。
+color：用颜色区分显示的键（默认为浅灰色）。可以通过重新定义 refkey 和 labelkey 颜色来修改。
+final：完全禁用宏包功能（相当于不加载该宏包），常用于生成最终版文档时快速关闭所有调试信息。
+draft：默认行为（通常无需显式声明）。
+ 

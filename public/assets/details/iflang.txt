@@ -1,0 +1,3 @@
+iflang 宏包提供了可展开的（expandable）检查命令，用于判断当前文档使用的语言。它主要基于以下两种机制进行判断：宏 \languagename：存储当前语言名称的宏。连字符模式（hyphenation patterns）：TeX 引擎内部用于断字的语言模式。这弥补了标准 babel 包中 \iflanguagename 命令的不足（后者仅基于连字符模式，当不同语言共享相同模式时可能会失效）。
+\IfLanguageName{<语言>}{<真分支>}{<假分支>}：将指定的 <语言> 与当前宏 \languagename 的值进行比较。如果名称完全匹配，执行 <真分支>；否则执行 <假分支>。可以安全地在 \edef 或 \csname 等需要完全展开的上下文中使用。如果 \languagename 未定义，会执行 <假分支> 并可能发出警告。依赖于 babel 或其他包正确设置 \languagename。如果在未加载 babel 的格式中使用，可能会因为 \languagename 值不准确而发出警告。
+\IfLanguagePatterns{<语言>}{<真分支>}{<假分支>}：基于当前生效的连字符模式（即 \language 寄存器的值）来判断语言。如果当前模式匹配指定的 <语言>，执行 <真分支>；否则执行 <假分支>。可展开。自动识别并支持 babel (\l@<语言>) 和 etex.src (\lang@<语言>) 两种不同的模式命名 convention。针对不使用 babel 而直接使用 etex.src 的情况做了特殊处理（例如尝试默认设为 USenglish 并进行验证）。

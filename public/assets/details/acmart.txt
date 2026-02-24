@@ -1,0 +1,9 @@
+acmart 的主要作用是为 ACM 的出版物提供统一、专业的 LaTeX 排版解决方案。它强制执行 ACM 的视觉规范，包括：默认使用 Libertine 字体集，禁止随意替换字体或调整页边距。支持单栏、双栏（会议常用）及特殊封面格式。规范化文章标题、作者信息、摘要、CCS 分类号等的显示样式。
+宏包通过 format 选项支持多种出版类型，用户只需在导言区选择对应的选项即可自动切换样式：
+manuscript：稿件/盲审。默认选项，用于提交给审稿人的版本。
+acmsmall：小型单栏期刊。适用于大多数 ACM 期刊（如 TOIS，TOCS 等）。
+acmlarge：大型单栏期刊。适用于 DLT，HEALTH 等期刊。
+acmtog：TOG 期刊。适用于 ACM Transactions on Graphics。
+sigconf：会议论文集。适用于绝大多数 ACM 会议（如 SIGGRAPH，SIGPLAN 除外）。
+sigplan：SIGPLAN 会议。专为编程语言会议设计。
+acmcp：ACM 封面页。用于 JDS 等期刊的附带封面页。

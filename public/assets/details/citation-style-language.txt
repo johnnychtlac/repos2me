@@ -1,0 +1,12 @@
+这个宏包的作用是让 LaTeX 用户能够直接使用 Citation Style Language（CSL）格式来排版参考文献。CSL 是目前世界上最通用的引文格式标准（拥有数千种现成样式），这使得 LaTeX 的参考文献处理能力与现代参考管理工具（如 Zotero）实现了无缝对接。该宏包采用了一种混合架构，结合了 Lua 编程语言的高效性与 LaTeX 的排版能力：核心处理器是用 Lua 编写的，负责读取书目元数据（如 JSON 格式），并根据 CSL 样式进行排序和格式化。作为 LaTeX 与 Lua 引擎之间的通信桥梁，负责将排版指令传递给处理器。原生支持 CSL-JSON（推荐），同时也兼容 CSL-YAML 和传统的 Bib(La)TeX 格式（需内部转换）。该宏包的主要作用体现在它解决了 LaTeX 用户在参考文献处理上的痛点，用户不再需要手动编写复杂的 .bst 文件或修改 .bbx/.cbx 样式。可以直接使用全球通用的 CSL 样式文件（如 APA，Chicago，IEEE，Nature 等）。内置了大量常用样式，无需下载即可直接使用（如 APA 7th，IEEE，Nature，Vancouver 等）。通过 locale 选项自动处理不同语言的日期、数字和术语（如 "et al."）。支持 \refsection 环境，允许在不同章节（如每章）生成独立的参考文献列表。允许用户在 LaTeX 中覆盖 CSL 样式的部分设置，例如调整参考文献的字体、行距、悬挂缩进等。
+\addbibresource：加载参考文献数据文件（JSON/Bib）。
+\cslsetup：设置全局选项（如样式、语言）。
+\cite：生成标准引用（支持前缀、后缀、页码）。
+\parencite / \citep：生成括号包裹的引用（兼容模式）。
+\textcite / \citet：生成叙述性引用（作者在正文，年份在括号）。
+\footcite：生成脚注引用。
+\fullcite：生成完整的引用条目（类似参考文献列表项）。
+\printbibliography：打印参考文献列表（支持筛选类型、关键词）。
+\defbibheading：自定义参考文献列表的标题格式。
+refsection：定义独立的参考文献作用域（分节引用）。
+直接在编译过程中运行 Lua 代码，无需调用外部程序。只需运行 latex 两次（类似处理交叉引用）。需要像传统 BibTeX 一样，先运行 LaTeX，再运行 citeproc-lua 处理器生成 .bbl 文件，最后再运行 LaTeX。由于机制不同，它不能与 biblatex, natbib, cite 等其他参考文献宏包同时加载。文档注明该项目处于早期开发阶段，部分 CSL 功能可能尚未完全实现。

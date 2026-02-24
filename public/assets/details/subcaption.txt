@@ -1,0 +1,13 @@
+subcaption 宏包是 LaTeX 中用于处理子标题（sub-captions）的工具，通常用于在同一个浮动体（如 figure 或 table）内排列多个子图或子表，并为它们分别添加编号和标题（例如 (a), (b) 或 1.1, 1.2）。subcaption 是现代 LaTeX 文档中处理复杂图表布局的标准解决方案，替代了过时的 subfigure 和 subfig 宏包。允许在主图/主表内部创建带有独立编号和标题的子元素。自动生成子图/子表的编号（如 (a), (b)），并提供专门的命令进行交叉引用（如 \subref）。提供多种环境和命令来对齐和排列子内容，确保基线对齐美观。继承并扩展了 caption 宏包的强大配置功能，可单独设置子标题的字体、标签格式、间距等。
+\subcaptionbox 命令：最常用的命令。它将内容和标题放入一个框中，并自动根据第一行标题对齐子图/子表。无需手动管理垂直对齐，超链接锚点位置准确。
+subcaptionblock 环境（及其别名 subfigure, subtable）：创建一个指定宽度的盒子（类似 minipage），在其中可以使用标准的 \caption 命令来生成子标题。建议在 figure 环境中使用 subfigure，在 table 环境中使用 subtable，或者通用使用 subcaptionblock。
+subcaptiongroup 环境：仅在TeX组内切换到“子标题模式”。它不提供格式化帮助（不像前两者会自动建框），需要用户自己使用 minipage 或 parbox 来布局，但灵活性最高。
+\ref{label}：引用完整的编号（例如 "1a"）。
+\subref{label}：仅引用子编号部分（例如 "a"）。
+\phantomcaption / \captionlistentry：用于不显示标题文本但需要生成编号和引用锚点的情况（例如图片内部已有文字说明）。
+通过 \subcaptionsetup 或加载宏包时的选项进行设置：边距为0，字体稍小（smaller），标签格式为括号 (a)，标签与文本间有空格。
+font：设置字体（如 it 斜体，bf 粗体）。
+labelformat：标签格式（如 simple，parens）。
+list=true/false：是否将子标题列入图表目录（默认不列入）。
+skip：标题与内容之间的间距。
+依赖 caption 宏包，加载 subcaption 时会自动加载 caption。不应与旧的 subfigure 或 subfig 宏包混用（计数器冲突）。如果文档类（如 memoir）已经定义了子图计数器，需遵循特定规则。支持使用 overpic，tikz，stackengine 等宏包将标题放置在图片内部（需配合 \captiontext 等命令避免计数器错误）。如果一个浮动体内有多个主标题（罕见情况），需要使用 \nextfloat 明确分隔，否则子图可能归属错误的主图编号。在使用 \subcaptionbox 后，主图计数器可能会提前增加。

@@ -1,0 +1,1 @@
+一个TeX 自动化工具（Automation Tool）。它并不像 graphicx 或 amsmath 那样通过 \usepackage{} 的方式加载到你的 LaTeX 代码中来扩展排版功能。相反，arara 是一个独立运行在命令行（Terminal）中的程序，用于自动化执行编译任务。arara 的主要作用是根据你源代码文件中的特殊注释（指令），自动执行一系列任务（如编译 LaTeX、运行 BibTeX、清理辅助文件等）。它将复杂的编译步骤（例如 pdflatex -> bibtex -> pdflatex -> makeindex -> pdflatex）简化为一条命令。与 latexmk 等工具通过分析日志文件来猜测下一步不同，arara 完全依赖你在文件头部写好的指令，这使得编译过程更加透明和可预测。

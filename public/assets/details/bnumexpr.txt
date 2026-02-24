@@ -1,0 +1,5 @@
+其主要作用是提供一个可扩展的（expandable）解析器，用于处理包含任意精度大整数（Big Integers）的数值表达式。它是 LaTeX 原生 \inteval（基于 \numexpr）的一个增强版替代品，专门解决了原生命令无法处理超大整数以及功能单一的问题。bnumexpr 保留了原生 \inteval 的易用性，但突破了其计算限制，并增加了大量数学运算符。\bnumeval{表达式}可直接将计算结果转换为特定进制：
+\bnumeval[b]{...}：输出二进制
+\bnumeval[o]{...}：输出八进制
+\bnumeval[h]{...}：输出大写十六进制
+\bnumeval[ha]{...}：输出小写十六进制

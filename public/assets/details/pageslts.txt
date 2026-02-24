@@ -1,0 +1,15 @@
+主要用于在文档中引用最后一页的页码，特别是在使用多种页码编号方案（如罗马数字、阿拉伯数字、字母等）或需要精确控制页码计数时。它是对 lastpage 宏包的增强和替代版本。提供标签 LastPage 和 VeryLastPage，允许用户通过 \lastpageref{LastPage} 或 \lastpageref{VeryLastPage} 引用文档的最后一页。这在页眉或页脚中显示“第 N 页，共 K 页”非常有用。提供标签 LastPages（注意末尾的 's'），用于获取文档的总页数。当文档中使用多种页码编号方案时，LastPage 可能只返回最后一种方案的页码，而 LastPages 能正确返回绝对总页数。能够处理混合使用的页码格式（例如：前言用罗马数字 i, ii, iii...，正文用阿拉伯数字 1, 2, 3...）。为每种页码方案的最后一页自动创建特定标签，格式为 pagesLTS.<编号方案>（例如 pagesLTS.roman, pagesLTS.arabic）。如果同一种编号方案被多次使用（例如前后言都用罗马数字），可以通过 pagesLTS.<方案>.<次数>（如 pagesLTS.Roman.1）来引用特定部分的最后一页。
+提供命令 \theCurrentPage：打印当前的绝对/总页码（从文档第一页开始连续计数），区别于标准的 \thepage（仅显示当前编号方案下的页码名称）。
+提供命令 \theCurrentPageLocal：打印当前编号方案内的页码数。
+默认情况下，如果同一种编号方案（如 Roman）在文档中多次出现，页码会自动延续（例如第一次用到 V，第二次接着从 VI 开始）。可以通过设置选项 pagecontinue=false 让页码在每次切换方案时重置为 1。配合 alphalph 宏包，支持超过标准限制的页码表示。
+字母页码：支持超过 'z' 或 'Z' 的页码（如 aa, ab, ... 或 AA, BB, ...），通过选项 alphMult 和 AlphMulti 控制格式。
+符号页码：支持超过 9 个 footnote 符号的页码（如 **, ††, ...），通过选项 fnsymbolmult 控制。
+负数和零页码：支持罗马数字、字母等的零值或负值页码（需配合相应选项如 romanMult, RomanMulti）。
+完美支持 hyperref 宏包，生成的引用可以是超链接。提供 \lastpageref* 命令，用于在使用 hyperref 时抑制超链接。修复了旧版 lastpage 在某些复杂情况（如 fnsymbol 页码）下的问题。
+\lastpageref{LastPage}：引用最后一页的页码名称（当前方案）。
+\lastpageref{VeryLastPage}：引用最后一页的页码名称（通常与 LastPage 相同）。
+\lastpageref{LastPages}：引用文档的总页数（绝对数值）。
+\theCurrentPage：输出当前的绝对页码数（连续计数）。
+\theCurrentPageLocal：输出当前编号方案内的页码数。
+\lastpageref{pagesLTS.<scheme>}：引用特定编号方案（如 arabic, roman）的最后一页。
+\lastpages{<scheme>}{<n>}：获取第 n 次使用该编号方案时的页数。

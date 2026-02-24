@@ -1,0 +1,9 @@
+aTableau 是一个专门用于绘制对称群组合学（Symmetric Group Combinatorics）相关对象的工具。它简化了 Young 图、杨表、算盘图（Abacus）等复杂结构的绘制过程。基于 TikZ 和 LuaTeX3 构建。用于绘制代数组合学和表示论中常见的图形，如杨表、杨图、算盘图、带状杨表等。数学论文、教材编写、学术报告（支持 Beamer）。
+\Tableau：杨表 （Tableaux），绘制标准的杨表，支持多种标记方式。
+\Diagram：杨图 （Young Diagrams），绘制无标记的杨图（即分区的图形表示）。
+\Abacus：算盘图 （Abacuses），用于表示分区的算盘图，在模表示论中非常有用。
+\SkewTableau / \SkewDiagram：斜杨表/图，绘制形状为 λ/μ （外正方形减去内正方形）的图形。
+\ShiftedTableau：移位杨表，用于绘制严格分区（Strict Partitions）的移位杨表。
+\RibbonTableau：带状杨表，用于绘制由“带状”多米诺骨牌铺砌而成的杨表。
+\Multitableau / \Multidiagram：多杨表/图，绘制 l -元组的杨表或杨图（常用于旋积 Hecke 代数表示）。
+\Tabloid：列标 （Tabloids），绘制行等价类的杨表（仅有行线框）。

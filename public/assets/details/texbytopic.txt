@@ -1,0 +1,1 @@
+该书系统地讲解了 TeX 引擎的内部工作机制和底层原理，涵盖了以下核心主题：宏（Macros）、展开（Expansion）、条件判断（Conditionals）、令牌列表（Token Lists）、尺寸与弹性间距（Dimensions and Glue）、其他底层机制等。

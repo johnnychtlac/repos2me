@@ -1,0 +1,22 @@
+旨在通过键/值（key/value）接口简化浮动体（如图片、表格）的创建和管理。它允许用户使用更简洁、自文档化的语法来生成各种复杂的布局，而无需编写冗长的标准 LaTeX 代码。将传统的 \begin{figure}...\end{figure} 结构简化为类似 \keyfig{w=3in,c=标题}{文件名} 的单行命令。支持快速创建单图、多图排列（行/列）、子图（subfloats）、跨栏浮动体等。原生支持将浮动体放置在特定位置，如：
+[H]here（强制当前位置，类似 float 宏包）。
+[M]argin（页边距浮动，兼容 tufte-book 类或自带实现）。
+[W]rapped（文字环绕，基于 wrapfig）。
+为图片、表格、任意内容的盒子以及自定义浮动体提供统一的参数设置方式（如宽度、旋转、边框、标题等）。
+keyfloat 提供了一系列宏命令和环境来处理不同类型的浮动体：
+\keyfig：插入带标题的图片文件。
+\keytab：插入带标题的表格。
+\keyfigbox / \keyparbox：插入包含任意文本内容的图片框（后者无编号/标题）。
+keyfigure / keytable：用于多段内容的环境版。
+keyfloats：将多个浮动体排列成行和列（自动换行）。
+keysubfigs / keysubtabs：创建子图或子表组。
+marginfigure / margintable：页边距浮动体。
+keywrap：让文字环绕浮动体（可在列表环境中使用）。
+\keyflt / keyfloat：用于自定义类型的浮动体。
+用户可以通过键值对轻松控制浮动体属性：
+尺寸：w （固定宽度）， lw （相对于 \linewidth 的比例）， h （高度）， kar （保持纵横比）。
+外观：f （松散边框）， ft （紧密边框）， r （旋转角度）， s （缩放）。
+标题与标签：c （标题）， cstar （无编号标题）， sc （短标题，用于目录）， l （标签）。
+位置：在命令后加 * 或选项 [H]， [M]， [W]。
+其他：cont （续接上一个浮动体编号）， ap/af/al/as （艺术家/作者姓名及索引）。
+依赖宏包 caption， subcaption， graphicx， xkeyval， wrapfig， etoolbox 等。不能与 subfig， subfigure， floatrow， floatflt 等宏包同时使用，因为它们的功能重叠且实现机制冲突。若加载 tocdata 宏包，可将艺术家姓名自动添加到图表目录中。

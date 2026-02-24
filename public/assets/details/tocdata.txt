@@ -1,0 +1,7 @@
+tocdata 宏包的核心功能是在目录（TOC）、图表目录（LOF）或其他浮动体列表的同一行中，添加额外的信息（如作者、艺术家名字等）。通常这些信息会放在标题之后、页码之前。这种格式常见于文学选集、诗歌集或艺术作品集，用于在目录中直接展示作者或创作者姓名。支持标准的 LaTeX 文档类（article, book, report 等）。兼容 memoir、koma-script (scrartcl, scrbook 等)。支持与目录定制宏包配合使用，如 titletoc、tocloft、tocbasic 和 tocstyle。
+章节命令：如 \chapterauthor、\sectionauthor，替代标准的 \chapter 或 \section，可自动将作者名加入目录并在标题下方打印作者名。
+图表命令：如 \captionartist、\captionauthor，替代标准的 \caption，可在图表下方打印艺术家/作者名及补充文本，并将名字加入图表目录和索引。
+字体控制：通过 \tocdataformat 命令自定义目录中额外信息的字体和样式（默认为斜体小字）。
+对齐方式：提供多种命令（如 \tdartistcenter, \tdauthorright 等）来控制图表下方作者/艺术家名字及其补充文本的对齐方式（左对齐、居中、右对齐等）。
+前缀与后缀：高层命令支持可选的前缀（如 "Sir"）和后缀，这些会显示在正文中但不会出现在目录或索引里。
+自动索引：使用高层宏时，作者或艺术家的名字会自动添加到文档的索引中。

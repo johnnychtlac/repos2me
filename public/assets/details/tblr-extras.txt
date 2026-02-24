@@ -1,0 +1,2 @@
+tblr-extras 是 tabularray 的补充库，目前包含两个库：caption 和 babel。在文档导言区添加 \usepackage{tblr-extras} 以启用该宏包。caption 库改变 talltblr 和 longtblr 环境的标题排版方式，使其遵循 caption 宏包的设置。加载 tblr-extras 和 tabularray 后，执行 \UseTblrLibrary{caption}。支持将标题置于表格下方（\TblrCaptionBelow）或恢复为上方（\TblrCaptionAbove）。longtblr 环境的标题超链接锚点会定位在最后一页，且表格会在“表格列表”中显示在最后占据的页面位置。
+babel 库重新定义 longtblr 环境的 conthead-text 和 contfoot-text，使其根据当前 babel 语言设置自动调整。支持的语言包括西班牙语、法语、意大利语、葡萄牙语、德语、世界语、罗马尼亚语、荷兰语、丹麦语、俄语、乌克兰语、加利西亚语、加泰罗尼亚语、南非荷兰语等。加载后执行 \UseTblrLibrary{babel}。

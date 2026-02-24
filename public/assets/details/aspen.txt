@@ -1,0 +1,1 @@
+Aspen 既是一套用于描述密码学协议的标准符号规范，也是一个帮助学术研究人员和学生在 LaTeX 文档中美观、一致地排版这些协议的工具。在安全文献中，不同的作者使用不同的符号（如 Kerberos、BAN Logic 等）来描述加密值、函数和协议。这种不一致性给阅读和写作带来了困扰。Aspen 受到 Ross J. Anderson 等人著作中的标准协议工程符号（Standard Protocol Engineering Notation）以及 Kerberos、BAN Logic 等经典文献的启发。它不是一种形式化的逻辑（如 BAN Logic）或演算系统（如 Spi Calculus），而是一种用于文档撰写和教学演示的符号表示法。

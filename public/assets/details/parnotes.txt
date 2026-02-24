@@ -1,0 +1,11 @@
+parnotes 宏包的主要作用是为 LaTeX 文档添加一种新的注释类型——段落注（parnotes）。与传统的脚注（footnotes）不同，parnotes 将注释直接放置在包含该注释标记的段落末尾，避免了脚注可能造成的阅读中断。在 autopn 环境中，注释会自动出现在每个段落的末尾。使用 \parnotes 命令可以在任意位置手动输出所有待处理的段落注。
+\parnote{文本}：插入一个段落注标记并定义注释内容。
+\parnote[标记]{文本}：自定义注释标记（如使用特定符号或编号）。
+\begin{autopn} ... \end{autopn}：启用自动模式，该环境内的段落注会自动附在段落之后。
+\parnotes：手动输出当前累积的所有段落注。
+\parnotereset / \parnoteclear：重置或清除段落注计数器及待定注释。
+\parnoteref{标签}：引用之前定义的段落注。
+宏包提供了丰富的选项来自定义样式和行为，例如：
+编号样式：roman（罗马数字）、alph（字母）、symbol（符号）。
+格式控制：notesrm（罗马体）、notesit（斜体）、notessf（无衬线体）。
+布局调整：breakwithin（每条注释换行）、indentafter（允许后续段落缩进）、narrower（增加页边距，类似引用块）。

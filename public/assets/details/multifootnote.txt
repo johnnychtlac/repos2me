@@ -1,0 +1,14 @@
+multifootnote 宏包旨在解决传统脚注的一个痛点：让同一个脚注内容对应文中多个不同的位置（标记）。传统方法需要在每个引用处重复写相同的脚注内容，或者手动管理标记，难以直观看出一个脚注被引用了多少次。本宏包方法允许脚注标记按线性顺序排列在文中，而脚注文本只需定义一次，即可自动关联到多个标记。在生成的脚注区域，会显示所有对应的标记号码（例如：1, 2, 5）。
+宏包提供了两组命令来实现这一功能，用户可选择其中一种方式使用（不建议混用）：
+\multifootnotemark[⟨label⟩] (或别名 \footnotenumber[⟨label⟩])用于在文中生成脚注标记。⟨label⟩ 是自定义标签（不能含逗号，但可含冒号或分号），作为可选参数放入方括号 [] 中。
+\multifootnotetext[⟨list of labels⟩]{⟨footnote text⟩} (或别名 \multifootnote[...] {...})用于生成脚注文本。⟨list of labels⟩ 是用逗号分隔的标签列表（如 fn1,fn2,fn3），对应文中使用该标签的所有标记。
+适用于习惯分别控制标记和文本的用户。
+\multifootnotetag{⟨tag⟩} (或别名 \footnotetag{⟨tag⟩})用于生成脚注标记。⟨tag⟩ 是标签，作为必填参数放入花括号 {} 中。支持一次性传入多个标签（如 {tag1,tag2}）。
+\multifootnotetagtext[⟨tag⟩]{⟨footnote text⟩} (或别名 \multifootnote[⟨tag⟩] {...})用于生成脚注文本。⟨tag⟩ 指定该文本对应的标签。
+语法更简洁，无需担心标记顺序。命令 \multifootnote 是通用的。如果其可选参数是逗号分隔的列表，它会被解释为方法一的文本命令；如果不是，则被解释为方法二的文本命令。
+加载时可使用以下选项进行配置：
+backref：启用从脚注文本反向链接回文中引用处的功能。
+left align (或 left-align, leftalign)：将脚注文本左对齐。
+left indent (或 left-indent=⟨length⟩)：设置脚注文本的缩进量，默认值为 1.5em。
+manual (或 manual-mode 等)：启用手动模式。默认情况下宏包会自动处理脚注位置，但在某些特殊环境（如盒子内）或脚注过长跨页时，自动模式可能失效。此时需使用手动模式，通过在特定位置放置 \multifootnote 命令来强制输出脚注文本。手动模式命令需在原命令后加 manual 后缀，如 \multifootnotemarkmanual、\multifootnotetextmanual 等。
+不与 footnotebackref 宏包兼容（但本宏包自带的 backref 选项可实现类似功能）。自动模式无法处理脚注文本跨页的情况，此时建议切换到手动模式，或者对于过长的内容考虑使用尾注（endnote）。建议在文档中只选择一种方法（方法一或方法二）并坚持使用，不要混用。方法二通常更推荐，因为它更简单且不易出错。

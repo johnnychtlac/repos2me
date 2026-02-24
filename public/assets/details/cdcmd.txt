@@ -1,0 +1,14 @@
+这是一个用于创建条件化命令（Conditional Commands）的工具，旨在解决 LaTeX 编程中特定的扩展性问题。与常见的 styledcmd 宏包不同，cdcmd 的核心优势在于它允许定义可 f-扩展的（f-expandable）条件命令。这意味着在某些需要 TeX 进行完全展开（Expansion-only context）的场景下，这些命令依然可以正常工作。该宏包的主要目的是让用户能够根据预定义的“条件”来执行不同的代码块。它区分了两种类型的命令定义接口：
+不可扩展命令（Protected）： 类似于 LaTeX2ε 的 \newcommand，安全性高，但不能在某些受限的 TeX 扫描环境中使用。
+可 f-扩展命令（f-Expandable）： 这是 cdcmd 的特色。它允许条件判断在 TeX 的“f-扩展”过程中进行，这对于编写底层宏包或处理复杂文本流非常有用。
+你需要先定义条件，然后设置它们的状态：
+\newcondition{identifier}{ids}：定义一个名为 identifier 的条件，并列出可能的 ID（如纸张大小 a4，b5）。
+\setcondition{identifier=ids}：设置当前生效的 ID。
+\clearcondition：清除设置。
+分为“任意匹配（any）”和“全部匹配（all）”两种逻辑：
+\conditionif / \econditionif：如果条件为真，执行 ⟨true⟩，否则执行 ⟨false⟩。不带 * 的版本是 any 逻辑（只要列表中有一个匹配即为真）。带 * 的版本是 all 逻辑（列表中所有项都必须匹配才为真）。
+\econditionif 是可 f-扩展的版本。
+\conditioncase：类似于编程语言中的 switch-case 语句。它会依次检查条件，直到找到第一个匹配的 case 并执行对应的代码。
+宏包提供了与 xparse 和 LaTeX2ε 兼容的命令定义方式：
+\NewConditionCommand：定义基于 xparse 规则的条件命令。
+\NewExpandableConditionCommand：定义可扩展的条件命令（不能有默认参数）。

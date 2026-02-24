@@ -1,0 +1,5 @@
+这是一个专为在 XeTeX 和 LuaTeX 引擎下进行双向排版（Bidirectional typesetting）而设计的强大工具。它的核心作用是让 LaTeX 和 Plain TeX 能够完美地处理从右向左（RTL，如波斯语、阿拉伯语、希伯来语）和从左向右（LTR，如英语、中文）混合书写的复杂排版需求。bidi 宏包提供了精细的命令来切换和控制文本的书写方向。它不仅能处理段落级别的方向，还能处理行内短文本、数学公式、脚注等复杂场景。
+\setRTL， \setLTR， \begin{RTL}...\end{RTL}：控制整个段落是右对齐（RTL）还是左对齐（LTR）。
+\RLE{...}， \LRE{...}， \RL{...}， \LR{...}：在长段 RTL 文本中插入 LTR 片段（如英文单词），或反之。
+\hboxR， \hboxL， \vboxR， \vboxL：类似原始 TeX 盒子，但强制内容为特定方向（RTL 或 LTR）。
+ bidi 必须是最后一个加载的宏包（除了极少数特定的内部宏包外）。如果在 bidi 之后加载了其他宏包（如 graphicx），会覆盖 bidi 的定义，导致双向排版失效。 必须使用 XeTeX 或 LuaTeX 引擎。bidi 依赖于 TeX--XeT 算法来实现双向排版。通过加载选项（如 RTLdocument）可以将整个文档的主方向设为 RTL，从而改变章节标题、目录等的默认排版方向。

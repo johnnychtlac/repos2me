@@ -1,0 +1,1 @@
+这是一个由 Clea F. Rees 开发的 LaTeX 宏包，旨在为 Latin Modern 字体 提供更深层次的支持，特别是针对传统的 8-bit TeX 引擎（如 pdfTeX）。官方的 LaTeX 发行版对 Latin Modern 字体的支持较为基础。cfr-lm 的主要作用是通过虚拟字体（Virtual Fonts）技术，让使用者能够在不切换到 Unicode 引擎（如 XeTeX 或 LuaTeX）的情况下，在传统的 8-bit 引擎中使用 Latin Modern 字体的高级特性。

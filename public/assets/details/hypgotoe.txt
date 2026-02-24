@@ -1,0 +1,7 @@
+该宏包的核心功能是扩展 LaTeX 的超链接功能，使其支持 PDF 标准中的 GoToE（Go to Embedded）动作。这允许用户在主文档中点击链接，直接跳转到另一个被嵌入到当前 PDF 中的子文档的特定位置（如某一页、某个标签或章节）。作者提到未来可能会将此功能合并到 hyperref 宏包中。
+扩展 \href 命令：宏包通过识别前缀 gotoe: 来扩展标准的 \href 命令。语法格式：\href{gotoe:<key>=<value>,...}{<link text>}。
+支持的参数（Key-Value 列表）：dest（必填）——目标位置名称。可以是目标文档中通过 \hypertarget 设置的锚点，或者是 \label 生成的目的地名称，也可以是 PDF 目录中的命名目的地。embedded（可选）——指定要跳转的嵌入文件的文件名（即出现在当前文档 /EmbeddedFiles 列表中的名字）。parent（可选）——无值参数。表示跳转到父文档（即包含该嵌入文件的文档）。root（可选）——指定根文档的文件名。
+颜色控制：gotoecolor：设置链接文字颜色（默认为文件链接颜色）。gotoebordercolor：设置链接边框颜色。这些可以在 \hypersetup 中配置。
+依赖与限制：必须加载 hyperref 宏包，且仅支持 pdfTeX 引擎生成的 PDF 模式。目前仅支持嵌入文件和命名目的地。不支持目的地数组（destination arrays）和附件文件（attached files，指非嵌入式的附件）。不支持特殊字符。
+ 
+ 

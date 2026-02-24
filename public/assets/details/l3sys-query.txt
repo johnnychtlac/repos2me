@@ -1,0 +1,7 @@
+该宏包是一个用于 LaTeX 的文档接口，旨在安全地查询系统信息（如文件列表、工作目录等），以支持文档的动态构建。它通过 Lua 脚本 l3sys-query 实现，避免了直接使用 Shell 转义带来的安全风险，并且无需 Java 环境（不同于旧的 texosquery）。允许 LaTeX 文档在编译时获取当前工作目录路径或特定目录下的文件列表。基于文件系统数据（如自动包含某目录下所有图片、自动输入所有章节文件）动态生成文档内容。基于 Lua 实现，符合 TeX Live 的安全限制（restricted shell escape），可在 Windows、macOS 和 Linux 上“开箱即用”，且路径分隔符统一为 /。
+\QueryWorkingDirectory：定义一个命令来存储当前的绝对工作目录路径（通常是主 .tex 文件所在的目录）。
+\QueryFiles：根据指定的文件匹配规则（如 *.png）生成文件列表。对列表中的每个文件执行 <处理函数>（例如自动 \includegraphics 或 \input）。常用选项：recursive——递归搜索子目录。pattern——将参数视为 Lua 正则模式而非通配符。sort——排序方式（name 或 date）。type——过滤类型（f 为文件，d 为目录）。exclude——排除特定文件。
+\QueryFilesTF：与 \QueryFiles 类似，但增加了条件判断：如果找到文件列表执行真分支代码，如果列表为空则执行假分支代码。
+\sys_get_query:nN 等系列命令：直接调用底层查询并将结果存入变量。
+\sys_split_query:nN 等系列命令：将查询结果按行分割存入序列（sequence），便于进一步编程处理。
+必须启用 Shell 转义（--shell-escape 或 --enable-write18）才能工作。如果未启用，宏包会发出警告并返回空结果。在文件匹配模式中，% 是 Lua 的转义字符，可能需要特殊处理（宏包内部已做部分自动处理，允许在顶层使用 % 和 ^）。由于受限 Shell 转义的限制，文件名中的空格处理较为特殊，通常由宏包自动处理参数拼接。

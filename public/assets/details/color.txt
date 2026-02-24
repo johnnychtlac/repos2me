@@ -1,0 +1,12 @@
+color 宏包是 LaTeX 处理色彩的基础工具，它让用户能够轻松地在文档中应用各种颜色效果，同时处理底层驱动差异和作用域问题。为 LaTeX 文档添加文本颜色、背景颜色和边框颜色的支持。通过与不同的输出驱动（driver）交互，确保颜色在各种格式（DVI, PDF, PS 等）中正确渲染。提供多种颜色模型（RGB, CMYK, Gray, Named）和定义方式，满足不同印刷和显示需求。提供单色模式选项，确保文档在不支持彩色的环境下仍能正常编译；通过作用域管理命令，保证与 LaTeX 其他宏包的兼容性。
+\color{declared-colour}：切换到已定义的颜色，直到当前组结束。
+\color[model]{spec}：直接使用颜色模型（如 rgb, cmyk）和数值指定颜色。
+\textcolor{color}{text}：将特定文本设置为指定颜色，自动处理分组，确保颜色不影响后续文本。
+\pagecolor：设置当前及后续页面的背景颜色（全局生效）。
+\nopagecolor：移除页面背景颜色，恢复透明默认值。
+\definecolor{name}{model}{spec}：定义一个新的颜色名称，以便后续使用。支持多种颜色模型（rgb, cmyk, gray, named 等）。
+\DefineNamedColor：用于定义“命名”颜色模型，允许在后处理软件中调整颜色配置。
+\colorbox{color}{text}：给文本添加彩色背景框。
+\fcolorbox{frame-color}{bg-color}{text}：给文本添加带边框和背景色的框。
+\mathcolor：通过引入外部文件支持数学模式下的颜色。
+宏包默认定义了一些基本颜色，如 black, white, red, green, blue, cyan, magenta, yellow，方便用户直接使用。

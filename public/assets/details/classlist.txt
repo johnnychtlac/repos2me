@@ -1,0 +1,5 @@
+该宏包用于记录 LaTeX 文档中加载的所有文档类（classes），并将它们存储在一个列表中。如果在 \documentclass 之前加载该宏包，它会拦截类的加载过程，记录类名、传递给 \documentclass 或 \LoadClass 的选项以及请求的版本号。如果在 \documentclass 之后加载，它会解析内部的 \@filelist 来查找类文件，但此时无法获取选项和请求的版本信息。在文档开始处（\AtBeginDocument），宏包会自动将记录到的类列表信息通过 \PackageInfo 输出到日志中。
+\MainClassName：存储第一个加载的类名。
+\ClassList：存储所有类条目的列表。每个条目格式为 \ClassListEntry{类名}{选项}{请求的版本}。
+\PrintClassList：在屏幕（日志文件）上打印类列表。可以通过重定义 \PrintClassListTitle 来修改标题。可以通过重定义 \PrintClassListEntry 来修改条目的格式化方式。
+在 \documentclass 之前加载，以获取完整信息（包括选项）。在 \documentclass 之后加载，仅能获取类名。

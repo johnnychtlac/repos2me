@@ -1,0 +1,18 @@
+传统的 LaTeX 索引命令 \index{} 需要用户在正文中写一次内容，再在 \index{} 中写一次索引关键词，容易出错且繁琐。hvindex 宏包提供了一系列新宏，让用户只需输入一次单词，即可同时将其出现在正文中并添加到索引里。
+使用 \Index{foo}：会在正文中输出 "foo"，同时在索引中添加 "foo"。
+支持层级索引：\Index{foo!bar} 会在正文输出 "bar"，在索引中归为 "foo" 下的 "bar" 条目。
+支持多级层级：\Index{foo!bar!baz}。
+宏包提供了一系列带格式前缀的命令，可以在输出到正文时自动应用特定字体，同时处理索引：
+\ttIndex{...}：打字机字体 (typewriter)
+\bfIndex{...}：粗体 (bold)
+\sfIndex{...}：无衬线字体 (sans-serif)
+\scIndex{...}：小型大写字母 (small caps)
+\itIndex{...}：斜体 (italic)
+例如：\ttIndex{foo!bar} 会在正文显示为打字机字体的 "bar"，并在索引的 "foo" 下记录 "bar"。
+\sIndex{foo|bar}：在索引中生成 "foo, see bar"。
+\saIndex{baz|bar}：在索引中生成 "baz, see also bar"。
+解决了在索引中直接使用花括号 { 和 } 的困难。
+\iBraceL / \iBraceR：仅在索引中写入左/右花括号。
+\IBraceL / \IBraceR：同时在正文输出花括号并在索引中正确排序记录。
+支持使用 \| (通过 \IVert 输入) 作为分隔符。
+加载时会同时加载 makeidx 包并执行 \makeindex 命令。建议在 babel 包之后加载此包。

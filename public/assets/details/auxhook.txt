@@ -1,0 +1,7 @@
+这个宏包的作用是为 LaTeX 的辅助文件（.aux）提供了“钩子”（Hooks），允许其他宏包在 .aux 文件的开头插入代码。LaTeX 在编译过程中会生成 .aux 文件来存储交叉引用、目录等信息。通常有两种 .aux 文件：主辅助文件（Main .aux file）——对应主文档。部分辅助文件（Part .aux files）——对应使用 \include 命令包含的子文档。如果没有 auxhook，当用户停止使用某个宏包（例如 babel）时，旧的 .aux 文件中可能仍残留该宏包的宏命令（如 \select@language），导致编译报错（未知命令错误）。它修补（Patch）了 LaTeX 的底层命令 \document 和 \@include，使得在打开 .aux 文件并写入第一行（\relax）之后，能够调用特定的钩子。
+该宏包主要提供了两类接口：一类是供开发者调用的钩子，另一类是供用户使用的命令。
+\@beginmainauxhook：主辅助文件开头，在主 .aux 文件写入 \relax 后调用。
+\@beginpartauxhook：包含的辅助文件开头，在由 \include 生成的 .aux 文件写入 \relax 后调用。
+\AddLineBeginMainAux{<line>}：将 <line> 写入到主 .aux 文件的开头。
+\AddLineBeginPartAux{<line>}：将 <line> 写入到所有包含（\include）的 .aux 文件的开头。
+\AddLineBeginAux{<line>}：将 <line> 同时写入到所有类型的 .aux 文件开头（即上述两者的组合）。

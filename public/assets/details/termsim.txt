@@ -1,0 +1,12 @@
+termsim 是一个基于 LaTeX3 开发的 LaTeX 宏包，主要用于在文档中模拟 Windows 10、Ubuntu 和 Mac 操作系统的终端窗口。它依赖于 tcolorbox 宏包，旨在提供一种美观且可定制的方式来展示命令行代码或终端输出，避免了使用截图的繁琐。支持模拟 Win10、Mac 和 Ubuntu 三种操作系统的终端窗口样式（包括窗口边框、按钮图标、颜色主题等）。通过环境直接在 LaTeX 源码中输入终端内容。通过命令读取外部文件（如 .bat， .sh 等）的内容并在模拟窗口中显示。提供带星号（*）的环境和命令，允许为终端窗口添加底线注释，用于解释代码或输出结果。支持暗色 （dark）、亮色 （light） 和 白色 （white） 三种颜色主题，适应不同的文档排版需求（如深色模式演示或打印输出）。
+terminal 环境：用于直接在环境中编写终端内容。变体 terminal*：支持添加底线注释。
+\termfile 命令：用于读取外部文件内容并显示在终端窗口中。变体 \termfile*：支持添加底线注释。
+\termset 命令：用于全局或局部设置终端窗口的外观样式（键值对形式）。操作系统类型 （os）、颜色主题 （theme）、代码引擎 （minted/listings）、字体大小、行距等。
+用户可以通过 \termset 或环境/命令的可选参数调整以下细节：
+操作系统 （os）：win10， mac， ubuntu （默认: win10）。
+颜色主题 （theme）：dark， light， white （默认: dark）。
+代码引擎 （minted）：选择使用 minted （默认，需安装 Pygments） 或 listings 宏包进行代码高亮。
+代码样式 （shstyle）：设置代码高亮风格（仅对 minted 有效）。
+字体与间距：可调整代码字号 （shsize） 和行距 （shstretch）。
+注释格式 （commentf）：设置底线注释的字体格式。
+使用该宏包通常需要安装以下 LaTeX 宏包：tcolorbox （核心依赖），fontawesome5 （用于绘制窗口按钮图标），minted 或 listings （用于代码高亮），xcolor， tikz， expl3 等基础宏包。

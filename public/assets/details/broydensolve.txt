@@ -1,0 +1,9 @@
+这个宏包的主要作用是在 LaTeX 内部实现非线性方程组的数值求解。基于 Broyden's good method（Broyden 好方法），这是一种拟牛顿法，用于求解非线性方程组。完全使用 LaTeX3（expl3）编写，不需要 shell-escape 选项，也不需要安装 Python 或 Sage。相比 pythontex 或 sagetex 需要多次编译或复杂的构建流程，此宏包只需编译一次即可得到结果。特别适合用于几何绘图，可以将求解出的坐标直接用于 TikZ 画图。
+\BroydenSolve{...}：核心命令，用于执行求解。
+\BroydenSetup{...}：用于设置全局参数。
+\dis(A, B)：计算两点间的距离。
+\ang(A, B, C)：计算角度（弧度制）。
+\col(A, B, C)：要求三点共线（Collinear）。
+\BroydenRoot{var}：获取变量 var 的根。
+\BroydenIterations：获取迭代次数。
+\BroydenRoots：获取所有根的列表。

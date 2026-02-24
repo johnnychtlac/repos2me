@@ -1,0 +1,20 @@
+这是一个基于 l3draw 和 expl3 开发的工具，专门用于排版带圈文字（例如带圈的数字、汉字或任意文本）。
+\circledtext：对必选参数中的文本添加圆圈边框后排版。
+\circledtext*：实现阴文（反白）效果的带圈文字输出。
+\circledtextset：设置后续所有 \circledtext 命令的默认外观参数。
+用户可以通过 Key-Value 方式在命令中局部设置，或通过 \circledtextset 全局设置以下参数：
+boxtype （外框类型）：支持多种背景类型。
+basechar （基字符）：设置尺寸测度的基准字符（默认 XeTeX/LuaTeX 为“好”，其他为“x”）。
+resize （缩放类型）：none （无缩放）， real （实际宽高）， base （基字符缩放）。
+width / height：直接设置宽度或高度。
+xscale / yscale：设置 X/Y 方向的缩放系数。
+boxcolor：边框颜色（默认黑色）。
+charcolor：文本颜色（默认黑色）。
+boxfill：背景填充颜色。
+charf：文本格式（如 \Huge， \sffamily 等，默认 \normalsize）。
+charshrink：文本缩放系数（默认 0.75）。
+boxlinewidth：边框线宽（默认 0.4pt）。
+crosslinewidth：背景线（如十字线）线宽（默认 0.3pt）。
+crosscolorratio：背景线颜色相对于边框颜色的比例（%）。
+charstroke：笔画类型。none （原始）， solid （实线）， dashed （虚线）， invisible （隐藏笔画）。
+dashpattern：自定义虚线的线型模式。

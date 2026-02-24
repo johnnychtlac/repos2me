@@ -1,0 +1,8 @@
+zref-vario 是一个兼容性层（compatibility layer），旨在让传统的 varioref 宏包能够与现代化的 zref-clever 宏包协同工作。它提供了一系列以 \z 开头的命令（如 \zvref），作为 varioref 主要引用命令的对应版本。这些命令本质上是在调用原始的 varioref 命令之前，先进行一些（作用域内的）设置，从而实现对 zref 系统的支持。它封装了 varioref 的功能，提供了以下用户命令，用法与原版类似，但支持 zref 的特性：
+\zvref：对应 \vref
+\zvpageref：对应 \vpageref
+\zvrefrange：对应 \vrefrange（范围引用）
+\zvpagerefrange：对应 \vpagerefrange
+\zfullref：对应 \fullref
+这些命令接受单个标签（而非列表），星号版本（如 \zvref*）可禁止超链接，且默认局部设置 nospace 选项以避免语法歧义。
+原版 varioref 仅能识别阿拉伯数字页码，无法正确处理罗马数字（如前言部分）或其他页码格式，导致无法判断引用位置是“同一页”、“附近”还是“远处”。zref-vario 允许通过 pageprop 选项指定用于比较的 zref 属性（例如使用 zref-abspage 模块的 abspage 属性）。这使得页码比较独立于页码显示格式，能够正确处理前言（罗马数字）到正文（阿拉伯数字）的跨页引用。提供 \zvLanguageSetup 命令，允许用户针对不同语言自定义引用文本（如“见第...页”、“在下一页”等）和格式。支持设置 reftextfaceafter, reftextfaraway 等标准 varioref 选项。内置 \zvhyperlink 命令，可在自定义文本中灵活创建超链接。当加载 zref-check 宏包时，zref-vario 的命令支持 vcheck 选项。该选项用于检查引用标签与引用位置在同一页时的相对位置（上方 above 或下方 below），仅在两者同页时生效。必须依赖 zref-clever 和 varioref。加载顺序需注意，特别是相对于 hyperref 的顺序，需遵循 varioref 的要求。

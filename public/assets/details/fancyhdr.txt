@@ -1,0 +1,8 @@
+fancyhdr 是一个用于 LaTeX 的宏包，其主要作用是高度自定义文档的页眉（header）和页脚（footer）。它允许用户轻松替换默认的页眉页脚样式，创建复杂的布局，并控制页眉页脚中的内容（如页码、章节标题、作者名等）。取代 LaTeX 标准的 plain、headings 等页面风格，允许用户自由定义每一页顶部和底部的内容。支持将内容放置在页眉/页脚的左侧（L）、中间（C）或右侧（R），并区分奇偶页（用于双面打印）。可以自定义页眉和页脚下方的横线（规则线）的粗细、样式或完全移除。支持处理未编号的章节标题、字典式页眉、拇指索引（thumb-indexes）等高级功能。文档还提到了配套的 extramarks 包，用于更复杂的多级标记处理。
+\pagestyle{fancy}：启用 fancyhdr 风格。
+\fancyhf{}：清除所有当前的页眉页脚设置，以便重新开始定义。
+\fancyhead / \fancyfoot：分别用于设置页眉和页脚。可以通过可选参数指定位置，例如：\fancyhead[L]{...}——左侧页眉。\fancyhead[C]{...}——中间页眉。\fancyhead[R]{...}——右侧页眉。\fancyhead[LE,RO]{...}——偶数页左侧和奇数页右侧（常用于书籍的双面打印）。
+\fancyheadoffset / \fancyfootoffset：调整页眉或页脚的宽度偏移量，使其超出正文文本宽度。
+\renewcommand{\headrulewidth}{...}：修改页眉下方横线的宽度（设为 0pt 可隐藏横线）。
+\fancypagestyle：定义新的页面风格或重新定义现有风格（如 plain 风格，通常用于章首页）。
+\fancycenter：用于在页眉页脚中进行特殊的居中处理（v4.0+ 版本特性）。

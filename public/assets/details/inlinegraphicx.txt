@@ -1,0 +1,7 @@
+旨在简化图形元素的行内插入（即图片与文字在同一行显示），并自动处理图片的定位和缩放。基于标准的 \includegraphics 命令，提供 \inlinegraphics 命令。它能根据当前字体的字符高度（height）和深度（depth）自动计算图片的尺寸和垂直位置，使图片能完美地嵌入到文本行中，无需手动调整。宏包会自动计算当前行高（通常参考字符 "q" 和 "H" 的高度），并将图片缩放到匹配该行高，确保图片不会破坏行间距或显得突兀。
+自动调整：\inlinegraphics{example-image-16x10} —— 图片自动调整为与当前文本行高一致。
+手动缩放：\inlinegraphics[scale=0.75]{example-image-16x10} —— 图片高度为行高的 75%。
+忽略深度：\inlinegraphics*{example-image-16x10} —— 仅考虑高度，不考虑字符下沉深度（descender）。
+自定义参考字符：\inlinegraphics[strut={()}]{...} —— 使用括号的高度作为参考基准。
+结合其他选项：\inlinegraphics<angle=10>{...} —— 在自动调整大小的同时旋转图片。
+仅依赖 graphicx 包，内部逻辑使用 LaTeX3（expl3）语法编写，保证了现代 LaTeX 环境的兼容性。inlinegraphicx 解决了在 LaTeX 段落中插入小图标或示意图时，需要反复手动尝试 height、raisebox 等参数的痛点，实现了“一键式”的完美行内图文混排。

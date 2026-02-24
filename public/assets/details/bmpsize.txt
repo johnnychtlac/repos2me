@@ -1,0 +1,7 @@
+该宏包能够分析位图图像文件，自动提取其大小（宽度和高度）和分辨率数据。它将这些功能添加到 graphics 宏包中，使得在使用 \includegraphics 插入位图时，不再需要单独的边界框（.bb）。它利用 pdfTeX 的 \pdffiledump 原语以二进制模式读取文件并解析头部信息。重写了部分驱动程序（如 dvips, dvipdfm, dvipdfmx）中关于位图包含的实现。增加了对 viewport（视口）、trim（裁剪）和 clip（剪切）选项的支持，这些在标准的位图驱动支持中通常缺失或功能有限。在 dvipdfm 和 dvipdfmx 驱动中，支持图像复用（如果同一图像被多次使用，不会重复包含，从而减小文件体积）。该宏包支持解析多种常见的位图格式，包括：
+BMP、GIF、JPEG、PNG、TIFF、PCX、MSP、PNM（PBM/PGM/PPM）。
+resolutionunit：指定分辨率单位（默认为英寸 1in，即 DPI）。
+defaultresolution：当图像文件本身不包含分辨率信息时，使用的默认分辨率（默认为 72!，感叹号表示保持宽高比）。
+resolution：强制覆盖图像文件中自带的分辨率设置。
+bmpsizefast：开关选项。启用时（默认）使用 ε-TeX 算术计算，速度快但数值范围有限；禁用时使用 fp 包算术，支持更大数值但速度稍慢。
+需要 pdfTeX 1.30.0 或更高版本（因为依赖 \pdffiledump 原语）。适用于 DVI 和 PDF 模式。如果在 pdfTeX 的 PDF 模式下编译，该宏包的功能已被 pdfTeX 原生支持（针对 JPEG 和 PNG），此时宏包会提示已被取代并停止加载。它主要用于其他驱动程序或非原生支持的格式。

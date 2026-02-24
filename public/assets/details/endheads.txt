@@ -1,0 +1,5 @@
+这是一个专为 LaTeX 设计的工具，旨在增强尾注（endnotes）的可读性和导航性。在尾注部分的每一页页眉中，自动生成类似 “Notes to pp. xx–yy”（第 xx 至 yy 页的注释）的说明。方便读者在翻阅尾注时，能快速知道当前页面的注释对应正文中的哪些页码，无需来回翻找。利用 LaTeX 的 \mark 机制持续更新页眉，确保其始终反映当前页尾注所对应的正文页码范围。必须配合 endnotes 宏包使用。标准文档类（如 article, book）还需要 fancyhdr（处理页眉页脚）、ifthen（逻辑判断）、needspace（防止孤行）和 titleref（获取章节标题）。Memoir 文档类兼容性更好，仅需 endnotes 和 ifthen，因为 memoir 内置了许多相关功能且与 fancyhdr 冲突。若同时使用 biblatex，需在 \begin{document} 之后 调用 \setupendnoteheaders 以避免冲突。
+\setupendnoteheaders：必须调用。启用页眉功能，设置页眉样式，并修改 \endnote 命令以记录页码信息。
+\notesbychapter：自动在每章结束时重置尾注计数并在尾注区添加章节标题。
+\resetendnotes：手动重置尾注计数（适用于没有尾注的章节或参考文献前）。
+\setstyleforchapternotebegin / \setstyleforchapternoteend：自定义章节分隔线的格式（如字体、对齐方式）。

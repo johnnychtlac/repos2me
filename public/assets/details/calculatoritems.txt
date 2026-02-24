@@ -1,0 +1,1 @@
+由 Cédric Pierquet 开发。它的核心作用是帮助用户在 LaTeX 文档中精准地复刻和排版经典图形计算器（如 Casio、NumWorks、TI、HP 等）的菜单项和按键样式。

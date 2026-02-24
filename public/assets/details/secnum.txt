@@ -1,0 +1,3 @@
+secnum 宏包提供了一个直观的命令 \setsecnum，允许用户自定义章节编号的格式。它通过简单的语法缩写和分隔符，灵活地控制章节、子章节等的编号样式，并支持“断号”功能（即深层级标题不显示浅层级的编号前缀，但在引用标签中保留）。用户在导言区使用 \usepackage{secnum} 加载宏包。通过 \setsecnum{⟨num format⟩} 命令定义编号格式。格式语法由编号样式缩写（如 A, a, I, i, 1 分别对应 \Alph, \alph, \Roman, \roman, \arabic）和分隔符组成。示例：\setsecnum{A,:1.i} 表示章用大写字母，节用阿拉伯数字（但节标题不显示章号），子节用阿拉伯数字加点加小写罗马数字。使用逗号 ,（默认）作为断号标记。如果分隔符中包含断号标记（如示例中的 ,:），则较深层级的标题（如 subsection）在显示时会省略较浅层级（如 section）的编号前缀。但在交叉引用（reference labels）中，编号仍然包含完整的路径，只是去掉了断号标记（例如引用显示为 B:3 而不是 B,3）。用户可以通过 breaking 选项自定义断号标记字符。
+tocdep=⟨integer⟩：手动设置目录深度（table-of-contents depth），范围通常为 1 到 5。若使用此选项，\setsecnum 将不会自动覆盖 tocdepth。
+breaking=⟨token⟩：更改断号标记字符（默认为逗号 ,）。

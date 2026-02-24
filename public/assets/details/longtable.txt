@@ -1,0 +1,1 @@
+longtable 宏包定义了一个新的环境 longtable，它是标准 tabular 环境的多页版本。与标准的 table 或 tabular 环境不同（它们不能跨页，且通常是浮动的），longtable 允许表格被 TeX 的标准分页算法打断，从而可以跨越多个页面。它不是浮动体（float），表格会出现在代码所在的位置，而不是被 TeX 移动到页面的顶部或底部。它支持与 table 环境类似的 \caption 命令，默认使用相同的计数器（table），并且生成的表格标题会自动添加到“表格列表”（List of Tables）中。

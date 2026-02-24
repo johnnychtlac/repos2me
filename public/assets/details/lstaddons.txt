@@ -1,0 +1,1 @@
+lstlinebgrd 和 lstautogobble 这两个宏包都是为了增强 LaTeX 核心宏包 listings（用于排版代码）的功能而开发的。lstlinebgrd 宏包主要用于为代码 listings 的行添加背景颜色，实现如“斑马纹”（Zebra effect）或渐变等视觉效果。它允许用户根据行号条件，为代码的每一行设置不同的背景颜色，而不仅仅是改变文字颜色。lstautogobble 宏包主要用于解决代码块缩进的问题。原生的 listings 宏包有一个 gobble 选项用于去除每行开头的字符，但需要手动数空格数。此宏包实现了自动计算。自动检测代码 listings 中第一行的缩进（空格或制表符 Tab），并将 listings 的 gobble 参数设置为该值，从而自动去除所有行的前导空白字符。

@@ -1,0 +1,1 @@
+centernot 宏包提供了一个名为 \centernot 的命令，用于在数学公式中生成水平居中的否定符号（即斜杠“/”）。LaTeX 原生的 \not 命令会将否定符号放在一个固定位置，这导致当它作用于宽度较大的关系符号（如 \longrightarrow 或 \parallel）时，斜杠往往无法居中，视觉效果不佳。\centernot 会测量其后跟随符号的宽度，并自动调整否定符号的位置，使其在水平方向上完美居中。许多常用的否定符号其实已经有专门的宏包（如 amssymb 或 mathabx）提供了预设好的独立符号（例如 \nparallel, \nmid, \nrightarrow），这些专用符号通常是首选。只有在没有专用符号可用时，才建议使用 \centernot 来手动构建。

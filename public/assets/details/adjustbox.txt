@@ -1,0 +1,7 @@
+它的核心作用是让你能够像调整图片大小、裁剪图片一样，去调整文字、表格、代码块等任何排版元素。adjustbox 的主要目的是解决标准 LaTeX 中只能对图片进行缩放、旋转、裁剪，而无法直接对普通文本或表格进行类似操作的问题。
+\adjustbox{keys}{content}：核心命令。使用 key=value 语法调整任意内容。
+\adjustimage{keys}{filename}：专门用于调整图片，结合了 \includegraphics 的功能和 adjustbox 的额外选项。
+\adjincludegraphics[options]{filename}：像标准 \includegraphics 一样使用，但支持 adjustbox 的所有 keys。
+adjustbox 环境：用于包含复杂的内容（如包含 verbatim/代码的环境）。
+自定义宏/环境：你可以使用 \newadjustboxcmd 或 \newadjustboxenv 基于 adjustbox 定义自己的常用命令。
+它依赖于 graphicx，xkeyval，collectbox 等包。如果需要颜色支持，需要手动加载 xcolor。文档提到裁剪功能（\clipbox，\trimbox）实际上是由其子包 trimclip 提供的，这使得其他文档可以仅加载基础裁剪功能而不引入整个 adjustbox。你可以使用 \adjustboxset 来全局设置某些参数（例如统一给所有盒子加边框），这些设置会应用到后续所有的 adjustbox 调用中。

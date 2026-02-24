@@ -1,0 +1,1 @@
+ltfilehook 是 LaTeX 内核（LaTeX kernel）中的一个宏包（实际上是内核代码的一部分，文件名为 ltfilehook-code.pdf），由 LaTeX Project Team 开发。它的主要作用是为 LaTeX 提供一套文件加载钩子（hooks）机制，允许用户或宏包在文件（如 .tex, .sty, .cls 等）被读取之前或之后执行自定义代码。

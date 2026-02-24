@@ -1,0 +1,6 @@
+KOMA-Script 是一个功能强大的 LaTeX 文档类（document classes）和宏包集合，旨在提供比标准 LaTeX 类（如 article、report、book）更灵活、更符合欧洲（特别是德国）排版规范的文档样式。它特别注重 typography（排版艺术），提供了丰富的自定义选项。
+scrartcl：对应标准的 article 类，用于短篇论文、文章等。
+scrreprt：对应标准的 report 类，用于报告、技术文档等。
+scrbook：对应标准的 book 类，用于书籍、长篇论文等。
+scrlttr2：专门用于撰写信件的类，功能非常强大，支持多种信封格式和布局。
+scrextend：允许将 KOMA-Script 的功能扩展到其他非 KOMA-Script 的文档类上。

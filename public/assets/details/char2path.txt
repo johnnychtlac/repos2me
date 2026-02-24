@@ -1,0 +1,7 @@
+这是一个非常实用的工具，主要用于将文本字符转换为 TikZ 路径（Vector Paths），从而允许用户对文字进行极其精细的图形化处理。char2path 的主要作用是将字符的轮廓转化为 TikZ 可以识别的路径数据。这意味着文字不再仅仅是“文本”，而是变成了可以填充、描边、裁剪甚至进行数学变换的“图形”。将输入的字符串转换为路径。支持对路径进行填充（Fill）、描边（Draw）、渐变（Fading）以及应用图案（Pattern）。基于 Latin Modern 字体家族（包括罗马体、无衬线体和等宽字体）。
+\chartopath：将字符串转换为路径用于绘制文字轮廓、填充颜色或渐变效果。
+\chartoclip：使用单个字符裁剪图像用于创建“文字镂空”效果，即用字符形状裁剪出指定的图片。
+\ctpdata：输出字符的路径数据用于调试或获取底层的 PGF 坐标数据。
+通过 key-val 参数，你可以灵活控制转换后的效果：设置 draw（描边色）和 fill（填充色），默认为黑色。通过 outline 参数设置轮廓宽度，模拟“粗体”效果。支持水平渐变 (hfading) 和垂直渐变 (vfading)，可以指定两种颜色的过渡（如 hfading={red, green}）。支持 scale 缩放，以及结合 TikZ 的 xslant 等参数进行倾斜变换。
+文档中展示了几个非常有创意的高级用法：可以将该宏包用于 listings 或 minted 环境中，使代码行号也具备渐变等艺术效果，且不影响复制文本。虽然 \chartoclip 默认只支持单个字符，但文档提供了一段 expl3 代码（\strpathclip），允许用户定义一个接受字符串的命令，实现多字符的图片裁剪效果。文档展示了如何利用此宏包重新创建经典的 TeX 和 LaTeX Logo，证明了其在处理复杂字形连接上的能力。
+支持 pdfLaTeX、XeLaTeX 和 LuaLaTeX 等主流编译方式。基于 Latin Modern 字体（AMS 公共领域）开发，遵循 GUST Font License (GFL)。

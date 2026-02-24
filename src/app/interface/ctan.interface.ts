@@ -1,6 +1,14 @@
-export interface ICtan {
-  id: string;
-  date: string;
-  description: string;
-  docfile?: string;
+interface IPkgs {
+    id: string;
+    subtitle: string;
+    date?: string;
+    labels: string[];
+    docpaths?: string[];
 }
+
+interface ICtan {
+    site: string;
+    pkgs: IPkgs[];
+}
+
+export type { ICtan };

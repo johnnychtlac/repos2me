@@ -1,0 +1,1 @@
+exscale 宏包是专为 LaTeX2e 设计的，主要用于实现数学扩展字体（math extension font）cmex 的缩放功能。提供了 cmex10 字体在不同尺寸下的缩放版本，包括 10.95pt、12pt、14.4pt、17.28pt、20.74pt 和 24.88pt，这些尺寸对应于标准的 \magstephalf 和 \magstep1 到 \magstep5。对于 7pt 到 9pt 的尺寸，需要使用 AMS 字体包中的 cmex 变体。exscale 宏包旨在解决在较大字号下数学扩展字体显示不正确的问题，提供一种临时的解决方案，直到有更优化的字体设计出现。

@@ -1,0 +1,4 @@
+eolgrab 是一个由 Heiko Oberdiek 开发的 LaTeX（及 plain TeX）宏包，其主要作用是提供一个通用的参数捕获机制，允许宏的参数以行尾（End of Line, EOL）作为分隔符，而不是传统的花括号 {}。
+\eolgrab{<code>} <argument> <EOL>：捕获直到行尾的所有内容作为参数，并将其传递给 <code> 指定的宏。它将捕获到的 <argument> 自动加上花括号，然后执行 <code>{<argument>}。
+\eolgrabopt{<code>} <argument> <EOL>：作用与 \eolgrab 类似，但将捕获的内容作为可选参数传递。如果 <argument> 非空，执行 <code>[{<argument>}]（自动添加方括号和内部的花括号以支持特殊字符）。如果 <argument> 为空（即直接换行），则执行 <code> 而不带可选参数。
+让用户在编写文档时省略花括号，使源代码看起来更简洁，类似于某些标记语言或自然书写习惯。例如：可以直接写 \eolsection My Title 而不是 \section{My Title}。用户可以基于此宏包创建自己的“行尾结束”命令。文档中提供了一个复杂的例子 \eolsection，它不仅支持行尾参数，还兼容 LaTeX 标准的星号形式（\section*）和可选参数形式（\section[短标题]长标题）。可以定义简写命令如 \Begin itemize 来代替 \begin{itemize}。

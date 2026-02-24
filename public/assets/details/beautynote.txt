@@ -1,0 +1,1 @@
+定义了 beautynote 这一文档类，用于构建书籍或笔记的基本框架。提供了一系列可自定义的变量，用于设置文档的标题、作者、日期等信息。预设了多种数学和逻辑环境，如定理、引理、定义、命题等，支持编号和样式化。包含特定的章节样式（Chapter Styles）和页面样式（Page Styles），旨在实现“优雅”的视觉效果。针对纯数学（Pure Mathematics）出版需求，宏包内置了多种排版环境，能够自动处理编号和标题格式，包括：Theorem（定理）、Lemma（引理）、Proposition（命题）。Definition（定义）。Problem（问题）、Remark（注记）、Solution（解答）、Proof（证明）。
