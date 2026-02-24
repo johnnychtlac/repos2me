@@ -1,1 +1,17 @@
 obsolete
+latex-dev
+aspell
+sysuthesis
+proflycee
+nwejm
+jyu-chem-thesis
+iacrj
+fhj-script
+deutschesmuseum
+denisbdoc
+cqjtuthesis
+bfh-ci
+hebrew
+german
+kotex-oblivoir
+hyph-utf8

@@ -1,7 +1,7 @@
 import {
   NzIconDirective,
   NzIconModule
-} from "./chunk-MF3FKGE5.js";
+} from "./chunk-AWTRQL6W.js";
 import {
   NzConfigService,
   NzStringTemplateOutletDirective,
@@ -694,4 +694,4 @@ export {
   NZ_SPACE_COMPACT_ITEM_TYPE,
   NzSpaceCompactItemDirective
 };
-//# sourceMappingURL=chunk-QGUAMQ5R.js.map
+//# sourceMappingURL=chunk-CZ3QI3CZ.js.map

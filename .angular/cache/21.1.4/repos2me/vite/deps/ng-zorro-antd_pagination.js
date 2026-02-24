@@ -1,7 +1,10 @@
 import {
   NzEmbedEmptyComponent,
   NzEmptyModule
-} from "./chunk-UZ4ELDNM.js";
+} from "./chunk-X6WFMOUZ.js";
+import {
+  NzI18nService
+} from "./chunk-VPZZAMU6.js";
 import {
   NZ_FORM_SIZE,
   NZ_SPACE_COMPACT_ITEM_TYPE,
@@ -10,7 +13,7 @@ import {
   NzFormNoStatusService,
   NzFormStatusService,
   NzSpaceCompactItemDirective
-} from "./chunk-QGUAMQ5R.js";
+} from "./chunk-CZ3QI3CZ.js";
 import {
   A,
   ALT,
@@ -42,7 +45,7 @@ import {
   getPlacementName,
   slideAnimationEnter,
   slideAnimationLeave
-} from "./chunk-S7I7GES5.js";
+} from "./chunk-OKNHGDI4.js";
 import {
   BreakpointObserver,
   NzBreakpointEnum,
@@ -50,26 +53,12 @@ import {
   cancelAnimationFrame,
   gridResponsiveMap,
   requestAnimationFrame
-} from "./chunk-34QSA22R.js";
+} from "./chunk-YLEKFQFV.js";
 import {
   NzIconDirective,
   NzIconModule
-} from "./chunk-MF3FKGE5.js";
-import {
-  Platform,
-  _getEventTarget,
-  _getFocusedElementPierceShadowDom,
-  _getShadowRoot,
-  normalizePassiveListenerOptions
-} from "./chunk-VMU2ZAM7.js";
-import {
-  NzI18nService
-} from "./chunk-VPZZAMU6.js";
+} from "./chunk-AWTRQL6W.js";
 import "./chunk-BQ76GOFF.js";
-import {
-  DomSanitizer
-} from "./chunk-5TGB3BYV.js";
-import "./chunk-4D67RZE2.js";
 import {
   NzConfigService,
   NzOutletModule,
@@ -87,15 +76,26 @@ import {
   toNumber
 } from "./chunk-LM4IETVQ.js";
 import {
+  Platform,
+  _getEventTarget,
+  _getFocusedElementPierceShadowDom,
+  _getShadowRoot,
+  normalizePassiveListenerOptions
+} from "./chunk-VMU2ZAM7.js";
+import {
   Directionality
 } from "./chunk-JC63M5VE.js";
 import {
   takeUntilDestroyed
 } from "./chunk-FUQ6BMHY.js";
 import {
+  DomSanitizer
+} from "./chunk-BCE6KIPK.js";
+import {
   NgTemplateOutlet,
   isPlatformBrowser
 } from "./chunk-KFDOK4JN.js";
+import "./chunk-4D67RZE2.js";
 import {
   getDOM
 } from "./chunk-47JDWAB7.js";

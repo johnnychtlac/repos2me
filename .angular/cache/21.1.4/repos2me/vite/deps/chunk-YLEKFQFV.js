@@ -1,12 +1,12 @@
 import {
-  Platform
-} from "./chunk-VMU2ZAM7.js";
-import {
   coerceArray,
   environment,
   getEventPosition,
   isTouchEvent
 } from "./chunk-LM4IETVQ.js";
+import {
+  Platform
+} from "./chunk-VMU2ZAM7.js";
 import {
   takeUntilDestroyed
 } from "./chunk-FUQ6BMHY.js";
@@ -742,12 +742,14 @@ var ComponentPortal = class extends Portal {
   viewContainerRef;
   injector;
   projectableNodes;
-  constructor(component, viewContainerRef, injector, projectableNodes) {
+  bindings;
+  constructor(component, viewContainerRef, injector, projectableNodes, bindings) {
     super();
     this.component = component;
     this.viewContainerRef = viewContainerRef;
     this.injector = injector;
     this.projectableNodes = projectableNodes;
+    this.bindings = bindings || null;
   }
 };
 var TemplatePortal = class extends Portal {
@@ -860,7 +862,8 @@ var DomPortalOutlet = class extends BasePortalOutlet {
         index: portal.viewContainerRef.length,
         injector,
         ngModuleRef,
-        projectableNodes: portal.projectableNodes || void 0
+        projectableNodes: portal.projectableNodes || void 0,
+        bindings: portal.bindings || void 0
       });
       this.setDisposeFn(() => componentRef.destroy());
     } else {
@@ -873,7 +876,8 @@ var DomPortalOutlet = class extends BasePortalOutlet {
       componentRef = createComponent(portal.component, {
         elementInjector,
         environmentInjector,
-        projectableNodes: portal.projectableNodes || void 0
+        projectableNodes: portal.projectableNodes || void 0,
+        bindings: portal.bindings || void 0
       });
       appRef.attachView(componentRef.hostView);
       this.setDisposeFn(() => {
@@ -995,7 +999,8 @@ var CdkPortalOutlet = class _CdkPortalOutlet extends BasePortalOutlet {
       index: viewContainerRef.length,
       injector: portal.injector || viewContainerRef.injector,
       projectableNodes: portal.projectableNodes || void 0,
-      ngModuleRef: this._moduleRef || void 0
+      ngModuleRef: this._moduleRef || void 0,
+      bindings: portal.bindings || void 0
     });
     if (viewContainerRef !== this._viewContainerRef) {
       this._getRootNode().appendChild(ref.hostView.rootNodes[0]);
@@ -1106,4 +1111,4 @@ export {
   CdkPortalOutlet,
   PortalModule
 };
-//# sourceMappingURL=chunk-34QSA22R.js.map
+//# sourceMappingURL=chunk-YLEKFQFV.js.map

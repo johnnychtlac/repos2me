@@ -1,6 +1,6 @@
 export interface ICtan {
   id: string;
-  date: string;
+  date?: string;
   description: string;
-  docfile?: string;
+  document?: string;
 }

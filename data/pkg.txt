@@ -1,5 +1,9 @@
-# files第一个元素表示需要跟踪的文件，第二个为文档
-# <id>代表id值
+# id
+# sub?
+# files: [0,1]
+# description
+# isgithub?
+
 # &cp [<id>.cls,<id>.pdf,]
 # &dp [<id>.dtx,<id>.pdf,]
 # &sp [<id>.sty,<id>.pdf,]
@@ -8,6 +12,7 @@
 # &d-dp [<id>.dtx,<id>-doc.pdf,]
 # &s-dp [<id>.sty,<id>-doc.pdf,]
 # &t-dp [<id>.tex,<id>-doc.pdf,]
+
 
 - id: context-notes-zh-cn
   files: &tp [<id>.tex,<id>.pdf,]
@@ -21,16 +26,16 @@
   files: *tp
   description: 该宏包将介绍在Windows11、Ubuntu24.04和macOS系统上安装TeXLive（包括macOS上的MacTeX）、升级宏包以及编译简单文档的相关操作，并主要介绍命令行操作
 
-- id: latex2e
-  files: [<id>.txt,<id>.pdf,]
+- id: latex2e-help-texinfo
+  files: [latex2e.html,latex2e.pdf,]
   description: 本项目旨在编写一份关于LaTeX核心部分的参考手册
 
-- id: etex_man
-  files: *tp
+- id: etex
+  files: [<id>_man.tex,<id>_man.pdf,]
   description: 扩展版TeX。LaTeX需要e-TeX扩展以及部分超越e-TeX的扩展所提供的功能
 
-- id: lshort-zh-cn
-  files: *tp
+- id: lshort
+  files: [lshort-zh-cn.tex,lshort-zh-cn.pdf,]
   description: 一份（不太）简短的LATEX2ε介绍
 
 - id: ptex-manual
@@ -42,447 +47,554 @@
   description: 本文档介绍了纯粹的TeX特性
 
 - id: yet-another-guide-latex2e
-  files: [Yet-Another-Guide-LaTeX2e_v131.tex,Yet-Another-Guide-LaTeX2e.pdf,]
+  files: [Yet-Another-Guide-LaTeX2e_v132.tex,Yet-Another-Guide-LaTeX2e_v132.pdf,]
   description: 本文档是一份关于如何使用LaTeX2e排版高质量文档的简明指南
 
 - id: l3build
-  files: *tp
+  files: &dp [<id>.dtx,<id>.pdf,]
   description: 用于TeX/LaTeX的测试和构建系统
 
-- id: l3draw
-  files: &dp [<id>.dtx,<id>.pdf,]
+- id: l3experimental
+  sub: l3draw
+  files: [l3draw.dtx,l3draw.pdf,]
   description: 该模块提供了一个用于构建绘图的代码级接口
 
-- id: xcoffins
-  files: *dp
+- id: l3experimental
+  sub: xcoffins
+  files: [xcoffins.dtx,xcoffins.pdf,]
   description: 一种数据结构，它既包含一个TeX盒子，也包含相关的辅助信息，以便进行受控的排版。这一功能由底层的l3coffins宏包支持，后者提供了该数据结构
 
-- id: xgalley
-  files: *dp
+- id: l3experimental
+  sub: xgalley
+  files: [xgalley.dtx,xgalley.pdf,]
   description: 一个矩形区域，用于从顶部接收文本及其他内容进行填充。这一功能由底层的l3galley宏包支持，后者提供了该数据结构
 
-- id: expl3
-  files: *dp
+- id: l3kernel
+  sub: expl3
+  files: [expl3.dtx,expl3.pdf,]
   description: 满足大型TeX宏编程项目需求而设计的一套新的编程规范
 
-- id: interface3
-  files: *tp
+- id: l3kernel
+  sub: interface3
+  files: [interface3.tex,interface3.pdf,]
   description: 这是expl3编程环境的参考文档
 
-- id: l3doc
-  files: *dp
+- id: l3kernel
+  sub: l3doc
+  files: [l3doc.dtx,l3doc.pdf,]
   description: 专为expl3宏包设计的文档类
 
-- id: l3docstrip
-  files: *dp
+- id: l3kernel
+  sub: l3docstrip
+  files: [l3docstrip.dtx,l3docstrip.pdf,]
   description: LaTeX3（expl3）项目的增强版代码提取工具。所有功能均已移至主DocStrip程序中
 
-- id: l3prefixes
-  files: *tp
+- id: l3kernel
+  sub: l3prefixes
+  files: [l3prefixes.tex,l3prefixes.pdf,]
   description: 该文件列出了已向LaTeX团队注册并用于expl3代码中的前缀
 
-- id: l3styleguide
-  files: *tp
+- id: l3kernel
+  sub: l3styleguide
+  files: [l3styleguide.tex,l3styleguide.pdf,]
   description: 本文档旨在作为LaTeX3内核代码及文档作者的风格指南
 
-- id: l3term-glossary
-  files: *tp
+- id: l3kernel
+  sub: l3term-glossary
+  files: [l3term-glossary.tex,l3term-glossary.pdf,]
   description: 用于描述LATEX3函数的TEX术语表
 
-- id: alltt
-  files: *dp
+- id: base
+  sub: alltt
+  files: [alltt.dtx,alltt.pdf,]
   description: 该宏包定义了alltt环境，它类似于verbatim环境，但其中\、{和}具有其通常的含义。因此，其他命令和环境可以出现在alltt环境内部
 
-- id: cfgguide
-  files: *tp
+- id: base
+  sub: cfgguide
+  files: [cfgguide.tex,cfgguide.pdf,]
   description: 任何依赖扩展宏包的文档都必须在文档文件中声明该宏包；这有助于确保文档在另一个站点（那里的LaTeX系统配置可能不同）也能正常工作
 
-- id: classes
-  files: *dp
+- id: base
+  sub: classes
+  files: [classes.dtx,classes.pdf,]
   description: LaTeX2e版本的标准文档类
 
-- id: cyrguide
-  files: *tp
+- id: base
+  sub: cyrguide
+  files: [cyrguide.tex,cyrguide.pdf,]
   description: LaTeX中的西里尔语系语言支持
 
-- id: doc
-  files: *dp
+- id: base
+  sub: doc
+  files: [doc.dtx,doc.pdf,]
   description: 提供排版宏名、代码块、生成索引等文档命令
 
-- id: docstrip
-  files: *dp
+- id: base
+  sub: docstrip
+  files: [docstrip.dtx,docstrip.pdf,]
   description: 从.dtx文件中提取出.sty/.cls/.def等可执行代码
 
-- id: encguide
-  files: *tp
+- id: base
+  sub: encguide
+  files: [encguide.tex,encguide.pdf,]
   description: 本文档解释了LaTeX字体编码的基础理念
 
-- id: exscale
-  files: *dp
+- id: base
+  sub: exscale
+  files: [exscale.dtx,exscale.pdf,]
   description: 该宏包实现了对数学扩展字体“cmex”的缩放功能
 
-- id: fix-cm
-  files: *dp
+- id: base
+  sub: fix-cm
+  files: [fix-cm.dtx,fix-cm.pdf,]
   description: fix-cm改进了ComputerModern字体族的定义
 
-- id: fntguide
-  files: *tp
+- id: base
+  sub: fntguide
+  files: [fntguide.tex,fntguide.pdf,]
   description: 本文档介绍了LaTeX文档准备系统的新型字体选择功能
 
-- id: ifthen
-  files: *dp
+- id: base
+  sub: ifthen
+  files: [ifthen.dtx,ifthen.pdf,]
   description: 该文件为LaTeX2ε实现了一个\ifthenelse命令
 
-- id: inputenc
-  files: *dp
+- id: base
+  sub: inputenc
+  files: [inputenc.dtx,inputenc.pdf,]
   description: 该宏包允许用户通过以下命令指定输入编码（例如，ASCII、ISOLatin-1或Macintosh）
 
-- id: latexrelease
-  files: *dp
+- id: base
+  sub: latexrelease
+  files: [latexrelease.dtx,latexrelease.pdf,]
   description: 使新格式使用某些命令的旧定义，反之也可以为旧格式提供新定义以供使用
 
-- id: letter
-  files: *dp
+- id: base
+  sub: letter
+  files: [letter.dtx,letter.pdf,]
   description: LaTeX2e标准信函文档类
 
-- id: ltcmdhooks
-  files: &d-dp [<id>.dtx,<id>-doc.pdf,]
+- id: base
+  sub: ltcmdhooks
+  files: [ltcmdhooks.dtx,ltcmdhooks-doc.pdf]
   description: 现在的\⟨name⟩提供了两个关联的钩子（hooks），可以使用\AddToHook、\AddToHookNext、\AddToHookWithArguments和\AddToHookNextWithArguments向其中添加代码
 
-- id: ltfilehook
-  files: *d-dp
+- id: base
+  sub: ltfilehook
+  files: [ltfilehook.dtx,ltfilehook-doc.pdf,]
   description: 存在两类钩子：一类是对特定类型的文件（如果包含代码）都会执行的钩子，例如所有“被包含的文件”或所有“宏包”；另一类则是针对单个文件特有的钩子，例如在foo.sty宏包加载后执行某些操作
 
-- id: lthooks
-  files: *d-dp
+- id: base
+  sub: lthooks
+  files: [lthooks.dtx,lthooks-doc.pdf,]
   description: LATEX的钩子管理
 
-- id: ltluatex
-  files: *dp
+- id: base
+  sub: ltluatex
+  files: [ltluatex.dtx,ltluatex.pdf,]
   description: 该文件在LATEX2ε内核级别提供了对LuaTEX的基础支持
 
-- id: ltmarks
-  files: *d-dp
+- id: base
+  sub: ltmarks
+  files: [ltmarks.dtx,ltmarks-doc.pdf,]
   description: 该模块为不同类别的标记提供了一种通用的机制
 
-- id: ltpara
-  files: *d-dp
+- id: base
+  sub: ltpara
+  files: [ltpara.dtx,ltpara-doc.pdf,]
   description: 这段代码定义了四个特殊的内核钩子以支持段落标记，同时还定义了四个偶尔会很有用的公共钩子
 
-- id: ltproperties
-  files: *d-dp
+- id: base
+  sub: ltproperties
+  files: [ltproperties.dtx,ltproperties-doc.pdf,]
   description: 这段代码实现了用于记录和（可展开地）引用文档属性的命令。它扩展了标准的\label、\ref、\pageref命令
 
-- id: ltshipout
-  files: *d-dp
+- id: base
+  sub: ltshipout
+  files: [ltshipout.dtx,ltshipout-doc.pdf,]
   description: 该代码提供了对TEX\shipout原语的接口，该原语在最终完成的页面被“输出”到目标文件（例如.dvi或.pdf文件）时被调用
 
-- id: ltsockets
-  files: *d-dp
+- id: base
+  sub: ltsockets
+  files: [ltsockets.dtx,ltsockets-doc.pdf,]
   description: 这段代码实现了“插槽”（sockets），即代码中可以插入预定义代码块（plugs）的位置。插槽和插块都有各自的“名称”，且在任何给定时间，每个插槽都恰好分配有一个插块
 
-- id: lttemplates
-  files: *d-dp
+- id: base
+  sub: lttemplates
+  files: [lttemplates.dtx,lttemplates-doc.pdf,]
   description: 文档编写的三个层级
 
-- id: ltxdoc
-  files: *dp
+- id: base
+  sub: ltxdoc
+  files: [ltxdoc.dtx,ltxdoc.pdf,]
   description: 该类文件专为记录LATEX源文件而设计
 
-- id: proc
-  files: *dp
+- id: base
+  sub: proc
+  files: [proc.dtx,proc.pdf,]
   description: 这个LATEX2ε文档类旨在生成可用于直接印刷的会议论文集
 
-- id: syntonly
-  files: *dp
+- id: base
+  sub: syntonly
+  files: [syntonly.dtx,syntonly.pdf,]
   description: 该宏包为LATEX2ε实现了\syntaxonly声明。此命令可用于导言区，用于在不实际生成任何输出文件的情况下运行文档（仅进行语法检查）
 
-- id: usrguide
-  files: *tp
+- id: base
+  sub: usrguide
+  files: [usrguide.tex,usrguide.pdf,]
   description: 本文档介绍了该团队工作成果中那些稳定且具有广泛适用性的概念。这些“新”理念已从开发阶段的宏包转移到了LATEX2ε内核中
 
 - id: amsmath
   files: *dp
   description: amsmath宏包是LaTeX的一个扩展宏包，它提供了额外的功能以方便数学公式的排版
 
-- id: afterpage
-  files: *dp
+- id: tools
+  sub: afterpage
+  files: [afterpage.dtx,afterpage.pdf,]
   description: 该宏包实现了一个名为afterpage的命令，它会使参数中指定的命令在当前页面输出完成后才进行展开执行
 
-- id: array
-  files: *dp
+- id: tools
+  sub: array
+  files: [array.dtx,array.pdf,]
   description: 本文介绍了一种对LATEXarray和tabular环境的扩展实现
 
-- id: bm
-  files: *dp
+- id: tools
+  sub: bm
+  files: [bm.dtx,bm.pdf,]
   description: 该宏包定义了用于访问粗体数学符号的命令
 
-- id: calc
-  files: *dp
+- id: tools
+  sub: calc
+  files: [calc.dtx,calc.pdf,]
   description: calc宏包重新实现了LATEX的\setcounter、\addtocounter、\setlength和\addtolength命令。现在，这些命令不再仅接受一个简单的数值，而是可以接受中缀表达式
 
-- id: dcolumn
-  files: *dp
+- id: tools
+  sub: dcolumn
+  files: [dcolumn.dtx,dcolumn.pdf,]
   description: 该宏包定义了一套系统，用于在array或tabular环境中定义按“小数点”对齐的条目列
 
-- id: delarray
-  files: *dp
+- id: tools
+  sub: delarray
+  files: [delarray.dtx,delarray.pdf,]
   description: delarray宏包对array.sty的补充是一个隐式\left\right配对系统
 
-- id: fileerr
-  files: *dp
+- id: tools
+  sub: fileerr
+  files: [fileerr.dtx,fileerr.pdf,]
   description: 安装这些文件后，用户可以在TEX询问缺失的文件名时，使用h、q、r、s、e、x进行响应，而在某些系统上也可以直接按回车键（⟨return⟩）来响应
 
-- id: ftnright
-  files: *dp
+- id: tools
+  sub: ftnright
+  files: [ftnright.dtx,ftnright.pdf,]
   description: 汇集页面上所有栏的脚注，并将它们全部集中放置在右栏的底部
 
-- id: hhline
-  files: *dp
+- id: tools
+  sub: hhline
+  files: [hhline.dtx,hhline.pdf,]
   description: \hhline生成的线条类似于\hline，或者是双线类似于\hline\hline，区别仅在于其与竖线的交互方式
 
-- id: layout
-  files: *dp
+- id: tools
+  sub: layout
+  files: [layout.dtx,layout.pdf,]
   description: 可生成当前文档版式布局的概览
 
-- id: longtable
-  files: *dp
+- id: tools
+  sub: longtable
+  files: [longtable.dtx,longtable.pdf,]
   description: 该宏包定义了longtable环境，它是tabular环境的跨页版本
 
-- id: multicol
-  files: *dp
+- id: tools
+  sub: multicol
+  files: [multicol.dtx,multicol.pdf,]
   description: 该环境允许在同一页面上切换单栏和多栏格式
 
-- id: showkeys
-  files: *dp
+- id: tools
+  sub: showkeys
+  files: [showkeys.dtx,showkeys.pdf,]
   description: showkeys.sty宏包修改了\label、\ref、\pageref、\cite和\bibitem命令，以便打印出“内部”键名
 
-- id: tabularx
-  files: *dp
+- id: tools
+  sub: tabularx
+  files: [tabularx.dtx,tabularx.pdf,]
   description: 定义了一个新环境tabularx，通过调整特定列的宽度（而不是列间距）来设置表格的总宽度
 
-- id: trace
-  files: *dp
+- id: tools
+  sub: trace
+  files: [trace.dtx,trace.pdf,]
   description: 该宏包定义了两个宏\traceon和\traceoff，分别用于无条件地开启或关闭追踪功能
 
-- id: varioref
-  files: *dp
+- id: tools
+  sub: varioref
+  files: [varioref.dtx,varioref.pdf,]
   description: 该宏包为LATEX2ε定义了命令\vref、\vpageref、\vrefrange和\vpagerefrange
 
-- id: xr
-  files: *dp
+- id: tools
+  sub: xr
+  files: [xr.dtx,xr.pdf,]
   description: 在独立编译的LaTeX文档之间共享\label引用
 
-- id: xspace
-  files: *dp
+- id: tools
+  sub: xspace
+  files: [xspace.dtx,xspace.pdf,]
   description: \xspace应用于主要在文本中使用的宏的末尾
 
 - id: docsurvey
   files: *tp
   description: 一份关于LATEX文档的综述
 
-- id: aliascnt
-  files: *dp
+- id: oberdiek
+  sub: aliascnt
+  files: [aliascnt.dtx,aliascnt.pdf,]
   description: 别名计数器
 
-- id: bmpsize
-  files: *dp
+- id: oberdiek
+  sub: bmpsize
+  files: [bmpsize.dtx,bmpsize.pdf,]
   description: 获取位图的尺寸和分辨率数据
 
-- id: centernot
-  files: *dp
+- id: oberdiek
+  sub: centernot
+  files: [centernot.dtx,centernot.pdf,]
   description: 该宏包提供了 \centernot 命令，它会在随后的参数上打印 \not 符号。与 \not 不同，该符号是水平居中对齐的
 
-- id: chemarr
-  files: *dp
+- id: oberdiek
+  sub: chemarr
+  files: [chemarr.dtx,chemarr.pdf,]
   description: 可伸缩的化学反应箭头
 
-- id: classlist
-  files: *dp
+- id: oberdiek
+  sub: classlist
+  files: [classlist.dtx,classlist.pdf,]
   description: 记录所用文档类的信息
 
-- id: colonequals
-  files: *dp
+- id: oberdiek
+  sub: colonequals
+  files: [colonequals.dtx,colonequals.pdf,]
   description: 为数学关系符号（例如“定义为等于”）定义了简易版符号。其中的冒号是围绕数学水平轴居中对齐的
 
-- id: dvipscol
-  files: *dp
+- id: oberdiek
+  sub: dvipscol
+  files: [dvipscol.dtx,dvipscol.pdf,]
   description: dvips 颜色栈管理
 
-- id: engord
-  files: *dp
+- id: oberdiek
+  sub: engord
+  files: [engord.dtx,engord.pdf,]
   description: 该宏包用于生成英文序数的后缀
 
-- id: enparen
-  files: *dp
+- id: oberdiek
+  sub: enparen
+  files: [enparen.dtx,enparen.pdf,]
   description: 该宏包定义了用于设置括号的宏，这些括号会根据嵌套层级自动从内层到外层改变符号
 
-- id: eolgrab
-  files: *dp
+- id: oberdiek
+  sub: eolgrab
+  files: [eolgrab.dtx,eolgrab.pdf,]
   description: 该宏包实现了一个通用的参数抓取器，用于捕获以行尾为定界的参数
 
-- id: fibnum
-  files: *dp
+- id: oberdiek
+  sub: fibnum
+  files: [fibnum.dtx,fibnum.pdf,]
   description: 该宏包为 LATEX 和 plain TEX 提供了可扩展的斐波那契数列计算功能
 
-- id: flags
-  files: *dp
+- id: oberdiek
+  sub: flags
+  files: [flags.dtx,flags.pdf,]
   description: flags宏包允许在位字段中设置和清除标志，并将位字段转换为十进制数。目前位字段限制为31位
 
-- id: hypbmsec
-  files: *dp
+- id: oberdiek
+  sub: hypbmsec
+  files: [hypbmsec.dtx,hypbmsec.pdf,]
   description: 该宏包扩展了章节命令的语法。如果章节命令的参数无法直接用作书签条目，可以为其指定一个替代文本作为书签
 
-- id: hypgotoe
-  files: *dp
+- id: oberdiek
+  sub: hypgotoe
+  files: [hypgotoe.dtx,hypgotoe.pdf,]
   description: 用于链接到嵌入文件的实验性宏包
 
-- id: hyphsubst
-  files: *dp
+- id: oberdiek
+  sub: hyphsubst
+  files: [hyphsubst.dtx,hyphsubst.pdf,]
   description: ATEX格式文件可能包含以不同名称定义的、用于同一语言的替代断词模式。如果命名规范遵循babel的规则，那么格式文件中提供的替代断词模式就可以替换该语言原有的断词模式
 
-- id: ifdraft
-  files: *dp
+- id: oberdiek
+  sub: ifdraft
+  files: [ifdraft.dtx,ifdraft.pdf,]
   description: 该宏包提供了一个根据draft（草稿）和final（最终）选项来选择不同代码的接口
 
-- id: iflang
-  files: *dp
+- id: oberdiek
+  sub: iflang
+  files: [iflang.dtx,iflang.pdf,]
   description: 该宏包基于\languagename宏或断词模式，提供了可扩展的当前语言检测功能
 
-- id: pdfcolparallel
-  files: *dp
+- id: oberdiek
+  sub: pdfcolparallel
+  files: [pdfcolparallel.dtx,pdfcolparallel.pdf,]
   description: 该宏包修复了parallel宏包中的错误，并利用pdfTEX 1.40及以上版本提供的多个颜色栈改进了对颜色的支持
 
-- id: pdfcolparcolumns
-  files: *dp
+- id: oberdiek
+  sub: pdfcolparcolumns
+  files: [pdfcolparcolumns.dtx,pdfcolparcolumns.pdf,]
   description: 由于pdfTEX 1.40版本开始支持多个颜色栈，该宏包利用这一特性修复了parcolumns宏包中的颜色问题
 
-- id: pdfcrypt
-  files: *dp
+- id: oberdiek
+  sub: pdfcrypt
+  files: [pdfcrypt.dtx,pdfcrypt.pdf,]
   description: 该宏包支持为VTEX以及一些旧版本的pdfTEX设置PDF加密选项
 
-- id: protecteddef
-  files: *dp
+- id: oberdiek
+  sub: protecteddef
+  files: [protecteddef.dtx,protecteddef.pdf,]
   description: 该宏包提供了\ProtectedDef命令，用于在Plain TeX和LaTeX中定义稳健宏。它首先尝试使用ε-TEX的\protected，若不可用则使用LaTeX的\DeclareRobustCommand；否则，定义的宏将不是稳健的
 
-- id: resizegather
-  files: *dp
+- id: oberdiek
+  sub: resizegather
+  files: [resizegather.dtx,resizegather.pdf,]
   description: 过长的公式会被自动缩放以适应可用空间。该宏包支持amsmath宏包的gather环境，并重新定义了equation和displaymath环境，使其分别基于gather及其不带编号的版本实现
 
-- id: rotchiffre
-  files: *dp
+- id: oberdiek
+  sub: rotchiffre
+  files: [rotchiffre.dtx,rotchiffre.pdf,]
   description: 该宏包实现了ROT13编码及其变体ROT5、ROT18和ROT47
 
-- id: scrindex
-  files: *dp
+- id: oberdiek
+  sub: scrindex
+  files: [scrindex.dtx,scrindex.pdf,]
   description: 如果加载了KOMA-Script的文档类，该宏包会重新定义index宏包的theindex环境。同时也支持idxtotoc选项。索引的前导内容既可以通过index宏包提供，也可以通过KOMA-Script提供的接口来设置
 
-- id: setouterhbox
-  files: *dp
+- id: oberdiek
+  sub: setouterhbox
+  files: [setouterhbox.dtx,setouterhbox.pdf,]
   description: 如果在 hbox中设置了数学内容，TeX会执行一些优化并省略隐式的断点惩罚值\binoppenalty和\relpenalty。该宏包试图将内容放入\hbox中，同时又不丢失这些惩罚值
 
-- id: settobox
-  files: *dp
+- id: oberdiek
+  sub: settobox
+  files: [settobox.dtx,settobox.pdf,]
   description: 定义了用于获取盒子尺寸的命令，功能类似于LaTeX的\settowidth命令
 
-- id: stackrel
-  files: *dp
+- id: oberdiek
+  sub: stackrel
+  files: [stackrel.dtx,stackrel.pdf,]
   description: 该宏包为\stackrel命令添加了一个可选参数，用于在关系符号下方放置内容，并定义了用于二元符号的\stackbin命令
 
-- id: stampinclude
-  files: *dp
+- id: oberdiek
+  sub: stampinclude
+  files: [stampinclude.dtx,stampinclude.pdf,]
   description: 该宏包替换了\includeonly命令，通过检查.aux文件的时间戳来选择 \include 的文件。如果.aux文件尚不存在，或者其时间早于对应的.tex文件，该文件就会被选中包含进来
 
-- id: tabularht
-  files: *dp
+- id: oberdiek
+  sub: tabularht
+  files: [tabularht.dtx,tabularht.pdf,]
   description: 该宏包定义了一些环境，为tabular和array环境增加了高度设定功能
 
-- id: tabularkv
-  files: *dp
+- id: oberdiek
+  sub: tabularkv
+  files: [tabularkv.dtx,tabularkv.pdf,]
   description: 该宏包通过新的环境tabularkv为tabular添加了键值对（key-value）接口。这样，通过命名参数可以使TeX源代码看起来更清晰，尤其是在使用tabularht宏包时
 
-- id: thepdfnumber
-  files: *dp
+- id: oberdiek
+  sub: thepdfnumber
+  files: [thepdfnumber.dtx,thepdfnumber.pdf,]
   description: 该宏包将实数转换为一种最简形式的表示，去除不必要的前导零、尾随零、正号以及小数点
 
-- id: twoopt
-  files: *dp
+- id: oberdiek
+  sub: twoopt
+  files: [twoopt.dtx,twoopt.pdf,]
   description: 该宏包提供了定义带有两个可选参数的宏的命令
 
-- id: booklet
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: booklet
+  files: [booklet.tex,"",]
   description: 重新排序PDF页面并将其整理，以便进行小册子打印
 
-- id: circu
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: circu
+  files: [circu.tex,"",]
   description: 为Plain TeX启用circuitikz.sty的功能
 
-- id: cnv-pu
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: cnv-pu
+  files: [cnv-pu.tex,"",]
   description: cnv.tex的使用示例——在PDF书签中使用Unicode编码
 
-- id: cnv-word
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: cnv-word
+  files: [cnv-word.tex,"",]
   description: cnv.tex的使用示例——单词到单词的转换
 
-- id: cnv
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: cnv
+  files: [cnv.tex,"",]
   description: 文本转换工具
 
-- id: cropmarks
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: cropmarks
+  files: [cropmarks.tex,"",]
   description: 为任意PDF文档添加裁切标记
 
-- id: eparam
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: eparam
+  files: [eparam.tex,"",]
   description: 在参数扫描期间进行完全展开
 
-- id: fun-coffee
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: fun-coffee
+  files: [fun-coffee.tex,"",]
   description: 在文档中生成咖啡渍（斑点）效果
 
-- id: openclose
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: openclose
+  files: [openclose.tex,"",]
   description: 修复\Open...\Close对之间的平衡文本
 
-- id: qrcode
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: qrcode
+  files: [qrcode.tex,"",]
   description: 在TeX层面生成二维码
 
-- id: scanbase
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: scanbase
+  files: [scanbase.tex,"",]
   description: 解析文本样式的MySQL输出
 
-- id: scancsv
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: scancsv
+  files: [scancsv.tex,"",]
   description: 解析CSV格式
 
-- id: seplist
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: seplist
+  files: [seplist.tex,"",]
   description: 具有参数分隔符替代方案的宏
 
-- id: xmlparser
-  files: [<id>.tex,"",]
+- id: olsak-misc
+  sub: xmlparser
+  files: [xmlparser.tex,"",]
   description: 解析XML语言
 
-- id: cuted
-  files: *dp
+- id: sttools
+  sub: cuted
+  files: [cuted.dtx,cuted.pdf,]
   description: 该功能用于在双栏页面（\twocolumn 模式）的任意位置插入通栏（全宽）内容
 
-- id: floatpag
-  files: *dp
+- id: sttools
+  sub: floatpag
+  files: [floatpag.dtx,floatpag.pdf,]
   description: 提供用于为通栏浮动体应用不同页面样式的命令
 
-- id: flushend
-  files: *dp
+- id: sttools
+  sub: flushend
+  files: [flushend.dtx,flushend.pdf,]
   description: 该宏包用于在双栏模式下的任意页面上平衡栏高（使两栏底部对齐）
 
-- id: stabular
-  files: *dp
+- id: sttools
+  sub: stabular
+  files: [stabular.dtx,stabular.pdf,]
   description: 通过允许分页来改进tabular环境
 
-- id: stfloats
-  files: *dp
+- id: sttools
+  sub: stfloats
+  files: [stfloats.dtx,stfloats.pdf,]
   description: 该宏包改进了双栏浮动体（dblfloat）和脚注的放置机制，以及基线间距（baselineskip）的弹性设置
 
 - id: fillpages
@@ -700,13 +812,13 @@
 - id: hereapplies
   files: *s-dp
   description: 一个用于引用具有共同特征的页面组的LaTeX宏包
- 
+
 - id: hvindex
   files: *s-dp
   description: hvindex宏包定义了一些宏命令，用以替代\index，从而使操作更加便捷。您只需键入每个单词一次，即可同时将其添加到索引和正文中
 
 - id: indextra
-  files: *d-dp
+  files: &d-dp [<id>.dtx,<id>-doc.pdf,]
   description: 该宏包为排版索引提供了一些增强功能
 
 - id: knowledge
@@ -730,7 +842,7 @@
   description: 该宏包支持alphalph宏包，即可以使用超过26的alph或Alph页码，以及超过9的fnsymbol页码（需设置相应选项）。甚至在arabic、alph、Alph、roman、Roman和fnsymbol页码格式下，也可以使用零和负数页码（需配合alphalph宏包及相应选项）
 
 - id: refcheck
-  files: *tp
+  files: [<id>.sty,refdemo.pdf,]
   description: 该宏包可以查找无用的标签、未加标签的公式、未引用的参考文献，并将标签的“键”显示在页边上
 
 - id: refstyle
@@ -913,7 +1025,7 @@
   files: *s-dp
   description: 用于以内联方式插入图形元素，并实现自动定位和缩放
 
-- id: magicwatermark 
+- id: magicwatermark
   files: [<id>.sty,<id>-cn.pdf,]
   description: magicwatermark是一个全新的水印宏包，可以灵活的设置背景和水印
 
@@ -965,12 +1077,14 @@
   files: *dp
   description: listings宏包是用于LaTeX的源代码打印工具
 
-- id: lstautogobble
-  files: *dp
+- id: lstaddons
+  sub: lstautogobble
+  files: [lstautogobble.dtx,lstautogobble.pdf,]
   description: 这个listings宏包的附加组件提供了一个布尔型autogobble设置，该设置会自动将gobble值设定为第一行的缩进量
 
-- id: lstlinebgrd
-  files: *dp
+- id: lstaddons
+  sub: lstlinebgrd
+  files: [lstlinebgrd.dtx,lstlinebgrd.pdf,]
   description: 这个listings宏包的附加组件提供了为代码行添加背景颜色的选项。通过使用依赖于行号的条件判断，可以为每一行指定不同的颜色
 
 - id: minted
@@ -1138,7 +1252,7 @@
   description: 该文件修正了TeX排版引擎所使用的断字算法中的一个小功能，该功能仅在那些使用撇号（'）来标记元音省略的语言中才会显现出来
 
 - id: flowfram
-  files: [<id>.dtx,ffuserguide.pdf,]
+  files: [<id>.dtx,<id>-manual.pdf,]
   description: flowfram宏包是一个LaTeX宏包，旨在使您能够在文档中创建文本框，让文档环境中内容按照定义的顺序从一个框流向下一个框。这对于创建海报、杂志或任何不符合标准单栏或双栏布局的文档形式非常有用
 
 - id: fontscale
@@ -1173,7 +1287,7 @@
   files: *tp
   description: 匈牙利语中有两个定冠词“a”和“az”，具体使用哪一个取决于其后单词的首个发音。如果单词以元音发音开头，定冠词则为“az”，否则为“a”。huaz宏包可帮助用户在交叉引用及其他包含文本的命令中自动插入正确的定冠词
 
-- id: ideaVault
+- id: ideavault
   files: *s-dp
   description: 声明某个概念（如果可以允许我称之为“创意”的话），然后在文档各处引用它，而无需进行复制粘贴。对于真正复杂的项目，你可能还需要使用标签对这些创意进行分类，或者建立它们之间的相互依赖关系
 
@@ -1480,6 +1594,7 @@
 - id: cus
   files: [<id>.sty,<id>-cn.pdf,]
   description: 使用CuSTEX可以方便地设置标题、目录、页面样式（页面几何元素、页眉页脚等）、图表、背景、水印、边注、脚注、列表、索引、术语表等文档元素，具有强大的可定制性
+  isgithub: true
 
 - id: dccpaper
   files: *dp
@@ -1498,7 +1613,7 @@
   description: 该文档类是欧盟委员会推荐的履历标准模型（即 Europass CV）的非官方LaTeX实现
 
 - id: exam
-  files: [<id>.dtx,""]
+  files: [<id>.cls,examdoc.pdf,]
   description: exam.cls是一个LaTeX2e文档类，旨在用于编写考试题目。它是在article等现有文档类基础上扩展构建的
 
 - id: exam-zh
@@ -1554,7 +1669,7 @@
   description: KOMA-Script是一个功能多样的LaTeX2e文档类和宏包集合。这些文档类旨在替代标准的LaTeX2e文档类，并增加了多项功能以使其更易于配置
 
 - id: luatex-cn
-  files: [<id>.sty,<id>-zh-doc.pdf,]
+  files: [<id>.sty,<id>-wiki-zh.pdf,]
   description: luatex-cn是一个专门为LuaTeX设计的中文排版宏包，特别增强了对古籍垂直排版（GujiLayout）和现代竖排的支持
 
 - id: luatexja
@@ -1579,7 +1694,7 @@
 
 - id: memoir
   files: [<id>.dtx,memman.pdf,]
-  description:
+  description: 一款适用于排版诗歌、小说的灵活类，非虚构类及数学作品，如书籍、报告、文章或手稿
 
 - id: minimalist
   files: [<id>.sty,"",]
@@ -1636,6 +1751,7 @@
 - id: simplexam
   files: [<id>.cls,exam.pdf,]
   description: 一个简单的试卷模板类simplexam。试卷分有答案和无答案两种模式，使用选项answer控制
+  isgithub: true
 
 - id: sjtutex
   files: *dp
@@ -1685,12 +1801,14 @@
   files: [<id>.sty,<id>-manual.pdf,]
   description: exsheets宏包的官方继任者
 
-- id: xtufte-book
-  files: *cp
+- id: xtufte
+  sub: book
+  files: [<id>-book.cls,sample-book.pdf,]
   description: Tufte-LaTeX文档类定义了一种类似于爱德华·塔夫特（Edward Tufte）在其书籍和讲义中使用的风格
 
-- id: xtufte-handout
-  files: *cp
+- id: xtufte
+  sub: handout
+  files: [<id>-handout.cls,sample-handout.pdf,]
   description: Tufte-LaTeX文档类定义了一种类似于爱德华·塔夫特（Edward Tufte）在其书籍和讲义中使用的风格
 
 - id: anima
@@ -1699,14 +1817,14 @@
 
 - id: beamer
   files: [<id>.cls,beameruserguide.pdf,]
-  description:
+  description: 制作（屏幕上）演示文稿，以及有讲义和演讲者笔记等支持材
 
 - id: beamer-theme-albi
-  files: *tp
+  files: [beamerthemeAlbi.sty,<id>-doc.pdf,]
   description: Albi beamer主题采用了色彩丰富的三角形设计
 
 - id: beamertheme-arguelles
-  files: [<id>.sty,"",]
+  files: [beamerthemeArguelles.sty,demo-arguelles.pdf,]
   description: Argüelles是一款beamer主题，可帮助您创建精美的演示文稿。它遵循平面设计的最佳实践，旨在追求简洁与易读性。其版式设计优雅而含蓄，以便让观众的注意力始终集中在您的内容上
 
 - id: beamertheme-cleaneasy
@@ -1945,7 +2063,7 @@
   files: *dp
   description: sankey宏包提供了用于构建桑基图（Sankey diagrams）的宏命令和环境
 
-- id: semesterplannerLua
+- id: semesterplannerlua
   files: *dp
   description: 该宏包提供了一种便捷的方式来打印时间表（例如用于学期计划）
 
@@ -1958,7 +2076,7 @@
   description: 宏包旨在便捷地创建时间图表（或译：年表、时间轴），用以直观展示人物和事件在历史长河中的相对位置
 
 - id: adigraph
-  files: [<id>.sty,<id>._documentation.pdf,]
+  files: [<id>.sty,<id>_documentation.pdf,]
   description: Adigraph是一个用于绘制有向图、对有向图进行增强处理，以及在有向图上绘制割集的LaTeX库
 
 - id: aiplans
@@ -2012,6 +2130,7 @@
 - id: l3charts
   files: *s-dp
   description: 该宏包主要定义了几种简单的TikZ图表，用户可以通过LaTeX环境来绘制它们
+  isgithub: true
 
 - id: pstricks-add
   files: *t-dp
@@ -2414,10 +2533,12 @@
   description: recorder-fingering宏包提供了生成巴洛克指法竖笛和锡哨指法示意图的支持
 
 - id: rpgicons
+  sub : rpgicons
   files: *s-dp
   description: rpgicons宏包提供了一整套高质量的图标，专门用于桌面角色扮演游戏的笔记中
 
-- id: rpgicons-l3
+- id: rpgicons
+  sub : rpgicons-l3
   files: [<id>-l3.sty,<id>-doc.pdf,]
   description: rpgicons宏包提供了一整套高质量的图标，专门用于桌面角色扮演游戏的笔记中
 
@@ -2965,16 +3086,19 @@
   files: *dp
   description: forloop宏包定义了两个命令：\forloop（推荐用法）和\forLoop（已弃用）
 
-- id: ifisdimension
-  files: [<id>.tex,ifis-macros-doc.pdf,]
+- id: ifis-macros
+  sub: ifisdimension
+  files: [ifisdimension.tex,<id>-doc.pdf,]
   description: 用于检查输入字符串是否为TeX的有效尺寸（dimension）
 
-- id: ifisglue
-  files: [<id>.tex,ifis-macros-doc.pdf,]
+- id: ifis-macros
+  sub: ifisglue
+  files: [ifisglue.tex,<id>-doc.pdf,]
   description: 检查输入字符串是否为TeX的有效弹性间距（glue）或数学弹性间距（muglue）规格
 
-- id: ifisinteger
-  files: [<id>.tex,ifis-macros-doc.pdf,]
+- id: ifis-macros
+  sub: ifisinteger
+  files: [ifisinteger.tex,<id>-doc.pdf,]
   description: 用于测试输入字符串是否代表TeX的有效数字
 
 - id: switch
@@ -3094,11 +3218,11 @@
   description: envverb宏包提供了一种简单而有效的方法，用于将环境中的原文内容（verbatim content）收集到一个宏（macro）中。这样一来，用户就可以“拾取”这些内容，进而实现额外的功能——比如编写一个简单的输出例程，或者将内容重新扫描（rescan）并转换为代码列表（code listings），亦或是进行类似的排版处理
 
 - id: eoldef
-  files: *d-dp
+  files: *t-dp
   description: eoldef宏包提供了\eoldef和\eolgdef这两个命令。它们的作用是定义宏，而这些宏的参数是以源代码行的行末（end of line）作为界定符的。这两个命令分别类似于传统的\def和\gdef
 
 - id: etoolbox
-  files: *dp
+  files: *tp
   description: etoolbox宏包是一套编程工具箱，主要面向LaTeX的文档类（class）和宏包（package）开发者。它不仅为e-TeX引擎提供的一些新原语（primitives）封装了LaTeX风格的前端接口，还提供了一些通用工具。这些通用工具虽然与e-TeX本身无关，但完全符合本宏包的“极客”定位
 
 - id: fontsetup
@@ -3509,24 +3633,27 @@
   files: [<id>.1,<id>.pdf,]
   description: texlogsieve会读取一个LaTeX日志文件（如果没有指定文件，则读取标准输入），过滤掉那些相关性较低的消息，并显示一份摘要报告
 
-- id: load-unicode-data
-  files: [<id>.tex,""]
+- id: unicode-data
+  sub: load-unicode-data
+  files: [load-unicode-data.tex,"",]
   description: 该加载器会解析由Unicode协会提供的大量数据文件；当与支持Unicode的引擎配合使用时，它会根据提取出的信息，来设置一系列与TeX相关的参数
 
-- id: load-unicode-math-classes
-  files: [<id>.tex,""]
+- id: unicode-data
+  sub: load-unicode-math-classes
+  files: [load-unicode-math-classes.tex,"",]
   description: 程序会依据MathClass-15.txt这个文件，建立Unicode数学类别与TeX数学类型之间的对应关系
 
-- id: load-unicode-xetex-classes
-  files: [<id>.tex,""]
+- id: unicode-data
+  sub: load-unicode-xetex-classes
+  files: [load-unicode-xetex-classes.tex,""]
   description: 程序会根据EastAsianWidth.txt和LineBreak.txt这两个文件，为XeTeX设置字符间距类别（即命令\XeTeXcharclass）
 
 - id: xindex
   files: *s-dp
   description: Lua程序xindex是一款支持Unicode的索引生成工具。 它能根据.idx源文件创建索引文件（.ind）。该程序与现有的makeindex完全兼容，但额外支持处理UTF-8、UTF-16、UTF-32以及UTF-64编码
 
-- id: vpp
-  files: [<id>.1,<id>.pdf,]
+- id: view_print_ps_pdf
+  files: [vpp.1,vpp.pdf,]
   description: vpp是一个Bash脚本，专门用来显示PDF或PostScript文档（如果需要的话，它会先自动把PostScript转换成PDF）
 
 - id: currfile
@@ -3673,8 +3800,8 @@
   files: *dp
   description: 支持TeX/LaTeX的OrnementsADF字体
 
-- id: aramaic-serto
-  files: [<id>.sty,sertodoc.pdf]
+- id: serto
+  files: [<id>.sty,<id>doc.pdf,]
   description: Serto是阿拉姆语（一种西闪米特语）所用字母的一种书写形式
 
 - id: arsenal
@@ -3774,7 +3901,7 @@
   description: 用于文本和数学的完整字体集合
 
 - id: kpfonts-otf
-  files: [<id>,sty,Kpfonts-OTF-Doc-English.pdf,]
+  files: [<id>.sty,Kpfonts-OTF-Doc-English.pdf,]
   description: kpfontsOTF版本
 
 - id: lete-sans-math
@@ -3835,7 +3962,7 @@
 
 - id: notocjksc
   files: [SourceHanSerifReadMe.pdf,SourceHanSerifReadMe.pdf,]
-  description:
+  description: 本软件包提供Noto CJK字体（亦称Source Han字体）的简体中文版本。提供无衬线和衬线字体系列的语言专用静态OpenType字体。这些字体由谷歌和Adobe设计，并依据SIL开放字体许可证分发
 
 - id: open-everyday-symbols
   files: *s-dp
@@ -3983,7 +4110,7 @@
 
 - id: comprehensive
   files: [symbols.tex,symbols-a4.pdf,]
-  description:
+  description: 一份包含超过20300个符号的有序列表LaTeX用户常用的符号。其中一些符号是保证在所有TeX发行版中均有提供。其他则需要随部分而非所有TeX发行版附带的字体文件
 
 - id: tikz-cookingsymbols
   files: *s-dp
@@ -4040,3 +4167,107 @@
 - id: gfdl
   files: *dp
   description: GFDL（GNU 自由文档许可证）是一种流行的许可证，常用于编程手册、文档以及各种其他文本作品，但在 LaTeX 中使用该许可证并不太方便。此宏包旨在帮助用户轻松使用该许可证，同时避免违反其任何规定
+
+- id: exframe
+  files: *dp
+  description: exframe是一个LaTeX2e宏包，它提供了一个通用框架，用于描述、排版练习题和考试题目及其解答
+
+- id: mathfont
+  files: [<id>-code.dtx,<id>-user-guide.pdf,]
+  description: mathfont宏包可将Unicode文本字体适配用于数学模式
+
+- id: rwth-ci
+  files: *dp
+  description: RWTH-CI宏包合集提供了一种在LaTeX中使用亚琛工业大学（RWTH Aachen）企业形象设计（Corporate Design）的方案。该合集包含了文档类、一些辅助宏包和配置文件，以及若干用户文档模板
+
+- id: physics3
+  files: *dp
+  description: 这个宏包定义了一些命令，以更快、更简单地排版数学公式
+
+- id: bussproofs-colorful
+  files: [<id>.sty,<id>-manual.pdf,]
+  description: 在bussproofs宏包的基础上进行了扩展，增加了对证明树的颜色支持
+
+- id: paramcalc
+  files: *dp
+  description: 有时候，人们希望调整字体大小或字母间距，使文本恰好填满某个指定长度；或者调整某些单位长度，使图片恰好符合某个指定尺寸。该宏包实现了用于计算此类参数以满足特定条件的宏
+
+- id: kkluaverb
+  files: [KKluaverb.sty,<id>-doc.pdf,]
+  description: 是一个LaTeX宏包，它通过Lua技术增强了\verb命令，提供了新的\KKverb 命令。该命令可以用于目录、索引、下划线命令（例如luwa-ul宏包提供的\underLineKK）、tblr环境等场合
+
+- id: simplivre
+  files: [<id>.cls,<id>-demo-style-default.pdf,]
+  description: simplivre是一个用于排版书籍的LaTeX文档类，其设计简洁明了
+
+- id: lebhart
+  files: [<id>.cls,"",]
+  description: 是一个用于排版文章的LaTeX文档类，其设计色彩丰富
+
+- id: fariscovernew
+  files: [<id>.sty,guide_<id>_full.pdf,]
+  description: 用于为阿拉伯语和英语文档生成现代且高度可定制的标题页（封面）
+
+- id: einfart
+  files: [<id>.cls,<id>-demo-style-default.pdf,]
+  description: 是一个用于排版文章的LaTeX文档类，其设计简单明了
+
+- id: zebra-goodies
+  files: *dp
+  description: 一个用于记录笔记的实用宏集合，例如todo和comment
+
+- id: tokgroupmark
+  files: *sp
+  description: 这个宏包旨在解决如何将某些记号（tokens）的保存范围扩展到任意数量的嵌套组之外的问题
+
+- id: tokglobalstack
+  files: *sp
+  description: 该宏包提供了两种栈（stack）的实现。这些栈可以用于例如将某些记号（tokens）的保存范围扩展到任意数量的嵌套组之外，或者在不依赖局部组的情况下实现递归命令
+
+- id: sanitize-umlaut
+  files: *tp
+  description: 用于处理变音分音符（umlauts），使其能直接用于MakeIndex及相关工具在pdflatex中的索引条目
+
+- id: milestonetimeline
+  files: *dp
+  description: 提供了一种灵活的方式，用于在 LaTeX 文档中创建横向的里程碑时间线，支持基于日期的位置设定、标签旋转以及针对每个里程碑的单独定制
+
+- id: metacapture
+  files: *s-dp
+  description: metacapture宏包为作者提供了一种机制，使其能够以将元数据与页面样式相分离的方式来表达元数据
+
+- id: memoize-ext
+  files: *dp
+  description: 通过Memoize实现对更多类型内容的自动处理，或在备忘（memoization）过程中进行处理
+
+- id: makegobbler
+  files: *d-dp
+  description: 目的是简化操作，以便有选择地“吞噬”（丢弃）或“不吞噬”（保留LaTeX源代码中的某些部分，这种操作可以是有条件的，也可以是无条件的
+
+- id: latex2pydata
+  files: *dp
+  description: 用于使用Python字面量语法将数据写入文件
+
+- id: fvextra
+  files: *dp
+  description: 为fancyvrb宏包提供了一些扩展功能，包括自动断行和改进的数学模式支持。同时，它也修补了fancyvrb的一些内部机制
+
+- id: fixtounicode
+  files: *dp
+  description: 这是一组简单的便捷封装工具，旨在帮助为作为TeX字体安装的Postscript Type1字体添加tounicode映射值，以便在LaTeX中使用
+
+- id: beamertheme-durham
+  files: [beamerthemedurham.sty,durham-manual.pdf,]
+  description: 杜伦Beamer主题（Durham Beamer Theme）是一款以内容为先的 LaTeX Beamer主题，专为教学、研究以及结构化的学术报告而设计
+
+- id: uptex-base
+  files: [uptex.tex,"",]
+  description: 该宏包合集包含了用于upTeX和e-upTeX的Plain TeX格式文件、文档以及示例文件
+
+- id: pmhanguljamo
+  files: *s-dp
+  description: 这个LaTeX宏包提供了一种韩文音译输入法，借助合适的字体即可排版韩文
+
+- id: mendex-doc
+  files: [mendex.tex,mendex.pdf,]
+  description: 是一个通用的分层索引生成器。它与makeindex几乎兼容，同时也提供了针对日语的附加功能（例如处理汉字词汇的读音等）

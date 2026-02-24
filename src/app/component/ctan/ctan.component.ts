@@ -8,23 +8,34 @@ import { NzFlexModule } from 'ng-zorro-antd/flex';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzListModule } from 'ng-zorro-antd/list';
 
+import { HeadingService } from '../../service/heading.service';
+
+import { DeviceDetectorService } from 'ngx-device-detector';
+
 @Component({
   selector: 'app-ctan',
   templateUrl: './ctan.component.html',
   styleUrl: './ctan.component.css',
   standalone: true,
-  imports: [NzFlexModule, NzPaginationModule, NzListModule]
+  imports: [NzFlexModule, NzPaginationModule, NzListModule],
 })
 export class CtanComponent {
   private http = inject(HttpClient);
+
+  private readonly headingService = inject(HeadingService);
+  public readonly title = this.headingService.titleState.title;
+
+  private readonly deviceService = inject(DeviceDetectorService);
+  public readonly isPC = this.deviceService.isDesktop();
+
+  // 加载数据
   private readonly ctans = toSignal<ICtan[] | null>(this.http.get<ICtan[]>('/ctan.json'), { initialValue: null });
   // 更改这里的数量不能组件本身的默认值，两者并未绑定
   private readonly countPerPage = 10;
   // 数据总数，组件的属性需要该值
   public readonly totalCount = computed(() => this.ctans()?.length ?? 0);
-
   public readonly currentPage = signal<number>(1);
-
+  // 获取数据列表
   public readonly currentPageItems = computed(() => {
     const data = this.ctans() ?? [];
     const page = this.currentPage();
@@ -32,8 +43,12 @@ export class CtanComponent {
     const end = start + this.countPerPage;
     return data.slice(start, end);
   });
-
+  // 按钮点击获取新的数据列表
   public changePage(page: number): void {
     this.currentPage.set(page);
+  }
+
+  constructor() {
+    this.headingService.setTitle('CTAN');
   }
 }

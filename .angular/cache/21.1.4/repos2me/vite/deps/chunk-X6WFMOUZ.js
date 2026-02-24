@@ -1,11 +1,11 @@
 import {
+  NzI18nService
+} from "./chunk-VPZZAMU6.js";
+import {
   CdkPortalOutlet,
   ComponentPortal,
   PortalModule
-} from "./chunk-34QSA22R.js";
-import {
-  NzI18nService
-} from "./chunk-VPZZAMU6.js";
+} from "./chunk-YLEKFQFV.js";
 import {
   NzConfigService,
   NzOutletModule,
@@ -650,4 +650,4 @@ export {
   NzEmbedEmptyComponent,
   NzEmptyModule
 };
-//# sourceMappingURL=chunk-UZ4ELDNM.js.map
+//# sourceMappingURL=chunk-X6WFMOUZ.js.map

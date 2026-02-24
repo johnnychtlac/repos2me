@@ -3,7 +3,13 @@ import {
   PortalModule,
   TemplatePortal,
   requestAnimationFrame as requestAnimationFrame2
-} from "./chunk-34QSA22R.js";
+} from "./chunk-YLEKFQFV.js";
+import {
+  coerceArray,
+  coerceCssPixelValue,
+  coerceElement,
+  coerceNumberProperty
+} from "./chunk-LM4IETVQ.js";
 import {
   Platform,
   RtlScrollAxisType,
@@ -12,12 +18,6 @@ import {
   getRtlScrollAxisType,
   supportsScrollBehavior
 } from "./chunk-VMU2ZAM7.js";
-import {
-  coerceArray,
-  coerceCssPixelValue,
-  coerceElement,
-  coerceNumberProperty
-} from "./chunk-LM4IETVQ.js";
 import {
   BidiModule,
   Directionality
@@ -4788,4 +4788,4 @@ export {
   NzConnectedOverlayDirective,
   NzOverlayModule
 };
-//# sourceMappingURL=chunk-S7I7GES5.js.map
+//# sourceMappingURL=chunk-OKNHGDI4.js.map

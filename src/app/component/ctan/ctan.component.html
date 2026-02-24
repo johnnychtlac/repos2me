@@ -2,12 +2,19 @@
   <nz-list>
     @for (item of currentPageItems(); track item.id) {
       <nz-list-item [nzNoFlex]=true>
-        <p>{{ item.id }}</p>
-        <p>{{ item.date }}</p>
-        <p>{{ item.description }}</p>
+        <p>宏包：{{ item.id }}</p>
+        @if (item.date) {
+          <p>更新日期：{{ item.date }}</p>
+        }
+        <p>简介：{{ item.description }}</p>
       </nz-list-item>
     }
   </nz-list>
-  <nz-pagination [nzPageIndex]="1" [nzTotal]="totalCount()" (nzPageIndexChange)="changePage($event)" />
+  @if (isPC) {
+    <nz-pagination [nzPageIndex]="1" [nzTotal]="totalCount()" (nzPageIndexChange)="changePage($event)" />
+  }
+  @else {
+    <nz-pagination nzSimple [nzPageIndex]="1" [nzTotal]="totalCount()" (nzPageIndexChange)="changePage($event)" />
+  }
 </div>
 
