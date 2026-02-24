@@ -1,0 +1,13 @@
+<div nz-flex [nzAlign]="'center'" [nzVertical]=true>
+  <nz-list>
+    @for (item of currentPageItems(); track item.id) {
+      <nz-list-item [nzNoFlex]=true>
+        <p>{{ item.id }}</p>
+        <p>{{ item.date }}</p>
+        <p>{{ item.description }}</p>
+      </nz-list-item>
+    }
+  </nz-list>
+  <nz-pagination [nzPageIndex]="1" [nzTotal]="totalCount()" (nzPageIndexChange)="changePage($event)" />
+</div>
+
