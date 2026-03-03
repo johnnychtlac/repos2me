@@ -2,22 +2,23 @@ import { Component, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { toSignal } from '@angular/core/rxjs-interop';
 
-import { ICtan } from '../../interface/ctan.interface';
-
-import { NzFlexModule } from 'ng-zorro-antd/flex';
-import { NzPaginationModule } from 'ng-zorro-antd/pagination';
-import { NzListModule } from 'ng-zorro-antd/list';
-
-import { HeadingService } from '../../service/heading.service';
-
 import { DeviceDetectorService } from 'ngx-device-detector';
+
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzFlexModule } from 'ng-zorro-antd/flex';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzModalModule, NzModalService } from 'ng-zorro-antd/modal';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+
+import { ICtan } from '../../interface/ctan.interface';
+import { HeadingService } from '../../service/heading.service';
 
 @Component({
   selector: 'app-ctan',
   templateUrl: './ctan.component.html',
   styleUrl: './ctan.component.css',
   standalone: true,
-  imports: [NzFlexModule, NzPaginationModule, NzListModule],
+  imports: [NzButtonModule, NzFlexModule, NzListModule, NzModalModule, NzPaginationModule],
 })
 export class CtanComponent {
   private http = inject(HttpClient);
@@ -27,6 +28,8 @@ export class CtanComponent {
 
   private readonly deviceService = inject(DeviceDetectorService);
   public readonly isPC = this.deviceService.isDesktop();
+
+  private readonly modal = inject(NzModalService);
 
   // 加载数据
   private readonly ctans = toSignal<ICtan[] | null>(this.http.get<ICtan[]>('/ctan.json'), { initialValue: null });
@@ -48,7 +51,20 @@ export class CtanComponent {
     this.currentPage.set(page);
   }
 
+  public openDocument(doc: string): void {
+    if (this.isPC) {
+      window.open('https://mirrors.aliyun.com/CTAN/' + doc, '_blank');
+    } else {
+      this.modal.warning({
+        nzTitle: '移动设备警告',
+        nzContent: '请在桌面端点击下载官方文档',
+      });
+    }
+  }
+
   constructor() {
     this.headingService.setTitle('CTAN');
   }
 }
+
+

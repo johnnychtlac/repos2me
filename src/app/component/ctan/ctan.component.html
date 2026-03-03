@@ -6,7 +6,16 @@
         @if (item.date) {
           <p>更新日期：{{ item.date }}</p>
         }
+        @else {
+          <p>该项目未收录至CTAN</p>
+        }
         <p>简介：{{ item.description }}</p>
+        @if (item.document) {
+          <button nz-button nzType="primary" [nzSize]="'small'" (click)="openDocument(item.document)">文档</button>
+        }
+        @else{
+          <button nz-button [disabled]=true nzType="primary" [nzSize]="'small'">文档</button>
+        }
       </nz-list-item>
     }
   </nz-list>

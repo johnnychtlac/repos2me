@@ -18,7 +18,6 @@ $fileData = foreach ($el in $filebynameSet) {
     $temp = $el.Replace(" ", "")
     $temp = $temp.Split([char[]]@("/", "|"), [System.StringSplitOptions]::RemoveEmptyEntries)
     $lineSet = [System.Collections.Generic.HashSet[string]]$temp
-    $temp = $null
     if (-not ($lineSet.Overlaps($blacklistSet))) {
         $el.Replace(" ", "")
     }
@@ -80,12 +79,12 @@ $filterSet = $null
 $output = foreach ($el in $pkgArray) {
     $tempString = ($fileDataSet -like "*/$($el.files[0])")[0]
     $data = @{
-        id = $el.sub ? "$($el.id) => $($el.sub)" : $el.id
+        id = $el.sub ? "$($el.id)---$($el.sub)" : $el.id
         description = $el.description
     }
     if (-not $el.isgithub) {
         try {
-            $nul = $tempString.Split("|")
+            $null = $tempString.Split("|")
         } catch {
             Write-Host $el
         }
@@ -103,4 +102,7 @@ $output = foreach ($el in $pkgArray) {
     $data
 }
 
+if (Test-Path -Path "$PSScriptRoot\public\ctan.json") {
+    Remove-Item -Path "$PSScriptRoot\public\ctan.json" -Force
+}
 $output | ConvertTo-Json -Compress | Set-Content -Path "$PSScriptRoot\public\ctan.json"

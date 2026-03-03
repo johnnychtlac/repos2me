@@ -22,43 +22,59 @@ if ($startDate -gt $endDate) {
 }
 
 # 根据参数生成两个DateTime之间的所有日期的一个字符串数组[yyyy/MM/dd, yyyy/MM/dd, ....]
-$dates = 0 .. (($endDate - $startDate).Days) | ForEach-Object {
+$dateArray = 0 .. (($endDate - $startDate).Days) | ForEach-Object {
     $startDate.AddDays($_).ToString("yyyy/MM/dd")
 }
+$dateSet = [System.Collections.Generic.HashSet[string]]$dateArray
+$dateArray = $null
+
+$extSet = [System.Collections.Generic.HashSet[string]]@("exe","dtx","edtx","tex","cls","sty","pdf","lua","txt","html","css","java","pl","sh","1")
 
 # 下载CTAN原始数据
 if (-not (Test-Path -Path "$PSScriptRoot\datatmp\filesbyname.txt")) {
     New-Item -Name "datatmp" -ItemType Directory
     Invoke-WebRequest -Uri "https://mirrors.aliyun.com/CTAN/FILES.byname" -Out "$PSScriptRoot\datatmp\filesbyname.txt"
 }
+$filebynameArray = Get-Content -Path "$PSScriptRoot\datatmp\filesbyname.txt"
+$fileSet = [System.Collections.Generic.HashSet[string]]$filebynameArray
+$filebynameArray = $null
 
-$extensionFilter = [System.Collections.Generic.HashSet[string]]@("exe","dtx","edtx","tex","cls","sty","pdf","lua","txt","html","css","java","pl","sh","1")
+# 根据日期和拓展名过滤数据
+$fileSet = foreach ($el in $fileSet) {
+    $temp = ($el.Replace(" ", "")).Split([char[]]@("|", "."), [System.StringSplitOptions]::RemoveEmptyEntries)
+    $lineSet = [System.Collections.Generic.HashSet[string]]$temp
+    if ($lineSet.Overlaps($dateSet) -and $lineSet.Overlaps($extSet)) {
+        $el.Replace(" ", "")
+    }
+}
+$dateSet = $null
+$extSet = $null
 
 Import-Module -Name "$PSScriptRoot\powershell-yaml\powershell-yaml.psd1"
-
 # 获取收藏宏包的id数组
-$pkgstmp = (Get-Content -Path "$PSScriptRoot\data\pkg.txt" -Raw | ConvertFrom-Yaml) | ForEach-Object {
+$pkgArray = (Get-Content -Path "$PSScriptRoot\data\pkg.txt" -Raw | ConvertFrom-Yaml) | ForEach-Object {
     $_.id
 }
+$pkgSet = [System.Collections.Generic.HashSet[string]]$pkgArray
+$pkgArray = $null
 
-$pkgs = [System.Collections.Generic.HashSet[string]]$pkgstmp
+# 获取黑名单
+$blacklistArray = Get-Content -Path "$PSScriptRoot\data\blacklist.txt"
+$blacklistSet = [System.Collections.Generic.HashSet[string]]$blacklistArray
+$blacklistArray = $null
 
-$pkgstmp = $null
-
-$pkgsCount = $pkgs.Count
-
-Get-Content -Path "$PSScriptRoot\datatmp\filesbyname.txt" | Where-Object {
-    $temp = ($_ -replace " ", "") -split '[\|.]'
-    if (($temp[0] -in $dates) -and ($temp[-1] -in $extensionFilter)) {
-        $_
+$fileSet = foreach ($el in $fileSet) {
+    $temp = $el.Split("/", [System.StringSplitOptions]::RemoveEmptyEntries)
+    $lineSet = [System.Collections.Generic.HashSet[string]]$temp
+    if (-not ($lineSet.Overlaps($pkgSet) -or $lineSet.Overlaps($blacklistSet))) {
+        $el
     }
-} | ForEach-Object {
-    $lines = ($_ -split "\|")[-1] -split "\/"
-    $linesCount = $lines.Count
-    $mergesData = [System.Collections.Generic.HashSet[string]]($lines + $pkgs)
-    $mergedDataCount = $mergesData.Count
-    if ($mergedDataCount -eq ($pkgsCount + $linesCount)) {
-        $_
-    }
-} | Set-Content -Path "$PSScriptRoot\datatmp\report.txt"
+}
+$pkgSet = $null
+$blacklistSet = $null
+
+if (Test-Path -Path "$PSScriptRoot\datatmp\report.txt") {
+    Remove-Item -Path "$PSScriptRoot\datatmp\report.txt" -Force
+}
+Set-Content -Path "$PSScriptRoot\datatmp\report.txt" -Value $fileSet
 
