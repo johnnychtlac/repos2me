@@ -1,0 +1,2 @@
+由HerbertVoß开发的名为runtexfile的Lua脚本程序，主要用于自动化处理LaTeX文档的编译流程。runtexfile的主要目的是简化复杂的LaTeX文档编译过程。通常，一个包含引用、索引或特殊绘图（如Asymptote）的LaTeX文档需要按特定顺序多次运行不同的编译器（如lualatex、biber、xindex等）。使用runtexfile，你只需要在终端运行一次该脚本，它会自动读取文档头部的指令，依次执行所有必要的编译步骤，无需手动重复输入命令。支持lualatex，luatex，latex，pdflatex，xelatex，xetex等多种编译器。可以传递参数给编译器，例如--shell-escape。每个执行的命令都会生成一个独立的日志文件（runtexfile-?.log，?为命令行号），便于定位问题。
+使用-v（verbose）参数时，会生成一个简要的脚本运行日志（runtexfile.log）。所有的TeX命令默认都以--interaction=nonstopmode模式运行，防止编译过程中因错误而中断。支持使用占位符!!file!!，这在不知道确切文件名的在线编译器环境中非常有用。

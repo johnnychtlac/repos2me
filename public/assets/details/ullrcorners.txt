@@ -1,0 +1,1 @@
+该宏包的主要作用是提供一个命令\ullrcorners，用于在一个单词或一串文字的左上角和右下角添加小的L形角标（Corner）。它会在文字的左上角画一个L形，在右下角画一个倒L形，从而将文字包围起来（虽然不是完全的矩形框，而是仅突出四个角）。这种排版惯例灵感来源于Friedl（2006）的著作，通常用于界定正则表达式（RegularExpressions）。通常需要先加载xcolor宏包（例如使用\usepackage[x11names]{xcolor}）。在导言区（Preamble）定义一个名为ullrcornerscolor的颜色。如果检测到ullrcornerscolor被定义，宏包将自动使用该颜色；否则使用默认文本颜色。

@@ -1,0 +1,1 @@
+xsim是一个功能极其强大的LaTeX宏包，主要用于创建、管理和排版习题（Exercises）与解答（Solutions）。它是著名宏包exsheets的官方继任者，旨在解决exsheets的一些局限性（如无法处理verbatim环境、计数器限制等），并提供了更灵活的架构。xsim的主要目的是帮助教师、作者或教育工作者在文档中高效地处理习题。提供了exercise和solution环境，用于包裹题目内容和答案内容。你可以选择将解答直接跟在题目后面，也可以将所有解答统一收集到文档的末尾（或单独的章节）。内置了分数（Points）和奖励分（BonusPoints）系统，可以自动计算总分，并生成评分表（GradingTables）。

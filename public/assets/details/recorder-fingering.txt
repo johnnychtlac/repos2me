@@ -1,0 +1,1 @@
+由AlanMunn开发，旨在帮助用户生成巴洛克指法竖笛（Recorder）和锡笛（TinWhistle）的指法图。

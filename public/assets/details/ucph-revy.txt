@@ -1,0 +1,1 @@
+这是一个专门为哥本哈根大学（ucph）科学系学生戏剧演出（Revue）编写的LaTeX文档类。用于排版学生讽刺剧（Revue）的剧本。它由旧的宏包revy.sty演变而来，现已移植为标准的LaTeXClass（文档类），继承自article类。适合排版由多个短小片段（Sketches）和歌曲（Songs）组成的剧本文档。

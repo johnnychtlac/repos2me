@@ -1,0 +1,7 @@
+unicode-data宏包，由LaTeX3项目组开发。它的核心作用是将庞大的Unicode标准数据文件“翻译”成TeX引擎能理解的参数，从而让TeX系统（特别是XeTeX和LuaTeX）能够原生支持Unicode字符的各种排版规则。它就是Unicode标准与TeX排版引擎之间的“翻译官”。
+load-unicode-data.tex：基础字符属性
+这个文件主要处理通用的文本属性，基于UnicodeData.txt进行配置：将所有Unicode字母（Letter,"L"）和组合标记（Mark,"M"）的\catcode设为11（Letter），让它们能被正常识别为文本内容。自动设置\lccode（小写代码）和\uccode（大写代码），涵盖大写字母（Lu）、小写字母（Ll）以及首字母大写（Lt）等类别。为大写字母设置\sfcode999，为标点符号（如Pe,Pf）设置\sfcode0，以控制句子间的间距。为字母和组合符设置\Umathcode，指定其在数学模式下的行为。
+load-unicode-math-classes.tex：数学符号分类
+该文件专门处理数学排版，基于MathClass.txt进行映射。它将Unicode数学类别转换为TeX的数学类型（\math...）：将"L"（Large）映射为\mathop。分别将"B"/"V"（Binary/Vary）、"R"（Relation）、"P"（Punctuation）映射为\mathbin、\mathrel、\mathpunct。将"O"（Opening）和"C"（Closing）映射为\mathopen和\mathclose。将"A"（Alphabetic）映射为\mathalpha。
+load-unicode-xetex-classes.tex：东亚文本间距控制
+此文件专为XeTeX引擎设计，用于处理中日韩（CJK）文本的自动间距，基于EastAsianWidth.txt和LineBreak.txt：为汉字（ID）、假名（CJ）、标点（OP/CL/EX等）和组合符（CM）分配XeTeX的\XeTeXcharclass。虽然它不直接激活间距功能（不设置\XeTeXinterchartokenstate），但它为后续通过宏代码实现“汉字与西文之间自动加空隙”提供了底层数据支持。

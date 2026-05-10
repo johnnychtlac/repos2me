@@ -1,0 +1,1 @@
+它是由DanielFLIPO开发的，旨在为YannisHaralambous设计的三款经典Metafont字体提供OpenType版本，并替代旧版yfonts宏包的功能。在现代LaTeX引擎（LuaLaTeX和XeLaTeX）中支持旧式德文（OldGerman）字体的排版。

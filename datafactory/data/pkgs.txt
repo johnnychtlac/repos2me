@@ -1,20 +1,22 @@
 # 配置,教程和手册,
 #
-# 体积优化,文档编码,加密,
+# 体积优化,文档编码,加密,审稿和修改,输出文档,
 #
-# 打包与分发,脚本,自动化工具,测试,查询,编程命令和宏,记录文档类,数组,遍历,钩子,标记,条件判断,版本兼容,系统命令,显示内部引用键,
+# 引擎,打包与分发,脚本,自动化工具,测试,查询,编程命令和宏,记录文档类,遍历,钩子,标记,条件判断,版本兼容,系统命令,显示内部引用键,数据模板,预读,缓存,参数展开控制,可选参数,代码模板复用,
+#
+# 字符串,数组,键值,
 #
 # 幻灯片,幻灯片主题,排版模板,精装书护封,平装书封面,精装书硬封壳,文学编程,
 #
-# 页边栏,页面数量,页面尺寸和布局,页面方向,页码,页面布局可视化,
+# 页边栏,页面数量,页面尺寸和布局,页面方向,页码,页面布局可视化,多设备排版,
 #
 # 章节和目录,章节编号,标题,
 #
 # 表格,矩阵,列表,多栏,浮动体,文本框,盒子,盒子尺寸,代码展示,
 #
-# 锚点,超链接,子文档,垂直分隔线,单元格,平行文本,
+# 锚点,超链接,子文档,垂直分隔线,单元格,
 #
-# 评分方案,课程表,
+# 评分方案,课程表,练习册,
 #
 # 图像,图像信息,
 #
@@ -22,24 +24,26 @@
 #
 # 原生作者和单位信息,词汇表,缩略语,术语,格式转换,书签,CSL格式,脚注和尾注,段落注,标签和引用,文献和引用,页眉和页脚,索引,
 #
-# 多语言,字族和字体,图标符号字符,加粗,字体支撑,带圈文字,缩放,连字符,
+# 多语言,字族和字体,图标符号字符,Unicode编码,加粗,字体支撑,带圈文字,缩放,连字符,拼音,字形展示,
 #
-# 叙利亚语,西多会数字,日语,基数词和序数词,
+# 叙利亚语,西多会数字,中文,日语,韩语,波斯语,基数词和序数词,熙笃会数字,
 #
-# 元素定位,自动断行,脱敏处理,填空效果,元素调整,文本缩进,逐字,定理,标点挤压,代码展示,双向排版,垂直间距,移动证明,环绕,
+# 元素定位,自动断行,脱敏处理,填空效果,元素调整,文本缩进,逐字,定理,标点挤压,代码展示,双向排版,平行文本,垂直间距,移动证明,环绕,对齐,假文,装饰性角标,
 # 
 # 计算机科学,图论,运筹学,数学,物理,化学,工程类,密码学,语言学,sage,
 #
-# 绘图,贝塞尔曲线,几何图形,公式,杨表,杨图,算盘图,带状杨表,二维码,辫子图,网络协议图,数据结构图,哈斯图,分子结构式,化学方程式,时间轴图,电气电路图,解剖图,动作规划,因果链,
+# 绘图,贝塞尔曲线,几何图形,公式,杨表,杨图,算盘图,带状杨表,二维码,辫子图,网络协议图,数据结构图,哈斯图,分子结构式,化学方程式,时间轴图,电气电路图,量子电路图,解剖图,动作规划,因果链,ZX演算,
 # 
-# 括号,箭头,标注框,引号,虚线,实线,网格,DOI横幅,田字格,米字格,拼音,上标和下标,张量矩阵,
-# 计算器,国际象棋,中国象棋,背景或水印,便利贴,模拟终端,
+# 括号,箭头,标注框,引号,虚线,实线,网格,DOI横幅,田字格,米字格,拼音,上标和下标,张量矩阵,网格背景,
+# 计算器,国际象棋,中国象棋,背景或水印,便利贴,模拟终端,旗帜,词云,围棋棋谱,二维码和条形码,
 # 公式缩放,
 # 
-# 计算,位运算,斐波那契数,数值归一化,
+# 计算,位运算,斐波那契数,数值归一化,齐肯多夫表示法,黄金比例,数据回归,单位转换,随机列表,
 # 时间和日期,
+#
+# 计数器,
 # 
-# 多媒体,
+# 多媒体,音乐,
 # 
 # 填字游戏,数独,卡库罗,
 #
@@ -749,6 +753,9 @@ graphpap:
 Gratzer-Color-Scheme:
 gregoriotex:
 gridset:
+gs1:
+  labels: [二维码和条形码,]
+  docpaths: [GS1.pdf,]
 handoutWithNotes:
 hanzibox:
   labels: [田字格,米字格,拼音,]
@@ -1218,7 +1225,8 @@ pgf-PeriodicTable:
 pgf-spectra:
 pgf-umlcd:
 pgf:
-TikZ:
+  labels: [引擎,绘图,]
+  docpaths: [doc/generic/pgf/pgfmanual.pdf,]
 pgfkeysearch:
 pgfmath-xfp:
 pgfornament-han:
@@ -1320,14 +1328,32 @@ quantumcubemodel:
 quizztex:
 qworld:
 ragged2e:
+  labels: [连字符,对齐,]
+  docpaths: [ragged2e.pdf,]
 rainbowbrackets:
+  labels: [括号,]
+  docpaths: [rainbowbrackets_doc.pdf,]
 raleway:
+  labels: [字族和字体,字体支撑,]
+  docpaths: [doc/raleway.pdf,]
 randexam:
+  labels: [排版模板,]
+  docpaths: [randexam.pdf,]
 randintlist:
+  labels: [计算,随机列表,数组,]
+  docpaths: [doc/randintlist-doc.pdf,doc/randintlist-l3-doc.pdf,]
 realhats:
+  labels: [图标符号字符,]
+  docpaths: [realhats.pdf,]
 rebuttal:
+  labels: [排版模板,]
+  docpaths: [rebuttal.pdf,]
 rec-thy:
+  labels: [排版模板,]
+  docpaths: [rec-thy.pdf,]
 recorder-fingering:
+  labels: [音乐,]
+  docpaths: [recorder-fingering.pdf,]
 refcheck:
   labels: [标签和引用,测试,]
   docpaths: [refdemo.pdf,]
@@ -1335,16 +1361,30 @@ refstyle:
   labels: [引用和标签,]
   docpaths: [refstyle.pdf,]
 reledmac:
+  labels: [排版模板,]
+  docpaths: [reledmac.pdf,]
 reledpar:
+  labels: [平行文本,]
+  docpaths: [reledpar.pdf,]
 reptheorem:
+  labels: [预读,缓存,定理,子文档,]
+  docpaths: [reptheorem-doc.pdf,]
 rescansync:
+  labels: [缓存,]
+  docpaths: [rescansync.pdf,]
 resizegather:
   labels: [公式缩放,]
   docpaths: [resizegather.pdf,]
 ResolSysteme:
 responsive:
+  labels: [多设备排版,]
+  docpaths: [responsive-doc.pdf,]
 rest-api:
+  labels: [代码展示,]
+  docpaths: [rest-api.pdf,]
 robust-externalize:
+  labels: [缓存,]
+  docpaths: [robust-externalize.pdf,]
 rotating:
   labels: [元素调整,]
   docpaths: [rotating.pdf,]
@@ -1352,8 +1392,14 @@ rotchiffre:
   labels: [加密,]
   docpaths: [rotchiffre.pdf,]
 rpgicons:
+  labels: [图标符号字符,]
+  docpaths: [rpgicons-doc.pdf,]
 rule-d:
+  labels: [实线,]
+  docpaths: [rule-D.pdf,]
 runtexfile:
+  labels: [脚本,自动化工具,]
+  docpaths: [doc/runtexfile-doc.pdf,]
 sagetex:
   labels: [sage,数学,计算,]
   docpaths: [sagetex.pdf,]
@@ -1572,6 +1618,8 @@ tocdata:
   docpaths: [tocdata.pdf,]
 todonotes:
 tokcycle:
+tokglobalstack:
+tokgroupmark:
 tokmap:
 tqft:
 trace:
@@ -1596,103 +1644,209 @@ twoopt:
 typog:
 tzplot:
 ucph-revy:
+  labels: [排版模板,]
+  docpaths: [ucph-revy-en-doc.pdf,]
 ullrcorners:
+  labels: [装饰性角标,]
+  docpaths: [ullrcorners.pdf,]
 undolabl:
   labels: [标签和引用,]
   docpaths: [undolabl.pdf,]
 unibidi-lua:
+  labels: [双向排版,]
+  docpaths: [unibidi-lua-doc.pdf,]
 unicode-data:
+  labels: [Unicode编码,]
+  docpaths: [README.md,]
 unicode-math:
+  labels: [数学,公式,Unicode编码,]
+  docpaths: [unicode-math.pdf,]
 unicodefonttable:
+  labels: [字形展示,]
+  docpaths: [unicodefonttable-doc.pdf,]
 unitconv:
+  labels: [单位转换,]
+  docpaths: [doc/unitconv-doc.pdf,]
 unravel:
+  labels: [编程命令和宏,参数展开控制,]
+  docpaths: [unravel.pdf,]
 updatemarks:
+  labels: [标记,]
+  docpaths: [doc/updatemarks.pdf,]
 upmendex:
-UPmethodology:
-uptex-fonts:
+  labels: [脚本,索引,]
+  docpaths: [man/upmendex.man1.pdf,]
+upmethodology:
+  labels: [排版模板,]
+  docpaths: [doc/upmethodology-doc.pdf,]
 usrguide:
   labels: [教程和手册,]
   docpaths: [usrguide.pdf,]
 utfsym:
+  labels: [图标符号字符,]
+  docpaths: [doc/utfsym.pdf,]
 varioref:
   labels: [标签和引用,]
   docpaths: [varioref.pdf,]
-VarsFromJobname:
+varsfromjobname:
+  labels: [编程命令和宏,参数展开控制,]
+  docpaths: [varsfromjobname.pdf,]
 vectorlogos:
+  labels: [图标符号字符,]
+  docpaths: [doc/vectorlogos-doc.pdf,]
 verbatimbox:
   labels: [逐字,]
   docpaths: [verbatimbox.pdf,]
 verifycommand:
+  labels: [编程命令和宏,查询,版本兼容,]
+  docpaths: [verifycommand.pdf,]
 vexillology:
+  labels: [旗帜,]
+  docpaths: [vexillology.pdf,]
 visualtoks:
+  labels: [测试,]
+  docpaths: [visualtoks-doc.pdf,]
 vpp:
+  labels: [脚本,输出文档,]
+  docpaths: [vpp.pdf,]
 vscodeicons:
+  labels: [图标符号字符,]
+  docpaths: [doc/vscodeicons-doc.pdf,]
 weiqi:
+  labels: [围棋棋谱,]
+  docpaths: [weiqi.pdf,]
 whatsnote:
+  labels: [排版模板,]
+  docpaths: [whatsnote.pdf,]
 wheelchart:
+  labels: [数据结构图,]
+  docpaths: [wheelchart.pdf,]
 withargs:
+  labels: [编程命令和宏,参数展开控制,代码模板复用,]
+  docpaths: [withargs.pdf,]
 witharrows:
+  labels: [箭头,]
+  docpaths: [witharrows.pdf,]
 wordcloud:
+  labels: [词云,]
+  docpaths: [doc/wordcloud-doc-en.pdf,]
 wordle:
-worldflags :
+  labels: [填字游戏,]
+  docpaths: [wordle-doc-en.pdf,]
+worldflags:
+  labels: [旗帜,]
+  docpaths: [doc/worldflags.pdf,]
 wrapfig2:
   labels: [环绕,]
   docpaths: [wrapfig2.pdf,]
 wrapstuff:
   labels: [环绕,]
   docpaths: [wrapstuff.pdf,]
-WriteOnGrid:
+writeongrid:
+  labels: [网格背景,]
+  docpaths: [doc/WriteOnGrid-doc-en.pdf,]
 xassoccnt:
+  labels: [计数器,]
+  docpaths: [xassoccnt_doc.pdf,]
 xcharter-math:
+  labels: [字族和字体,图标符号字符,]
+  docpaths: [XCharter-Math.pdf,unimath-xcharter.pdf,]
 xcjk2uni:
+  labels: [文档编码,]
+  docpaths: [xCJK2uni.pdf,]
 xcoffins:
   labels: [盒子,]
   docpaths: [xcoffins.pdf,]
 xcolor:
+  labels: [颜色,]
+  docpaths: [xcolor.pdf,xcolor2.pdf,]
 xcomment:
+  labels: [输出文档,]
+  docpaths: [doc/xcomment-doc.pdf,]
 xecjk:
-XePersian:
+  labels: [中文,日语,韩语,]
+  docpaths: [xeCJK.pdf,]
+xepersian:
+  labels: [波斯语,]
+  docpaths: [xepersian-doc.pdf,]
 xetexko:
-xgalley:
+  labels: [引擎,日语,韩语,]
+  docpaths: [xetexko-doc.pdf,]
 xindex:
+  labels: [索引,]
+  docpaths: [doc/xindex-doc.pdf,]
 xint-regression:
+  labels: [计算,数据回归,]
+  docpaths: [doc/xint-regression-doc.pdf,]
 xint:
-xintsession:
+  labels: [计算,]
+  docpaths: [xint.pdf,]
 xistercian:
+  labels: [熙笃会数字,]
+  docpaths: [xistercian.pdf,]
 xkeyval:
+  labels: [编程命令和宏,键值,]
+  docpaths: [xkeyval.pdf,]
 xlop:
+  labels: [计算,数学,]
+  docpaths: [doc/xlop-doc.pdf,]
 xltabular:
   labels: [表格,]
   docpaths: [doc/xltabular-doc.pdf,]
 xmeaning:
+  labels: [测试,查询,编程命令和宏,]
+  docpaths: [xmeaning.pdf,]
 xpeekahead:
+  labels: [预读,]
+  docpaths: [doc/xpeekahead.pdf,]
 xpinyin:
+  labels: [拼音,]
+  docpaths: [xpinyin.pdf,]
 xr:
   labels: [标签和引用,子文档,]
   docpaths: [xr.pdf,]
 xreview:
+  labels: [审稿和修改,]
+  docpaths: [xreview.pdf,]
 xsavebox:
   labels: [体积优化,]
   docpaths: [xsavebox.pdf,]
 xsim:
+  labels: [排版模板,练习册,]
+  docpaths: [xsim-manual.pdf,]
 xspace:
   labels: [编程命令和宏,]
   docpaths: [xspace.pdf,]
-xstacks:
 xstring:
+  labels: [编程命令和宏,字符串,]
+  docpaths: [xstring-en.pdf,]
 xtufte:
-YAMLvars:
+  labels: [排版模板,]
+  docpaths: [doc/sample-book.pdf,doc/sample-handout.pdf,]
+yamlvars:
+  labels: [数据模板,]
+  docpaths: [yamlvars.pdf,]
 yet-another-guide-latex2e:
   labels: [教程和手册,]
   docpaths: [Yet-Another-Guide-LaTeX2e_v132.pdf,]
 yfonts-otf:
+  labels: [字族和字体,]
+  docpaths: [doc/Erlkonig.pdf,doc/yfonts-otf.pdf]
 yquant:
-Ysabeau:
+  labels: [量子电路图,]
+  docpaths: [doc/yquant-doc.pdf,]
+ysabeau:
+  labels: [字族和字体,]
+  docpaths: [doc/ysabeau-doc-en.pdf,]
 zeckendorf:
+  labels: [计算,斐波那契数,齐肯多夫表示法,黄金比例,]
+  docpaths: [zeckendorf-doc.pdf,]
 zennote:
   labels: [排版模板,]
   docpaths: [zennote.pdf,]
 zhlipsum:
+  labels: [假文,]
+  docpaths: [zhlipsum.pdf,]
 zref-check:
   labels: [标签和引用,测试,]
   docpaths: [zref-check-doc.pdf,]
@@ -1706,3 +1860,5 @@ zref:
   labels: [标签和引用,]
   docpaths: [zref.pdf,]
 zx-calculus:
+  labels: [ZX演算,量子电路图,]
+  docpaths: [zx-calculus.pdf,]

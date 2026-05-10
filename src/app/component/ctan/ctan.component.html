@@ -10,7 +10,13 @@
                 @else {
                     <p>该项目未收录至CTAN</p>
                 }
-                <p>标签：{{ item.labels }}</p>
+                <p>标签：
+                    <nz-space>
+                        @for (val of item.labels; track val) {
+                            <span>{{ val }}</span>
+                        }
+                    </nz-space>
+                </p>
                 <nz-space>
                     <button *nzSpaceItem nz-button nzType="primary" [nzSize]="'small'" (click)="showDetail(item.id)">详细信息</button>
                     @for (val of item.docpaths; track val) {

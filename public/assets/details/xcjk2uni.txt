@@ -1,0 +1,1 @@
+这是一个由李清开发的LaTeX工具，主要用于解决在非Unicode编码（如GBK,Big5等）环境下生成PDF时的字符映射问题。xCJK2uni主要解决了两个关键痛点：当使用CJK宏包配合hyperref生成PDF书签时，非Unicode编码的文档往往会导致书签乱码。此宏包能确保书签显示正确。它提供了/ToUnicode映射文件。配合cmap宏包使用时，能让生成的PDF文件支持对CJK文字的查找（Find）、复制（Copy）和粘贴（Paste），确保复制出来的文字是正确的Unicode字符，而不是乱码或错误的符号。

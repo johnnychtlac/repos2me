@@ -1,0 +1,1 @@
+这是一个用于在TeX、LaTeX和ConTeXt等排版系统中创建矢量图形的强大工具。PGF代表"PortableGraphicsFormat"（可移植图形格式），而TikZ是"TikZistkeinZeichenprogramm"（TikZ不是一个绘图程序）的递归缩写。它不是一个像AdobeIllustrator或Inkscape那样的所见即所得（WYSIWYG）绘图软件。相反，它是一种图形描述语言。用户通过编写代码来“编程”生成图形，就像用TeX代码编写文档一样。旨在提供一个与后端驱动程序（如pdfTeX，dvips等）无关的、可移植的图形解决方案。TikZ&PGF是LaTeX生态系统中功能最强大、最标准的绘图工具，虽然学习曲线较陡峭，但它能产生与文档排版浑然一体的高质量矢量图形。

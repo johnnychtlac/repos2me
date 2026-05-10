@@ -1,0 +1,1 @@
+提供Ysabeau字体家族的LaTeX支持。Ysabeau是一款免费字体，结合了Garamond字体的经典可读性与低对比度无衬线字体（SansSerif）的整洁感，非常适合正文和展示使用。

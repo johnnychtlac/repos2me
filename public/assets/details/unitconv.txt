@@ -1,0 +1,4 @@
+unitconv的主要作用是将一个特定的长度值（带有单位）转换为另一个单位下的数值。这对于需要在不同度量标准（如TeX点、厘米、英寸、像素等）之间进行换算的排版工作非常有用。长度单位的自动计算与转换。仅支持LuaTeX（这是它与许多其他TeX宏包最大的区别）。如果你使用amsmath宏包，必须在加载amsmath之前加载unitconv。
+\convTeXLength*[<unit>][<digits>]{<TeXlength>}：用于转换一个TeX长度（例如\linewidth）。
+\convLength*[<unit>][<digits>]{<value>}[<unit>]：用于转换一个给定数值和单位的长度（例如10pt）。
+unitconv是一个利用LuaTeX的计算能力，为LaTeX用户提供高精度单位换算的实用工具，特别适合需要处理多单位混合排版或精确尺寸控制的场景。
